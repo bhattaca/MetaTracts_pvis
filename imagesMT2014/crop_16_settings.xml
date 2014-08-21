@@ -1,0 +1,9 @@
+<settings>
+ <sliceViews>
+  <XY viewUpW="1" scale="222.912" focalPointW="1" viewUpX="0" focalPointX="224.5" viewUpY="1" focalPointY="149.5" viewUpZ="0" focalPointZ="0" positionW="1" positionX="224.5" positionY="149.5" positionZ="1042.13"/>
+  <YZ viewUpW="1" scale="290.862" focalPointW="1" viewUpX="0" focalPointX="149.5" viewUpY="1" focalPointY="249.5" viewUpZ="0" focalPointZ="0" positionW="1" positionX="149.5" positionY="249.5" positionZ="1123.8"/>
+  <XZ viewUpW="1" scale="335.634" focalPointW="1" viewUpX="0" focalPointX="224.5" viewUpY="1" focalPointY="249.5" viewUpZ="0" focalPointZ="0" positionW="1" positionX="224.5" positionY="249.5" positionZ="1296.79"/>
+ </sliceViews>
+ <camera viewUpW="1" focalPointW="1" viewUpX="-0.256112" focalPointX="224.5" viewUpY="-0.798243" focalPointY="149.5" viewUpZ="0.545175" focalPointZ="249.5" positionW="1" positionX="683.586" positionY="-705.455" positionZ="-786.652"/>
+ <slicerSettings showPosition="0" minIsovalue="20000" linearInterpolation="1" maxIsovalue="40000" showIsolines="0" snakeSlices="100" numberOfIsolines="5" linkViews="0"/>
+</settings>

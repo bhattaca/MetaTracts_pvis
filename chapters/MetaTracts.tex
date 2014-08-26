@@ -390,8 +390,10 @@ Priority = \gamma_1 e^{(-angle^2 / \alpha^2)} + \gamma_2e^{(-dist^2 / \beta^2)}
 
 \begin{figure}[h]
 \centering
-	\subfloat[]{\includegraphics[width=0.49\linewidth]{imagesMT2014/MT_crop16_MT.png}}
-	\subfloat[]{\includegraphics[width=0.49\linewidth]{imagesMT2014/length_distribution.PNG}}
+%	\subfloat[]{\includegraphics[width=0.49\linewidth]{imagesMT2014/MT_crop16_MT_2.png}}
+	\subfloat[]{\includegraphics[width=0.49\linewidth]{imagesMT2014/MT_crop16_MT_2.PNG}} 
+	\subfloat[]{\includegraphics[width=0.49\linewidth]{imagesMT2014/length_distribution.PNG}}\\
+%	\subfloat[]{\includegraphics[width=0.9\linewidth]{imagesMT2014/mt_crop_16_orient.PNG}}
 	\caption{(a) MetaTracts colored according to mean orientations. (b) length distribution of individual MetaTracts for a particular bundle.}
 	\label{fig:length_distribution}
 \end{figure}
@@ -558,20 +560,8 @@ We repeated both until a steady state of clusters is reached and no new small cl
 
 \section {Voxelization and surface extraction}
 \label{sec:vis}
-Apart from direct visualization of the MetaTracts, we show two simple extensions of MetaTracts. The first way is to voxelize the original volume according to the clusters each voxel is associated with.
-The second is to extract the corresponding surfaces from the voxel data by binarizing the volume per cluster and extracting the isosurface from the binary volume by marching cubes algorithm. To voxelize the space,  we compute a neighborhood around each voxel. We then enumerate the number of voxels of each class (cluster) in this neighborhood. The voxel is then assigned to the class with the maximum number of elements in the neighborhood.  Intuitively this is a modification of the flood-fill algorithm. Figure~\ref{fig:mesh} and Fig.~\ref{fig:prepreg}D shows examples od extracted meshes.
-
-\begin{figure}[h]
-  \centering
-   \includegraphics[width=0.9\linewidth]{imagesMT2014/mesh2.png}
-   \caption{Two of the extracted triangle meshes.}
-   \label{fig:mesh}
-   \end{figure}
-
-
-
-
-
+Apart from direct visualization of the MetaTracts, we show two simple extensions. The first way is to voxelize the original volume according to the clusters each voxel is associated with.
+The second is to extract the corresponding surfaces from the voxel data by binarizing the volume per cluster and extracting the isosurface of the largest connected component from the binary volume. To voxelize the space,  we compute a neighborhood around each voxel. We then enumerate the number of voxels of each class (cluster) in this neighborhood. The voxel is then assigned to the class with the maximum number of elements in the neighborhood and Fig.~\ref{fig:prepreg}D shows the result of voxelization{\tiny }. Figure~\ref{fig:mesh} shows examples of extracted meshes.
 %The MetaTracts and the clustering provide an abstraction of the fiber bundles and are used as a visualization tool. Through visualization MetaTracts we can answer all the queries mentioned in Section~\ref{sec:intro}. 
 %
 %In this Section we show two simple extensions to the MetaTracts and discuss how the end user might benefit from each. One way to visualize  the bundles is to color map the original volume according to the clusters each voxels are associated with (Section~\ref{subsec:voxel}). The second is to extract the surfaces from the voxel data (Section~\ref{subsec:surf_ext}). The visualizations can be used together, for example Fig.~\ref{fig:crop-13-mesh}e shows the crossover bundle as a mesh overlay on the MetaTracts.
@@ -623,15 +613,22 @@ The second is to extract the corresponding surfaces from the voxel data by binar
 	\caption{(A) Orientation wise decomposition of data set Figure~\ref{fig:data-char}A into the extracted bundles and (B) all of them combined.}
 	\label{fig:crop-16-decomp}
 \end{figure}
+\begin{figure}[h]
+  \centering
+   \includegraphics[width=0.9\linewidth]{imagesMT2014/mesh.png}
+   \caption{Extracted meshes. (A) shows two of the extracted meshes separately. (B) Shows two different views of the combined meshes.}
+   \label{fig:mesh}
+   \end{figure}
 \begin{figure}
 \centering
-	\includegraphics[width=0.5\textwidth]{imagesMT2014/crop-6-J.PNG}
-	\caption{Data set with flat thin and compact bundles. A shows the volume rendering and a 2D slice, B shows the clusters according to individual orientation.C shows the complete result. D shows the cropped part of the mesh generated from the marked bundle.}
+	\includegraphics[width=0.5\textwidth]{imagesMT2014/crop-6-J_2.PNG}
+	\caption{Data set with flat thin and compact bundles. A shows the volume rendering and a 2D slice with one of the boundaries marked in red, B shows the clusters according to individual orientation.C shows the complete result. D shows the voxelization of C.}
 	\label{fig:prepreg}
 \end{figure}
 \begin{figure}
 \centering
 	\includegraphics[width=0.5\textwidth]{imagesMT2014/Graph_crop16.PNG}
+	%\includegraphics[width=0.23\textwidth]{imagesMT2014/Graph_crop16_3.PNG}
 	\caption{Number of tracts and median, minimum and maximum length of individual MetaTracts in the orientation cluster Fig.~\ref{fig:orientation_clustering}C, clustered into 10 clusters (Fig.~\ref{fig:crop-16-decomp}A top). The unit for length is the grid cube length. Figure~\ref{fig:length_distribution}(b) shows the length of individual MetaTracts in cluster 6.}
 	\label{fig:len_dist_crop16}
 \end{figure}
@@ -647,14 +644,7 @@ The second is to extract the corresponding surfaces from the voxel data by binar
 
  %glass
 
-%\begin{figure}
-%\centering
-%\subfloat[]{\includegraphics[width=0.25\linewidth]{imagesMetaTracts/glass-scalar.eps}}
-%  \subfloat[]{\includegraphics[width=0.25\linewidth]{imagesMetaTracts/glass-scalar-slice.eps}}
-%  \subfloat[]{\includegraphics[width=0.25\linewidth]{imagesMetaTracts/glass-cluster-b.eps}}
-%  \subfloat[]{\includegraphics[width=0.25\linewidth]{imagesMetaTracts/glass-cluster-a.eps}}
-%  \caption{Our algorithm on a data set made of glass fibers. (a) The scalar dataset, (b) Depicts a slice from the data set, the  fibers are clearly demarcated from the rest of the matrix as oppose to the type of data  where it is hard to distinguish the fibers (Fig. \ref{fig:orig_data}). (c) The result of the MetaTracts process, the colors are to help visualization. (d) The result of the orientation based clustering, the two clusters are marked red and yellow.}\label{fig:glass}
-%\end{figure}
+
 
 We tested our method on multiple datasets with varying characteristics. 
 Figure~\ref{fig:crop-16-decomp} shows the result of data set~\ref{fig:data-char} decomposed into 2 orientation and each orientation decomposed into 10 clusters (the ground truth is 6 and 5 respectively). The hierarchical clustering is robust to over segmentation.
@@ -663,9 +653,6 @@ Figure~\ref{fig:len_dist_crop16} shows the median, minimum and maximum lengths p
 Fig.~\ref{fig:prepreg} shows the results on a dense data set with \textit{flat and thin} bundles. The bundles are indistinguishable in the original data set (Fig.~\ref{fig:prepreg}A).
 The fiber bundle extraction using MetaTracts was implemented in ITK and C++. All clustering was done in R. The preprocessing consists of metaTract generation the distance computation and the orientation clustering. The hierarchical clustering separately,  on the orientation clusters can be done in a few minutes on a Intel Xeon E5-2667 workstation PC according to user input `h'(section~\ref{sec:param_choices}). We store the normalized direction at each fiber point, thus both distance measures can be extracted simultaneously without extra computation.
 
-
-%\textit{Glass Fibers}, While the core advantages of our approach are in cases when the individual fibers are not discernible, our approach also works on data where the fibers are relatively well separated. Fig. \ref{fig:glass} shows our framework applied on a glass  data set (350x350x300 in size) with an isotropic resolution of $2 \mu m$. Fig. \ref{fig:glass}b shows a slice from the original dataset, (comparison with Fig. \ref{fig:orig_data} shows the individual fiber separation is easier in this case.) 
-% Fig.~\ref{fig:glass}c shows the result of the MetaTracts extraction process. Fig~\ref{fig:glass}d shows the results of the orientation based clustering into two clusters (reds and yellows). TODO: with this as the ground truth, add noise and repeat experiment, to show robustness.
 
 
 \begin{figure}[h]
@@ -692,25 +679,7 @@ Here we compare our framework against the single link clustering based on proxim
 
 
 
-%\begin{figure}
-%  \centering
-%\includegraphics[width=0.2\linewidth]{imagesMetaTracts/compare-clus-1.eps}
-%\includegraphics[width=0.2\linewidth]{imagesMetaTracts/compare-clus-2.eps}
-%  \caption{Comparison of clustering approaches.(a) Orientation clustering into 2 classes followed by hierarchical clustering into 3 classes each. (b)Hierarchical clustering into 6 classes.}
-%  
-% \label{fig:fiber-clus-2}
-%\end{figure}
- 
 
-
-
-
-
-
-
-%\subsection {Proximity measures}
-%\textbf{weighted undirected graph}
-%In DT-MRI, each voxel is assigned a tensor that describes local water diffusion. In our case the Hessian is error prone
 
 \section {User Evaluation}
 \label {sec:evaluation}
@@ -726,7 +695,7 @@ Here we compare our framework against the single link clustering based on proxim
 \section{Parameter choices}
 \label{sec:param_choices}
 The critical parameters are $K$ for the K-means in orientation based clustering and $h$ for the hierarchical clustering. K denotes the number of major directions. Which is generally known a priori or can be easily estimated by looking at the weaving pattern. 
-Our framework is robust to the choice of $h$ (Section~\ref{sec:results}). Large $h$ keeps the major bundles intact. For example, in  Fig.~\ref{fig:len_dist_crop16}, where $h$ was set to ten while the ground truth was five, we observe that the major clusters remain well segmented and thus small clusters can be removed if they have too few elements. This is an appealing trait of the proximity based clustering, thus providing good results even when exact $h$ might be unknown.
+Our framework is robust to the choice of $h$ (Section~\ref{sec:results}). Large $h$ keeps the major bundles intact. For example, in  Fig.~\ref{fig:len_dist_crop16}, where $h$ was set to ten while the ground truth was five, we observe that the major clusters remain well segmented and small clusters can be removed if they have too few elements (clusters 2,3,4 and 5 in Fig.~\ref{fig:len_dist_crop16} all have less than 10 elements). This is an appealing trait of the proximity based clustering, thus providing good results even when exact $h$ might be unknown.
 
 The following parameters were fixed for all the tests. We set the reliable Hessian threshold $R_{h}$ to be 0.3 for all our tests. A $R_{h}$ of 0.0 would mean all points have reliable local orientation which would cause spurious MetaTracts detection. On the other hand a very high $ R_{h}$ would lead to be a decline in number of MetaTracts produced. The $\alpha$ and $\beta$ in $R_{h}$ are as explained in Frangi et al. \cite{Frangi1998} and set to 0.5. The length and the width parameters for the cylinders for the MetaTracts decide how coarse the fiber cylinders are. Larger cylinders will handle noisy local orientation better as it inspects a higher number of candidate points to extend the fiber. We used 10.00 and 2.00 for length and breadth, respectively for all tests. $\alpha$ and $\beta$ in equation~\ref{eqn:algo_1} decide how quickly the value of the factor decays, we have used [7-10] and half the length of cylinder (5.0). Our number of fiber bundle directions are limited, thus even for small $\eta$, the distinction between  the orientation clusters is preserved quite well. We compared  $\eta=3-7$ experimentally without any dramatic change in results. 
 %\begin{figure}

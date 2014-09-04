@@ -157,7 +157,7 @@ Tools based on image analysis, fiber tracking and clustering into bundles in DTI
 
 \begin{figure}
 \includegraphics[width=0.5\textwidth,clip=true, trim= 0cm 0cm 0cm 0cm]{imagesMT2014/MT_data_4_2.png}
-\caption{Data Characteristics. A: Shows a rendering of the data. B: Shows 2D slices along the X (Right) and Z (Left) axis. C: Shows a zoom of the yellow square, multiple bundles cross and are indistinguishable by visual inspection alone. }
+\caption{Data Characteristics. A: Shows a rendering of the data. B: Shows 2D slices along the X (Right) and Z (Left) axis. C: Shows a zoom of the green square, multiple bundles cross and are indistinguishable by visual inspection alone. }
 \label{fig:data-char}
 \end{figure}
 \section {Data Characteristic and Assumptions}
@@ -201,7 +201,7 @@ We make the following assumptions on our data.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.45\textwidth]{imagesMT2014/algo_A.png}
+\includegraphics[width=0.5\textwidth]{imagesMT2014/algo.png}
 \caption{Flow chart of our approach}
 \label{fig:flowchart}
 \end{figure}
@@ -315,7 +315,7 @@ In $\mathbb{R}^2$ all the above properties hold except that cylinders are replac
 
 \begin{figure}[h]
   \begin{center}
-  \includegraphics[ width=0.9\linewidth]{imagesMT2014/MT_abstract_A2} %algo-1d}
+  \includegraphics[ width=0.4\textwidth]{imagesMT2014/MT_abstract} 
   \end{center}
  \caption{MetaTracts generation. B. MetaTract generation, region with $R_H$ less than threshold. A: close up of marked region in A. C: Parts of a single MetaTract.}
   \label{fig:algo}
@@ -347,7 +347,7 @@ Priority = \gamma_1 e^{(-angle^2 / \alpha^2)} + \gamma_2e^{(-dist^2 / \beta^2)}
 \end{equation}
  $\gamma_1$, $\gamma_2$ are the  weights ($\mathbb{R}_{\ge 0}$)  which decide how the priority depends on the affine combination of the two factors. For all our cases we use ($\gamma_1$ = $1 / 3 $ and $\gamma_2$ = $2 / 3$). In general we suggest $\gamma_1 +\gamma_2 = 1 $ and $\gamma_1 \leq \gamma_2$). At each iteration we pick the top element in the priority queue generate the corresponding cylinder and repeat the steps. Essentially, Eqn.~\ref{eqn:algo_1}, selects a grid point which is the furthest from the current point and going in a similar direction. This gives it the advantage of tackling noise/errors in local orientation better than integral curves by looking at multiple choices for vertices and avoiding intra cell interpolation (for orientation) in an already noisy environment. 
  
- In this particular example Figure~\ref{fig:algo}B we select the orange grid vertex next and repeat the process. We do not select the purple vertex (Figure~\ref{fig:algo}C) because it is not a candidate vertex. If we generate tracts that have erroneous local orientations they will not be able to find further possible candidate vertices and will be of short length. Short tracts are then remove. The MetaTracts generated are shown in Figure~\ref{fig:length_distribution}(a). The MetaTracts are colored with the mean orientation direction mapped to the RGB space. That consistent orientation is a key intrinsic feature in the data becomes visually pronounced.
+ In this particular example Figure~\ref{fig:algo}B we select the orange grid vertex next and repeat the process. We do not select the purple vertex (Figure~\ref{fig:algo}C) because it is not a candidate vertex. If we generate tracts that have erroneous local orientations they will not be able to find further possible candidate vertices and will be of short length. Short tracts are then remove. The MetaTracts generated are shown in Figure~\ref{fig:length_distribution}(A). The MetaTracts are colored with the mean orientation direction mapped to the RGB space. That consistent orientation is a key intrinsic feature in the data becomes visually pronounced.
  We apply uniform, dense seeding to the XCT volume data to trace and generate the tracts of fiber bundles. 
  
 % \begin{figure}[h]
@@ -392,11 +392,8 @@ Priority = \gamma_1 e^{(-angle^2 / \alpha^2)} + \gamma_2e^{(-dist^2 / \beta^2)}
 
 \begin{figure}[h]
 \centering
-%	\subfloat[]{\includegraphics[width=0.49\linewidth]{imagesMT2014/MT_crop16_MT_2.png}}
-	\subfloat[]{\includegraphics[width=0.49\linewidth]{imagesMT2014/MT_crop16_MT_2.PNG}} 
-	\subfloat[]{\includegraphics[width=0.49\linewidth]{imagesMT2014/length_distribution.PNG}}\\
-%	\subfloat[]{\includegraphics[width=0.9\linewidth]{imagesMT2014/mt_crop_16_orient.PNG}}
-	\caption{(a) MetaTracts colored according to mean orientations. (b) length distribution of individual MetaTracts for a particular bundle.}
+	\includegraphics[width=0.4\textwidth]{imagesMT2014/crop-16/length_dist.png}
+	\caption{(A) MetaTracts colored according to mean orientations. (B) length distribution of individual MetaTracts for a particular bundle.}
 	\label{fig:length_distribution}
 \end{figure}
 
@@ -405,7 +402,7 @@ Priority = \gamma_1 e^{(-angle^2 / \alpha^2)} + \gamma_2e^{(-dist^2 / \beta^2)}
 The output of the above step is a set of MetaTracts. In this step we focus on clustering the MetaTracts into plausible bundles. We use hierarchical clustering which has enjoyed considerable attention and success in DTI field. 
 
 However, the MetaTracts produced as described in Section 4 often do not extend the full length of the fiber bundle.  Thus, MetaTracts
-in a given fiber bundle may have very different lengths and may only partially overlap Figure~\ref{fig:length_distribution}(b).
+in a given fiber bundle may have very different lengths and may only partially overlap Figure~\ref{fig:length_distribution}(B).
 
 Moreover, Carbon fibers have both orientation and proximity information which can be used for clustering. Instead of creating some formula
 which artificially combined the two measures,  we first cluster based on orientation and then further subdivide each orientation cluster using proximity information. We found that different clustering methods were preferable
@@ -463,8 +460,8 @@ Using the Belkin and Niyogi algorithm we ``embed" these points in a low dimensio
 % 	\subfloat[3]{\includegraphics[width=0.2\linewidth]{imagesMT2014/crop_16_clustering_2.PNG}}
 % 	\subfloat[4]{\includegraphics[width=0.2\linewidth]{imagesMT2014/curveD.PNG}}
 %  	
- \includegraphics[width=0.5\textwidth]{imagesMT2014/crop-16/Capture4.PNG}
-  	\caption{(B)Shows the result of K means clustering with data points projected to the top three eigenvectors as major axes. (A,C) show the MetaTracts colored according to the clustering results. (The white to black tracts are only to show context.)  }
+ \includegraphics[width=0.5\textwidth]{imagesMT2014/crop-16/orientation_cluster.PNG}
+  	\caption{(C) Shows the result of K means clustering with data points projected to the top three eigenvectors as major axes. (A) shows the MetaTracts projected on top three eigenvectors. (B) shows 2D slices of C. }
   \label{fig:orientation_clustering}
   \end{figure}
   
@@ -506,7 +503,7 @@ we need to include information about the geometric proximity between MetaTracts.
  
  The Hausdorff distance is a metric so $H(P,Q) \le H(P,Q') + H(Q',Q)$
  but the directed Hausdorff is not.
- Unfortunately, the Hausdorff distance does not work well for our application since a fiber bundle may have many MetaTract which only partially cover the bundle (figure~\ref{fig:length_distribution}(b)).
+ Unfortunately, the Hausdorff distance does not work well for our application since a fiber bundle may have many MetaTract which only partially cover the bundle (figure~\ref{fig:length_distribution}(B)).
  If a MetaTract $P$ covers only part of the fiber bundle covered by $Q$,
  then $H_{dir}(P,Q)$ will be very small while $H_{dir}(Q,P)$ will be large.
  Thus, $H(P,Q)$ will be large, even though $P$ and $Q$ are in the same
@@ -564,7 +561,7 @@ We repeated both until a steady state of clusters is reached and no new small fi
 \section {Voxelization and surface extraction}
 \label{sec:vis}
 Apart from direct visualization of the MetaTracts, we show two simple extensions. The first way is to voxelize the original volume according to the clusters each voxel is associated with.
-The second is to extract the corresponding surfaces from the voxel data by binarizing the volume per cluster and extracting the isosurface of the largest connected component from the binary volume. To voxelize the space,  we compute a neighborhood around each voxel. We then enumerate the number of voxels of each class (cluster) in this neighborhood. The voxel is then assigned to the class with the maximum number of elements in the neighborhood and Fig.~\ref{fig:mesh}A shows the result of voxelization. Fig.~\ref{fig:mesh}(B, C) show examples of extracted meshes.
+The second is to extract the corresponding surfaces from the voxel data by binarizing the volume per cluster and extracting the isosurface of the largest connected component from the binary volume. To voxelize the space,  we compute a neighborhood around each voxel. We then enumerate the number of voxels of each class (cluster) in this neighborhood. The voxel is then assigned to the class with the maximum number of elements in the neighborhood and Fig.~\ref{fig:crop-16-decomp}C and Fig~\ref{fig:prepreg}D shows the result of voxelization. Fig.~\ref{fig:crop-16-decomp}(E, F) show examples of extracted meshes.
 %The MetaTracts and the clustering provide an abstraction of the fiber bundles and are used as a visualization tool. Through visualization MetaTracts we can answer all the queries mentioned in Section~\ref{sec:intro}. 
 %
 %In this Section we show two simple extensions to the MetaTracts and discuss how the end user might benefit from each. One way to visualize  the bundles is to color map the original volume according to the clusters each voxels are associated with (Section~\ref{subsec:voxel}). The second is to extract the surfaces from the voxel data (Section~\ref{subsec:surf_ext}). The visualizations can be used together, for example Fig.~\ref{fig:crop-13-mesh}e shows the crossover bundle as a mesh overlay on the MetaTracts.
@@ -595,7 +592,6 @@ The second is to extract the corresponding surfaces from the voxel data by binar
 
 \section {Experimental Results}
 \label {sec:results}
-
 %\begin{figure*}
 %\centering
 %\captionsetup[subfigure]{labelformat=empty}
@@ -608,47 +604,30 @@ The second is to extract the corresponding surfaces from the voxel data by binar
 %	\caption{(a) Shows in order, the volume rendering of the second data set, a single (2D) slice, the orientation clustering bundles and the final bundles followed by proximity clustering. (b) Shows in order the third data set, a single (2D) slice and finally the extracted fiber bundles.}
 %	\label{fig:crop-6}
 %\end{figure*}
-
-
-\begin{figure}[h]
+\begin{figure*}[t]
 \centering
-	\includegraphics[width=0.5\textwidth]{imagesMT2014/all_clusters.PNG}
-	\caption{(A) Orientation wise decomposition of data set Figure~\ref{fig:data-char}A into the extracted bundles and (B) all of them combined.}
+	\includegraphics[width=0.45\textwidth]{imagesMT2014/crop-16/bundles}~ 
+	\includegraphics[height=0.35\textwidth]{imagesMT2014/crop-16/vol_mesh.png} 
+	\caption{(A) Orientation wise decomposition of data set Figure~\ref{fig:data-char}A into the extracted bundles and (B) all of them combined.(C) Shows the results of voxelization of B. (D) shows a 2D slice of the volume. (E,F) shows the extracted meshes.}
 	\label{fig:crop-16-decomp}
-\end{figure}
-\begin{figure}[h]
-  \centering
-   \includegraphics[width=0.5\textwidth]{imagesMT2014/mesh_2_C.png}
-   \caption{Volumes and  meshes. (A) Shows the voxelized volume. (B) Shows two different extracted meshes (C) shows the combined meshes.}
-   \label{fig:mesh}
-   \end{figure}
+\end{figure*}
 \begin{figure}
 \centering
-	\includegraphics[width=0.5\textwidth]{imagesMT2014/crop-6-J_2.PNG}
+	\includegraphics[width=0.35\textwidth]{imagesMT2014/crop-6.PNG}
 	\caption{Data set with flat thin and compact bundles. A shows the volume rendering and a 2D slice with one of the boundaries marked in red, B shows the clusters according to individual orientation.C shows the complete result. D shows the voxelization of C.}
 	\label{fig:prepreg}
 \end{figure}
-\begin{figure}
-\centering
-	\includegraphics[width=0.5\textwidth]{imagesMT2014/Graph_crop16.PNG}
-	%\includegraphics[width=0.23\textwidth]{imagesMT2014/Graph_crop16_3.PNG}
-	\caption{Number of tracts and median, minimum and maximum length of individual MetaTracts in the orientation cluster Fig.~\ref{fig:orientation_clustering}C, clustered into 10 clusters (Fig.~\ref{fig:crop-16-decomp}A top). The unit for length is the grid cube length. Figure~\ref{fig:length_distribution}(b) shows the length of individual MetaTracts in cluster 6.}
-	\label{fig:len_dist_crop16}
-\end{figure}
+
 
 
 
 
 %Fig~\ref{fig:kull} (b) shows the results after the MetaTracts extraction. Fig.~\ref{fig:kull} (c) shows the results of the orientation clustering with $K$ set to 2. Note, that the curved fiber bundle has also been detected with the correct orientation. Fig. \ref{fig:kull} (d) and (e) shows the results of hierarchical clustering of \ref{fig:kull} (c) using proximity based clustering. Both the orientation were clustered into 14 classes.
 
-
-
-
-
  %glass
 We tested our method on multiple datasets with varying characteristics. 
 Figure~\ref{fig:crop-16-decomp} shows the result of data set~\ref{fig:data-char} decomposed into 2 orientation and each orientation decomposed into 10 clusters (the ground truth is 6 and 5 respectively). The hierarchical clustering is robust to over segmentation.
-Figure~\ref{fig:len_dist_crop16} shows the median, minimum and maximum lengths per cluster. We generate the correct clusters and outlier bundles with very few elements which can be discarded. As noted in section~\ref{subsec:dist_clustering} the tracts donot run the entire length of the dataset, the median length of MetaTracts in cluster 6 is 200 while the maximum MetaTract in the bundle is about 500 (measured in units of grid cube length). Fig.~\ref{fig:length_distribution}(b) shows the length per MetaTract distribution for a particular fiber bundle. 
+Figure~\ref{fig:len_dist_crop16} shows the median, minimum and maximum lengths per cluster. We generate the correct clusters and outlier bundles with very few elements which can be discarded. As noted in section~\ref{subsec:dist_clustering} the tracts donot run the entire length of the dataset, the median length of MetaTracts in cluster 6 is 200 while the maximum MetaTract in the bundle is about 500 (measured in units of grid cube length). Fig.~\ref{fig:length_distribution}(B) shows the length per MetaTract distribution for a particular fiber bundle. 
 
 Fig.~\ref{fig:prepreg} shows the results on a dense data set with \textit{flat and thin} bundles. The bundles are indistinguishable in the original data set (Fig.~\ref{fig:prepreg}A). A red dotted line shows one of the fiber bundle boundary. Fig.~\ref{fig:prepreg}B shows the fiber bundles for the two orientation. Fig.~\ref{fig:prepreg}C shows the combined results.Fig.~\ref{fig:prepreg}D shows the volume after voxelization.
 The fiber bundle extraction using MetaTracts was implemented in ITK and C++. All clustering was done in R. The preprocessing consists of metaTract generation the distance computation and the orientation clustering. The hierarchical clustering separately, on the results of the orientation clusters can be done  quickly in a few minutes on a Intel Xeon E5-2667 workstation PC according to user input `h'(section~\ref{sec:param_choices}). We store the normalized direction at each fiber point, thus both distance measures can be extracted simultaneously without extra computation.
@@ -663,9 +642,14 @@ The fiber bundle extraction using MetaTracts was implemented in ITK and C++. All
 (b)Shows how the red bundle `bends' under the green bundle, which is not immediately apparent from just the volume rendering.}
 \label{fig:context}
 \end{figure}
-
 \section{Parameter choices}
 \label{sec:param_choices}
+\begin{figure}
+\centering
+	\includegraphics[width=0.5\textwidth]{imagesMT2014/crop-16/histogram_10_A.PNG}
+	\caption{Number of tracts and median, minimum and maximum length of individual MetaTracts in the orientation cluster Fig.~\ref{fig:orientation_clustering}, clustered into 10 clusters (Fig.~\ref{fig:crop-16-decomp}A top). The unit for length is the grid cube length. Figure~\ref{fig:length_distribution}(B) shows the length of individual MetaTracts in cluster 6.}
+	\label{fig:len_dist_crop16}
+\end{figure}
 The critical parameters are $K$ for the K-means in orientation based clustering and $h$ for the hierarchical clustering. K denotes the number of major directions. Which is generally known a priori or can be easily estimated by looking at the weaving pattern. 
 Our framework is robust to the choice of $h$ (Section~\ref{sec:results}). Large $h$ keeps the major bundles intact. For example, in  Fig.~\ref{fig:len_dist_crop16}, where $h$ was set to ten while the ground truth was five, we observe that the major clusters remain well segmented and small clusters can be removed if they have too few elements (clusters 2,3,4 and 5 in Fig.~\ref{fig:len_dist_crop16} all have less than 10 elements). This is an appealing trait of the proximity based clustering, thus providing good results even when exact $h$ might be unknown.
 

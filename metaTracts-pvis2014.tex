@@ -71,7 +71,7 @@
 \author{Arindam Bhattacharya\thanks{e-mail: arindamb86@gmail.com}\\ %
         \scriptsize The Ohio State University %
 \and Christoph Heinzl\thanks{e-mail:christoph.heinzl@fh-wels.at}\\ %
-     \scriptsize University of Applied Sciences - Upper Austria. %
+     \scriptsize University of Applied Sciences - Upper Austria%
 \and Rephael Wenger\thanks{e-mail:wenger@cse.ohio-state.edu}\\ %
     \scriptsize The Ohio State University}
 
@@ -84,19 +84,22 @@
 
 %% Abstract section.
 \abstract{
-Carbon fiber reinforced polymers (CFRP) typically consist of two main components: the matrix and the reinforcement. 
-Most important in order to achieve the desired characteristics of a CFRP is the reinforcement component. 
-In case of CFRPs the reinforcements typically consist of bundles of endless carbon fibers woven into sheets of carbon fiber cloth, which are then layered and combined to a CFRP by the matrix component. 
-For quality control of CFRP materials and components industrial 3D X-ray computed tomography (XCT) is increasingly applied as it allows detailed characterizations of the material in a non-destructive manner.	
+%Carbon fiber reinforced polymers (CFRP) typically consist of two main components: the matrix and the reinforcement. 
+%Most important in order to achieve the desired characteristics of a CFRP is the reinforcement component. 
+%In case of CFRPs the reinforcements typically consist of bundles of endless carbon fibers woven into sheets of carbon fiber %cloth, which are then layered and combined to a CFRP by the matrix component. 
+%For quality control of CFRP materials and components industrial 3D X-ray computed tomography (XCT) is increasingly applied %as it allows detailed characterizations of the material in a non-destructive manner.	
 
-The presented work contributes to the state of the art of CFRP characterization by the introduction of MetaTracts, a technique for extracting and visualizing fiber bundles and the geometric structure of the weaving pattern in fiber reinforced composites scanned with X-ray computed tomography. 
-The declared goal of this work is to analyze large areas of CFRPs using XCT scans of low resolution, in which individual fibers are barely visible. 
-To reach this goal we apply and extend methods originally developed for diffusion tensor imaging (DTI) on the generated XCT data. 
-In the first step a coarse version of integral curves is used to extract sections of the fiber bundles in the woven fabrics. We call these sections MetaTracts.
-Next, the extracted fiber bundle sections are clustered using a two step approach, wherein we first cluster according to orientation and then  cluster by proximity. 
-We evaluate our algorithm on a number of datasets and demonstrate that MetaTracts effectively and robustly identifies and separates different fiber bundles. 
+This work introduces MetaTracts, a novel method for extracting and visualizing individual fiber bundles as well as their weaving pattern in endless carbon fiber reinforced polymer (CFRP) materials, scanned by X-ray computed tomography (XCT). 
+
+For the purpose of characterizing larger areas of CFRP materials such as complete unit cells integrating the recurring weaving pattern, the proposed workflow is designed to handle XCT scans of low resolution, in which the individual fibers of the bundles to be extracted are not or just barely visible.  
+The proposed workflow applies and extends methods originally presented for the field of diffusion tensor imaging in order to cope with the low data quality: 
+First, a coarse version of integral curves is used to trace subsections of the individual fiber bundles in the woven CFRP materials. We call these sections MetaTracts.
+In the second step these extracted fiber bundle sections (MetaTracts) are clustered using a two step approach, wherein the first step clusters according to orientation and the second step cluster by proximity of the MetaTracts. 
+Finally, the tool generates volumetric representations as well as surface models of the extracted fiber bundles to be exported for further analysis.
+
+We evaluate the proposed workflow on a number of real world datasets and demonstrate that MetaTracts effectively and robustly identifies and separates different fiber bundles. 
 %mention user study here?%
-This work will provide a stepping stone to introduce novel non destructive testing techniques for reinforced fiber bundles analysis.
+%This work will provide a stepping stone to introduce novel non destructive testing techniques for reinforced fiber bundles analysis.
 } % end of abstract
 
 %% ACM Computing Classification System (CCS). 

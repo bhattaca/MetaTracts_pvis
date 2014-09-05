@@ -1,0 +1,527 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.6.16)  5 SEP 2014 23:36
+entering extended mode
+**metaTracts-pvis2014.tex
+(D:\ABhattacharya\Internship2014\Docs\MetaTracts_pvis\metaTracts-pvis2014.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+(D:\ABhattacharya\Internship2014\Docs\MetaTracts_pvis\vgtc.cls
+Document Class: vgtc 2006/05/21 IEEE VGTC
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\bibindent=\dimen103
+\bibspacing=\dimen104
+\titlespace=\skip43
+\teaserspace=\skip44
+\abstxtspace=\skip45
+\vgtc@copyrightlength=\skip46
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\mathptmx.sty"
+Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ztmcm/m/n on input line 28.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ztmcm/m/it on input line 29.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/ztmcm/m/n on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/ztmcm/m/n on input line 31.
+\symbold=\mathgroup4
+\symitalic=\mathgroup5
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 34.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
+LaTeX Info: Redefining \hbar on input line 50.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen105
+\Gin@req@width=\dimen106
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup6
+\symAMSb=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(C:\Users\arindam\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(C:\Users\arindam\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen107
+\captionmargin@=\dimen108
+\captionwidth=\dimen109
+\caption@tempdima=\dimen110
+\caption@indent=\dimen111
+\caption@parindent=\dimen112
+\caption@hangindent=\dimen113
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionski
+p \sbox \@tempboxa {\captionfonts #1\ifvgtcjournal . \else : \fi #2}\ifdim \wd 
+\@tempboxa >\hsize {\captionfonts #1\ifvgtcjournal . \else : \fi #2\par } \else
+ \global \@minipagefalse \def \@figcaptype {figure} \hb@xt@ \hsize {\ifvgtcjour
+nal \ifx \@captype \@figcaptype \else \hfil \fi \else \hfil \fi \box \@tempboxa
+ \hfil }\fi \vskip \belowcaptionskip .
+\c@ContinuedFloat=\count88
+)
+\c@KVtest=\count89
+\sf@farskip=\skip47
+\sf@captopadj=\dimen114
+\sf@capskip=\skip48
+\sf@nearskip=\skip49
+\c@subfigure=\count90
+\c@subfigure@save=\count91
+\c@lofdepth=\count92
+\c@subtable=\count93
+\c@subtable@save=\count94
+\c@lotdepth=\count95
+\sf@top=\skip50
+\sf@bottom=\skip51
+) (C:\Users\arindam\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
+\wrapoverhang=\dimen115
+\WF@size=\dimen116
+\c@WF@wrappedlines=\count96
+\WF@box=\box26
+\WF@everypar=\toks16
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\comment\comment.sty"
+\CommentStream=\write3
+
+Excluding comment 'comment')
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
+Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+))
+(D:\ABhattacharya\Internship2014\Docs\MetaTracts_pvis\metaTracts-pvis2014.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
+LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 120.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+\big@size=\dimen117
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count97
+\scratchdimen=\dimen118
+\scratchbox=\box27
+\nofMPsegments=\count98
+\nofMParguments=\count99
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count100
+\MPscratchDim=\dimen119
+\MPnumerator=\count101
+\makeMPintoPDFobject=\count102
+\everyMPtoPDFconversion=\toks18
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 128.
+
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 128.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 12
+8.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ztmcm.fd"
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 12
+8.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlztmcm.fd"
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 12
+8.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsztmcm.fd"
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 12
+8.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omxztmcm.fd"
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 128.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 128.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 128.
+LaTeX Font Info:    Calculating math sizes for size <7.4> on input line 128.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.47603> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 128.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <4.44003> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 128.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 128.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 128.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 128.
+LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <9> not available
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 128.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 128.
+
+(D:\ABhattacharya\Internship2014\Docs\MetaTracts_pvis\chapters\MetaTracts.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
+
+[1{C:/Users/arindam/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 73.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 73.
+ [2]
+<imagesMT2014/MT_data_4_2.png, id=15, 798.73407pt x 631.60968pt>
+File: imagesMT2014/MT_data_4_2.png Graphic file (type png)
+
+<use imagesMT2014/MT_data_4_2.png>
+Package pdftex.def Info: imagesMT2014/MT_data_4_2.png used on input line 159.
+(pdftex.def)             Requested size: 252.94499pt x 200.01823pt.
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 159--160
+[][] 
+ []
+
+<imagesMT2014/algo.png, id=18, 966.61125pt x 374.90062pt>
+File: imagesMT2014/algo.png Graphic file (type png)
+
+<use imagesMT2014/algo.png>
+Package pdftex.def Info: imagesMT2014/algo.png used on input line 204.
+(pdftex.def)             Requested size: 252.94499pt x 98.10112pt.
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 204--205
+ [][] 
+ []
+
+[3 <D:/ABhattacharya/Internship2014/Docs/MetaTracts_pvis/imagesMT2014/MT_data_4
+_2.png> <D:/ABhattacharya/Internship2014/Docs/MetaTracts_pvis/imagesMT2014/algo
+.png>] <imagesMT2014/MT_data_rh.png, id=26, 795.72281pt x 626.34pt>
+File: imagesMT2014/MT_data_rh.png Graphic file (type png)
+
+<use imagesMT2014/MT_data_rh.png>
+Package pdftex.def Info: imagesMT2014/MT_data_rh.png used on input line 265.
+(pdftex.def)             Requested size: 227.64894pt x 179.1873pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <D:/ABhattacharya/Internship2014/Docs/MetaTracts_pvis/imagesMT2014/MT_data_r
+h.png>] <imagesMT2014/MT_abstract.png, id=36, 773.13844pt x 531.48563pt>
+File: imagesMT2014/MT_abstract.png Graphic file (type png)
+
+<use imagesMT2014/MT_abstract.png>
+Package pdftex.def Info: imagesMT2014/MT_abstract.png used on input line 318.
+(pdftex.def)             Requested size: 202.3529pt x 139.09941pt.
+
+<imagesMT2014/crop-16/length_dist.png, id=37, 743.77875pt x 474.27188pt>
+File: imagesMT2014/crop-16/length_dist.png Graphic file (type png)
+
+<use imagesMT2014/crop-16/length_dist.png>
+Package pdftex.def Info: imagesMT2014/crop-16/length_dist.png used on input lin
+e 395.
+(pdftex.def)             Requested size: 202.3529pt x 129.03207pt.
+ [5 <D:/ABhattacharya/Internship2014/Docs/MetaTracts_pvis/imagesMT2014/MT_abstr
+act.png> <D:/ABhattacharya/Internship2014/Docs/MetaTracts_pvis/imagesMT2014/cro
+p-16/length_dist.png>]
+<imagesMT2014/crop-16/orientation_cluster.PNG, id=43, 510.40688pt x 385.44pt>
+File: imagesMT2014/crop-16/orientation_cluster.PNG Graphic file (type png)
+
+<use imagesMT2014/crop-16/orientation_cluster.PNG>
+Package pdftex.def Info: imagesMT2014/crop-16/orientation_cluster.PNG used on i
+nput line 463.
+(pdftex.def)             Requested size: 252.94499pt x 191.01982pt.
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 463--464
+ [][] 
+ []
+
+
+Underfull \vbox (badness 5245) has occurred while \output is active []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 512--514
+[]\OT1/ptm/m/n/9 Instead of us-ing the Haus-dorff dis-tance,
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 512--514
+$[]\OT1/ztmcm/m/n/9 (\OML/ztmcm/m/it/9 H[]\OT1/ztmcm/m/n/9 (\OML/ztmcm/m/it/9 P
+; Q\OT1/ztmcm/m/n/9 )\OML/ztmcm/m/it/9 ; H[]\OT1/ztmcm/m/n/9 (\OML/ztmcm/m/it/9
+ Q; P\OT1/ztmcm/m/n/9 )$\OT1/ptm/m/n/9 , we use $[]\OT1/ztmcm/m/n/9 (\OML/ztmcm
+/m/it/9 H[]\OT1/ztmcm/m/n/9 (\OML/ztmcm/m/it/9 P; Q\OT1/ztmcm/m/n/9 )\OML/ztmcm
+/m/it/9 ; H[]\OT1/ztmcm/m/n/9 (\OML/ztmcm/m/it/9 Q; P\OT1/ztmcm/m/n/9 ))$\OT1/p
+tm/m/n/9 .
+ []
+
+[6 <D:/ABhattacharya/Internship2014/Docs/MetaTracts_pvis/imagesMT2014/crop-16/o
+rientation_cluster.PNG>]
+<imagesMT2014/crop-16/bundles.png, id=48, 854.44218pt x 587.94656pt>
+File: imagesMT2014/crop-16/bundles.png Graphic file (type png)
+
+<use imagesMT2014/crop-16/bundles.png>
+Package pdftex.def Info: imagesMT2014/crop-16/bundles.png used on input line 60
+9.
+(pdftex.def)             Requested size: 227.64894pt x 156.63942pt.
+
+<imagesMT2014/crop-16/vol_mesh.png, id=49, 737.00343pt x 629.35126pt>
+File: imagesMT2014/crop-16/vol_mesh.png Graphic file (type png)
+
+<use imagesMT2014/crop-16/vol_mesh.png>
+Package pdftex.def Info: imagesMT2014/crop-16/vol_mesh.png used on input line 6
+10.
+(pdftex.def)             Requested size: 207.34918pt x 177.06458pt.
+
+<imagesMT2014/crop-6.PNG, id=50, 630.10406pt x 542.025pt>
+File: imagesMT2014/crop-6.PNG Graphic file (type png)
+
+<use imagesMT2014/crop-6.PNG>
+Package pdftex.def Info: imagesMT2014/crop-6.PNG used on input line 616.
+(pdftex.def)             Requested size: 177.06458pt x 152.31181pt.
+
+<imagesMT2014/crop-6-F.PNG, id=51, 961.34157pt x 727.96968pt>
+File: imagesMT2014/crop-6-F.PNG Graphic file (type png)
+
+<use imagesMT2014/crop-6-F.PNG>
+Package pdftex.def Info: imagesMT2014/crop-6-F.PNG used on input line 639.
+(pdftex.def)             Requested size: 126.47249pt x 95.76128pt.
+
+<imagesMT2014/orientB.PNG, id=52, 760.34062pt x 596.98032pt>
+File: imagesMT2014/orientB.PNG Graphic file (type png)
+
+<use imagesMT2014/orientB.PNG>
+Package pdftex.def Info: imagesMT2014/orientB.PNG used on input line 640.
+(pdftex.def)             Requested size: 126.47249pt x 99.2991pt.
+
+Overfull \hbox (11.99998pt too wide) in paragraph at lines 639--642
+ [][][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<imagesMT2014/crop-16/histogram_10_A.PNG, id=53, 733.23938pt x 645.91313pt>
+File: imagesMT2014/crop-16/histogram_10_A.PNG Graphic file (type png)
+
+<use imagesMT2014/crop-16/histogram_10_A.PNG>
+Package pdftex.def Info: imagesMT2014/crop-16/histogram_10_A.PNG used on input 
+line 649.
+(pdftex.def)             Requested size: 202.3529pt x 178.2525pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <D:/ABhattacharya/Internship2014/Docs/MetaTracts_pvis/imagesMT2014/crop-6.P
+NG> <D:/ABhattacharya/Internship2014/Docs/MetaTracts_pvis/imagesMT2014/crop-6-F
+.PNG> <D:/ABhattacharya/Internship2014/Docs/MetaTracts_pvis/imagesMT2014/orient
+B.PNG> <D:/ABhattacharya/Internship2014/Docs/MetaTracts_pvis/imagesMT2014/crop-
+16/histogram_10_A.PNG>])
+(D:\ABhattacharya\Internship2014\Docs\MetaTracts_pvis\metaTracts-pvis2014.bbl
+Underfull \vbox (badness 2818) has occurred while \output is active []
+
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no Ÿ in font ptmr7t!
+
+Underfull \hbox (badness 1389) in paragraph at lines 132--137
+[]\OT1/ptm/m/n/8 D. Sal-aberger, K. Kan-nap-pan, J. Kast-ner, J.and Reuss-ner, 
+and
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8 <D:/ABhattacharya/Internship2014/Docs/MetaTracts_pvis/imagesMT2014/crop-16/
+bundles.png> <D:/ABhattacharya/Internship2014/Docs/MetaTracts_pvis/imagesMT2014
+/crop-16/vol_mesh.png>]) [9
+
+]
+(D:\ABhattacharya\Internship2014\Docs\MetaTracts_pvis\metaTracts-pvis2014.aux) 
+) 
+Here is how much of TeX's memory you used:
+ 3585 strings out of 493921
+ 56507 string characters out of 3144870
+ 117652 words of memory out of 3000000
+ 6765 multiletter control sequences out of 15000+200000
+ 65126 words of font info for 143 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 44i,15n,47p,1243b,347s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/hoekwater/rsfs/rsfs10.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/urw/symbol/usyr.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/tim
+es/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on metaTracts-pvis2014.pdf (9 pages, 6785728 bytes).
+PDF statistics:
+ 112 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 67 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -51,7 +51,7 @@ To the best of our knowledge, there is no current work that can resolve simple q
 \begin{itemize}
 \item{ How to extract and visualize the geometric structure of a particular fiber bundle?}
 \item{ How to visualize the interaction between a particular pair of fiber bundles (crossovers/braiding) or a unit cell?}
-\item{ Which fiber bundles show a particular orientation, how may different orientations are prevalent in a unit cell? }
+\item{ Which fiber bundles show a particular orientation? }
 \item{ Which fiber bundles are of the same type of yarn (i.e. which bundles show similar sizes or diameters), which is the largest or smallest fiber bundle?}
 \end{itemize}
 
@@ -171,7 +171,7 @@ We make the following assumptions on our data:
 \begin{figure}[tb]
 \centering
 %\includegraphics[width=0.45\textwidth]{imagesMT2014/algo.png}
-\includegraphics[width=0.5\textwidth]{imagesMT2014/image3.png}
+\includegraphics[width=0.5\textwidth]{imagesMT2014/image3b.png}
 \caption{Flow chart of the MetaTracts approach for fiber bundle extraction}
 \label{fig:flowchart}
 \end{figure}
@@ -275,8 +275,10 @@ In $\mathbb{R}^2$ all the above properties hold except that cylinders are replac
    \includegraphics[ width=0.45\textwidth]{imagesMT2014/image4}
  % \includegraphics[ width=0.45\textwidth]{imagesMT2014/MT_abstract} 
   \end{center}
+  \vspace{-1em}
  \caption{MetaTracts generation: (B) MetaTract generation, region with $R_H$ less than threshold. (A) close up of marked region in (B). (C) Parts of a single MetaTract.}
   \label{fig:algo}
+    \vspace{-1.5em}
 \end{figure}
 The set of vertices which are in the blue region but not overlapped by green are possible candidates for the start point of the next cylinder in a particular MetaTract. We call these vertices \textit{``candidate vertices"}. From these we select another grid vertex which will be the start point for the next cylinder.
 %\begin{figure}
@@ -386,7 +388,7 @@ For our test case there are two major directions of the fiber bundles. So $K$ wa
 \begin{figure}[tb]
   \centering  	
  %\includegraphics[width=0.45\textwidth]{imagesMT2014/crop-16/orientation_cluster.PNG}
-  \includegraphics[width=0.45\textwidth]{imagesMT2014/image6}
+  \includegraphics[width=0.55\textwidth]{imagesMT2014/garb2}
   	\caption{(B) Result of K means clustering with data points projected to the top three eigenvectors as major axes. (A) MetaTracts belonging to orientation cluster 1. (B) MetaTracts belonging to orientation cluster 2. MetaTracts in gray(A,C) show context. }
   \label{fig:orientation_clustering}
   \end{figure}
@@ -444,15 +446,15 @@ We removed the MetaTracts that were in those clusters from the data set and reap
 To address the problem of short MetaTracts joining different fiber bundles, we applied hierarchical clustering and then removed the
 shortest fibers (fibers less than 0.6 times the median length) in each bundle. We then reapplied hierarchical clustering.
 We repeated both until a steady state of clusters is reached and no new small fibers can be removed. The results of clustering the orientation clusters are shown in Fig.~\ref{fig:crop-16-decomp}.
-\begin{figure*}
+\begin{figure}
 \centering
-		\includegraphics[width=0.4\textwidth]{imagesMT2014/garb1}~
-		\includegraphics[width=0.4\textwidth]{imagesMT2014/image7b}
+		%\includegraphics[width=0.4\textwidth]{imagesMT2014/garb1}~
+		\includegraphics[width=0.5\textwidth]{imagesMT2014/vol}
 	%\includegraphics[width=0.45\textwidth]{imagesMT2014/crop-16/bundles}~ 
 	%\includegraphics[height=0.35\textwidth]{imagesMT2014/crop-16/vol_mesh.png} 
 	\caption{(A) Orientation wise decomposition of data set Figure~\ref{fig:data-char}A into the extracted bundles and (B) all of them combined.(C) Shows the results of voxelization of (B). (D) shows a 2D slice of the volume. (E,F) shows the extracted meshes.}
 	\label{fig:crop-16-decomp}
-\end{figure*}  
+\end{figure}  
   
   
 % We in our approach use Zhang et al.~\cite{Zhang2008} Hierarchical clustering approach. Zhang et al.\cite{Zhang2008} define the distance between two DTI fibers Q and R as the larger mean of thresholded closest distances (equation \ref{eqn:dist}).

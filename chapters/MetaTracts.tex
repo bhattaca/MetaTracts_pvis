@@ -12,8 +12,12 @@ Modern industry is increasingly demanding function orientation, integration, and
 
 In general, CFRP materials show highly desired characteristics as high specific stiffness, high specific strength, high corrosion resistance at considerably lower weight compared to conventional materials. At the same time highly complex and integrated components may be produced from CFRPs, which were previously impossible to manufacture. For example even primary structures and highly loaded components in aeronautics are been increasingly manufactured from CFRP.
 
-Carbon fiber reinforced polymer components, more specifically CFRP laminates with endless carbon fibers which we focus on in this work, typically consist of two main components: 
-The matrix on the one side, which acts as a bonding component and the reinforcements on the other side, which allows for achieving the desired characteristics. To manufacture CFRP laminates with endless carbon fibers, various production processes are in industrial use. Most of these processes start with the reinforcement component by weaving individual carbon fiber bundles (yarn) into sheets of carbon fiber cloth in a predefined pattern. These sheets of woven carbon fiber cloth, which form the geometrical structure of the final CFRP materials, are also refereed to as fabric. Depending on the requirements of the final component as well as on the manufacturing process, fabrics may be stacked in multiple layers of the cloth. Both alignment of fabrics and the weaving pattern of the individual carbon fiber bundles strongly influence the strength, durability and stiffness properties. Next, resins are integrated in the material system to fill the gaps in the fabric, forming the matrix component. The main function of this matrix component is to act as a bonding component between the individual carbon fiber bundles. For the matrix of CFRP material systems with endless carbon fibers typically resins such as epoxy are frequently used. In special applications additional filler materials, such as colors or other particles, may be integrated. The production process CFRP laminate is finished after curing the resin and the CFRP laminate is ready for further processing. 
+
+
+Typically,  carbon fiber reinforced polymer components, more specifically CFRP laminates consists of two main components:
+
+The matrix on the one side, which acts as a bonding component and the reinforcements on the other side, which allows for achieving the desired characteristics. To manufacture CFRP laminates with endless carbon fibers, various production processes are in industrial use. Most of these processes start with the reinforcement component by weaving individual carbon fiber bundles (yarn) into sheets of carbon fiber cloth in a predefined pattern. These sheets of woven carbon fiber cloth, which form the geometrical structure of the final CFRP materials, are also refereed to as fabric. Depending on the requirements of the final component as well as on the manufacturing process, fabrics may be stacked in multiple layers of the cloth. Both alignment of fabrics and the weaving pattern of the individual carbon fiber bundles strongly influence the strength, durability and stiffness properties. Next, resins are integrated in the material system to fill the gaps in the fabric, forming the matrix component. The main function of this matrix component is to act as a bonding component between the individual carbon fiber bundles. For the matrix of CFRP material systems with endless carbon fibers typically resins such as epoxy are frequently used. In special applications additional filler materials, such as colors or other particles, may be integrated. 
+%The production process CFRP laminate is finished after curing the resin and the CFRP laminate is ready for further processing. 
 
 The increasing share of CFRPs and also the complexity of both material system as well as the final components generated a strong demand towards non-destructive testing (NDT) techniques for quality control~\cite{Red2012}. Ultrasonic testing is yet the most commonly used method for non-destructive testing of carbon fiber reinforce polymers. On the one hand ultrasonic testing provides a quick and cost-efficient overview. But on the other hand it shows low resolution and may generate arbitrary results, e.g. due to the geometry of the final component. 
 
@@ -82,7 +86,8 @@ Mori et al.~\cite{Mori2002} showed that tract reconstruction techniques could be
 \label {subsec:fiberClus}
 %!!!!! TODO REFINE FIBER CLUSTERING !!!!!
 %The next step is to identify  anatomically relevant fiber bundles. This is achieved through fiber clustering.
-The general assumption of fiber clustering in diffusion tensor imaging is that a similarity measure based on factors such as proximity between fibers can be used to interpret a collection of fiber tracts as bundles. Extensive research has been done on automatic DTI fiber clustering methods (see \cite{Corouge2004},~\cite{Brun2003},~\cite{Brun2004},~\cite{Zhang2008},~\cite{westinMEDIA02}). 
+The general assumption of fiber clustering in diffusion tensor imaging is that a similarity measure based on factors such as proximity between fibers can be used to interpret a collection of fiber tracts as bundles. Extensive research has been done on automatic DTI fiber clustering methods
+% (see \cite{Corouge2004},~\cite{Brun2003},~\cite{Brun2004},~\cite{Zhang2008},~\cite{westinMEDIA02}). 
 
 The clustering approach divides the problem into two parts. The first part deals with finding a suitable proximity measure and the second deals with the choice of the clustering method. Pairwise proximity measures include, endpoint distances~\cite{Brun2003} and mean of the closest distances between points on two fibers~\cite{Corouge2004}. Zhang et al.~\cite{Zhang2008} introduced a thresholded version of the of the above distance so that fibers that are close for certain distance and then diverge are clustered separately. Brun et al.~\cite{Brun2004} uses normalized cuts along with a pairwise distances  measure computed using a 9-D fiber shape descriptors. The choice of the clustering algorithm can be broadly divided into those approaches using hierarchical clustering (see ~\cite{Moberts2005},~\cite{Zhang2008}) and those using spectral clustering (see~\cite{jonasson2005},~\cite{ODonnell2007},~\cite{Brun2004})
  
@@ -137,8 +142,8 @@ Tools based on image analysis, fiber tracking and clustering into bundles in DTI
 \section {Data Characteristic and Assumptions}
 \label{sec:char_data}
 
-Figure \ref{fig:data-char} shows dataset1 with woven fiber bundles. Dataset1 is 450x300x500 voxels in size with isotropic resolution of $2\mu m$, the datatype is uint8. It clearly shows the weaving structure of the composite unit cell as regional subset of the recurring fiber bundle weaving pattern. The unit cell is used as a basis structure for CFRP manufacturing. The alignment and weaving pattern of the fiber bundles in the cloth influences the strength and stiffness properties of the resulting material. Figure~\ref{fig:data-char}A shows a volume rendering of the dataset. B shows 2D slices along the X(right) and C in Z(left) axis. Figure~\ref{fig:data-char}D shows the zoomed in version of the green square. 
-The resolution of dataset1 renders the individual carbon fibers in a fiber bundle are hard to resolve using 2D slice images only. Figure~\ref{fig:data-char}D contains multiple bundles going in opposite directions. However, the separation between two fiber bundles is barely visible. The carbon fibers themselves do not differ much from the underlying epoxy matrix in terms of attenuation which poses an additional challenge for characterization. The fiber bundles themselves may differ in terms of the amount of fibers in the bundle, figure~\ref{fig:data-char}A shows the large variation in cross section sizes among the bundles.
+Figure \ref{fig:data-char} shows dataset1 with woven fiber bundles. Dataset1 is 450x300x500 voxels in size with isotropic resolution of $2\mu m$, the datatype is uint8. It clearly shows the weaving structure of the composite unit cell as regional subset of the recurring fiber bundle weaving pattern. The unit cell is used as a basis structure for CFRP manufacturing. The alignment and weaving pattern of the fiber bundles in the cloth influences the strength and stiffness properties of the resulting material. Figure~\ref{fig:data-char}(A) shows a volume rendering of the dataset. Fig.~\ref{fig:data-char}(B) shows 2D slices along the X and Fig.~\ref{fig:data-char}(C) in Z(left) axis. Figure~\ref{fig:data-char}(D) shows the zoomed in version of the green square. 
+The resolution of dataset1 renders the individual carbon fibers in a fiber bundle are hard to resolve using 2D slice images only. Figure~\ref{fig:data-char}(D) contains two bundles going in opposite directions. However, the separation between two fiber bundles is barely visible. The carbon fibers themselves do not differ much from the underlying epoxy matrix in terms of attenuation which poses an additional challenge for characterization. The fiber bundles themselves may differ in terms of the amount of fibers in the bundle, figure~\ref{fig:data-char}(A) shows the large variation in cross section sizes among the bundles.
 Depending on the weaving pattern the fiber bundles cross each other in different orientations. In general the number of orientations is limited by the weaving pattern. In all our data sets the number of separate orientations was two. Nevertheless, the weaving pattern may cause the individual bundles to be curved. In consequence of the weaving pattern of the fiber bundles, individual fibers may be adjacent in euclidean distance but belong to different bundles. 
 We make the following assumptions on our data:
 \begin{itemize}
@@ -176,7 +181,7 @@ We make the following assumptions on our data:
 \label{fig:flowchart}
 \end{figure}
 
-Figure \ref{fig:flowchart} shows our pipeline. The approach consists of multiple steps which we divide into two broad phases, extracting the MetaTracts  (this section) and  finding plausible fiber bundles (Section~\ref{subsec:fiber-bundles}).
+Figure \ref{fig:flowchart} shows our pipeline. The approach consists of multiple steps. MetaTracts generations Sec.~\ref{sec:approach} and  finding plausible fiber bundles (Section~\ref{subsec:fiber-bundles}).
 %\subsection {Extracting MetaTracts}
 %\label{subsec:ExFiberCyl}
 %We explain the different steps of MetaTracts extraction.
@@ -269,7 +274,7 @@ Traditional integral curve based techniques cannot be used to extract fiber bund
 
 \subsection {MetaTracts generation}
 \label{subsec:MetaTracts-generation}
-In $\mathbb{R}^2$ all the above properties hold except that cylinders are replaced by rectangles. We explain the process of MetaTracts generation in $\mathbb{R}^2$. The procedure trivially extends to $\mathbb{R}^3$. The reliable Hessian step  generates a local orientation in $\mathbb{R}^2$ and a $R_H$[0,1]. In Figure \ref{fig:algo} all regions which have reliable Hessian less than the threshold have been marked in green. Let the seed point associated with the MetaTract be grid point $C_{p}$ (Property 2, Section~\ref{subsec:mtprop}). The local orientation at $C_p$ as computed in the step above is $N_P$ and is given by the blue arrow (Figure~\ref{fig:algo}C). We generate a rectangle of length L and radius R, the blue dashed rectangle shows the rectangle generated at $C_p$ (Property 3 and 5, Section~\ref{subsec:mtprop}). 
+In $\mathbb{R}^2$ all the above properties hold except that cylinders are replaced by rectangles. We explain the process of MetaTracts generation in $\mathbb{R}^2$. The procedure trivially extends to $\mathbb{R}^3$. The reliable Hessian step  generates a local orientation in $\mathbb{R}^2$ and a $R_H$[0,1]. In Figure \ref{fig:algo} all regions which have reliable Hessian less than the threshold have been marked in blue. Let the seed point associated with the MetaTract be grid point $C_{p}$ (Property 2, Section~\ref{subsec:mtprop}). The local orientation at $C_p$ as computed in the step above is $N_P$ and is given by the dark green arrow (Figure~\ref{fig:algo}C). We generate a rectangle of length L and radius R, the green dashed rectangle shows the rectangle generated at $C_p$ (Property 3 and 5, Section~\ref{subsec:mtprop}). 
 \begin{figure}[tb]
   \begin{center}
    \includegraphics[ width=0.45\textwidth]{imagesMT2014/image4}
@@ -280,7 +285,7 @@ In $\mathbb{R}^2$ all the above properties hold except that cylinders are replac
   \label{fig:algo}
     \vspace{-1.5em}
 \end{figure}
-The set of vertices which are in the blue region but not overlapped by green are possible candidates for the start point of the next cylinder in a particular MetaTract. We call these vertices \textit{``candidate vertices"}. From these we select another grid vertex which will be the start point for the next cylinder.
+The set of vertices which are in the green region but not overlapped by blue are possible candidates for the start point of the next cylinder in a particular MetaTract. We call these vertices \textit{``candidate vertices"}. From these we select another grid vertex which will be the start point for the next cylinder.
 %\begin{figure}
 %\centering
 % \includegraphics[width=0.25\textwidth]{imagesMetaTracts/angle-diff.png}
@@ -304,7 +309,7 @@ Priority = \gamma_1 e^{(-angle^2 / \alpha^2)} + \gamma_2e^{(-dist^2 / \beta^2)}
 \end{equation}
 $\gamma_1$, $\gamma_2$ are the  weights ($\mathbb{R}_{\ge 0}$)  which decide how the priority depends on the affine combination of the two factors. For all our cases we use ($\gamma_1$ = $1 / 3 $ and $\gamma_2$ = $2 / 3$). In general we suggest $\gamma_1 +\gamma_2 = 1 $ and $\gamma_1 \leq \gamma_2$). At each iteration we pick the top element in the priority queue generate the corresponding cylinder and repeat the steps. Essentially, Equation~\ref{eqn:algo_1}, selects a grid point which is the furthest from the current point and going in a similar direction. This gives it the advantage of tackling noise/errors in local orientation better than integral curves by looking at multiple choices for vertices and avoiding intra cell interpolation (for orientation) in an already noisy environment. 
  
-In this particular example in Figure~\ref{fig:algo}B we select the orange grid vertex next and repeat the process. We do not select the purple vertex (Figure~\ref{fig:algo}C) because it is not a candidate vertex. If we generate tracts that have erroneous local orientations they will not be able to find further possible candidate vertices and will be of short length. Short tracts are then removed. The MetaTracts generated are shown in Figure~\ref{fig:length_distribution}A. The MetaTracts are colored with the mean orientation direction mapped to the RGB space. That consistent orientation is a key intrinsic feature in the data becomes visually pronounced.
+In this particular example in Figure~\ref{fig:algo}(B) we select the orange grid vertex next and repeat the process. We do not select the purple vertex (Figure~\ref{fig:algo}(C)) because it is not a candidate vertex. If we generate tracts that have erroneous local orientations they will not be able to find further possible candidate vertices and will be of short length. Short tracts are then removed. The MetaTracts generated are shown in Figure~\ref{fig:length_distribution}A. The MetaTracts are colored with the mean orientation direction mapped to the RGB space. That consistent orientation is a key intrinsic feature in the data becomes visually pronounced.
 We apply uniform, dense seeding to the XCT volume data to trace and generate the tracts of fiber bundles. 
  
 % \begin{figure}[h]
@@ -429,7 +434,7 @@ Instead of using the Hausdorff distance, $\max(H_{dir}(P,Q),H_{dir}(Q,P)$, we us
 Note that if $P$ and $Q$ overlap but do not cover the same parts of the fiber bundle, then $H_{dir}(P,Q)$ and $H_{dir}(Q,P)$ and $\min(H_{dir}(P,Q),H_{dir}(Q,P))$ will be large.
  
 The directed Hausdorff distance is very sensitive to outliers in the data.
-However, because MetaTracts are constructed using cylinders with similar orientations, they are not plagued by outliers.
+However, because MetaTracts after orientation clustering are constructed using cylinders with similar orientations, they are not plagued by outliers.
 To cluster based on MetaTract proximity, we used single linkage hierarchical clustering.
 Hierarchical clustering has a single parameter $h$, the desired number of clusters.
 In hierarchical clustering each objects starts in its own cluster and clusters are merged based on some criterion.
@@ -445,7 +450,7 @@ To address the problem of small clusters, we applied hierarchical clustering and
 We removed the MetaTracts that were in those clusters from the data set and reapplied hierarchical clustering.
 To address the problem of short MetaTracts joining different fiber bundles, we applied hierarchical clustering and then removed the
 shortest fibers (fibers less than 0.6 times the median length) in each bundle. We then reapplied hierarchical clustering.
-We repeated both until a steady state of clusters is reached and no new small fibers can be removed. The results of clustering the orientation clusters are shown in Fig.~\ref{fig:crop-16-decomp}.
+We repeated both until a steady state of clusters is reached and no new small fibers can be removed. The results of clustering the orientation clusters Fig.~\ref{fig:orientation_clustering}(A,C) are shown in Fig.~\ref{fig:orientation_clustering}(D,E) respectively. Note how the purple cluster Fig.~\ref{fig:orientation_clustering}(E) bundle ``7'' is extracted well.
 \begin{figure}
 \centering
 		%\includegraphics[width=0.4\textwidth]{imagesMT2014/garb1}~

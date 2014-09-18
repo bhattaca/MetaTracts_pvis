@@ -352,8 +352,8 @@ We apply uniform, dense seeding to the XCT volume data to trace and generate the
 \begin{figure}[tb]
 \centering
 	%\includegraphics[width=0.45\textwidth]{imagesMT2014/crop-16/length_dist.png}
-		\includegraphics[width=0.45\textwidth]{imagesMT2014/image5}
-	\caption{(A) MetaTracts colored according to mean orientations. (B) length distribution of individual MetaTracts for a particular bundle.}
+		\includegraphics[width=0.45\textwidth,  trim = 0mm 100mm 0mm 50mm, clip]{imagesMT2014/image_length}
+	\caption{(A) MetaTracts colored according to mean orientations. (B) length distribution of individual MetaTracts for a particular bundle.(unit for length is grid cube edge length)}
 	\label{fig:length_distribution}
 \end{figure}
 
@@ -455,7 +455,7 @@ We repeated both until a steady state of clusters is reached and no new small fi
 \begin{figure}
 \centering
 		%\includegraphics[width=0.4\textwidth]{imagesMT2014/garb1}~
-		\includegraphics[width=0.5\textwidth, trim = 0mm 70mm 0mm 15mm, clip]{imagesMT2014/image7b.pdf}
+		\includegraphics[width=0.5\textwidth, trim = 0mm 70mm 0mm 20mm, clip]{imagesMT2014/image7b.pdf}
 	%\includegraphics[width=0.45\textwidth]{imagesMT2014/crop-16/bundles}~ 
 	%\includegraphics[height=0.35\textwidth]{imagesMT2014/crop-16/vol_mesh.png} 
 	\caption{(A) Volume rendering of data set Figure~\ref{fig:data-char}A.(B) shows a single slice of the data set. (C) shows two of the extracted meshes together. (D) shows the meshes separately.}
@@ -565,7 +565,7 @@ We integrated MetaTracts into a tool and created a user evaluation questionnaire
 \label{sec:param_choices}
 \begin{figure}
 \centering
-	\includegraphics[width=0.4\textwidth]{imagesMT2014/crop-16/histogram_10_A.PNG}
+	\includegraphics[width=0.5\textwidth,  trim = 10mm 40mm 0mm 15mm, clip]{imagesMT2014/image_length_histogram.pdf}
 	\caption{Number of tracts and median, minimum and maximum length of individual MetaTracts in the orientation cluster Fig.~\ref{fig:orientation_clustering}, clustered into 10 clusters (Fig.~\ref{fig:crop-16-decomp}A top). The unit for length is the grid cube length. Figure~\ref{fig:length_distribution}(B) shows the length of individual MetaTracts in cluster 6. Clusters labeled 2,3,4,5 and 7 all have cardinality less than 10. }
 	\label{fig:len_dist_crop16}
 \end{figure}

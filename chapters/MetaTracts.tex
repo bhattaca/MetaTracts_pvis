@@ -171,7 +171,8 @@ We make the following assumptions on our data:
 
 \begin{figure}[tb]
 %\includegraphics[width=0.45\textwidth]{imagesMT2014/algo.png}
-\includegraphics[width=0.5\textwidth,  trim = 0mm 300mm 0mm 0mm, clip,]{imagesMT2014/image_algo}
+%\includegraphics[width=0.5\textwidth,  trim = 0mm 300mm 0mm 0mm, clip,]{imagesMT2014/image_algo}
+\includegraphics[width=0.5\textwidth]{images_pvis/workflow}
 \caption{Flow chart of the MetaTracts approach for fiber bundle extraction}
 \label{fig:flowchart}
 \end{figure}
@@ -272,8 +273,7 @@ Traditional integral curve based techniques cannot be used to extract fiber bund
 In $\mathbb{R}^2$ all the above properties hold except that cylinders are replaced by rectangles. We explain the process of MetaTracts generation in $\mathbb{R}^2$. The procedure trivially extends to $\mathbb{R}^3$. The reliable Hessian step  generates a local orientation in $\mathbb{R}^2$ and a $R_H$[0,1]. In Figure \ref{fig:algo} all regions which have reliable Hessian less than the threshold have been marked in blue(Fig.~\ref{fig:algo}B). Let the seed point associated with the MetaTract be grid point $C_{p}$ (Property 2, Section~\ref{subsec:mtprop}). The local orientation at $C_p$ as computed in the step above is $N_P$ and is given by the dark green arrow (Fig.~\ref{fig:algo}C). We generate a rectangle of length L and radius R, the green dashed rectangle shows the rectangle generated at $C_p$ (Property 3 and 5, Section~\ref{subsec:mtprop}). 
 \begin{figure}[tb]
   \begin{center}
-   \includegraphics[ width=0.45\textwidth]{imagesMT2014/image4}
- % \includegraphics[ width=0.45\textwidth]{imagesMT2014/MT_abstract} 
+ \includegraphics[ width=0.45\textwidth]{imagesMT2014/image4}
   \end{center}
   \vspace{-1em}
  \caption{MetaTracts generation: (B) MetaTract generation, region with $R_H$ less than threshold. (A) close up of marked region in (B). (C) Parts of a single MetaTract.}
@@ -347,8 +347,8 @@ MetaTracts in a given fiber bundle do not extend the full length of the bundle. 
 
 \begin{figure}[tb]
 \centering
-	%\includegraphics[width=0.45\textwidth]{imagesMT2014/crop-16/length_dist.png}
-		\includegraphics[width=0.45\textwidth,  trim = 0mm 100mm 0mm 50mm, clip]{imagesMT2014/image_length}
+	\includegraphics[width=0.45\textwidth]{images_pvis/figure5}
+	%\includegraphics[width=0.45\textwidth,  trim = 0mm 100mm 0mm 50mm, clip]{imagesMT2014/image_length}
 	\caption{(A) MetaTracts colored according to mean orientations. (B) length distribution of individual MetaTracts for a particular bundle.(unit for length is grid cube edge length). A single fiber bundle is made of MetaTracts of varying length}
 	\label{fig:length_distribution}
 \end{figure}

@@ -84,15 +84,11 @@
 
 %% Abstract section.
 \abstract{
-This work introduces MetaTracts, a novel method for extracting and visualizing individual fiber bundles as well as their weaving pattern in endless carbon fiber reinforced polymer (CFRP) materials, scanned by X-ray computed tomography (XCT). 
-
-For the purpose of characterizing larger areas of CFRP materials such as complete unit cells integrating the recurring weaving pattern, the proposed workflow is designed to handle XCT scans of low resolution, in which the individual fibers of the bundles to be extracted are not or just barely visible.  
-The proposed workflow applies and extends methods originally presented for the field of diffusion tensor imaging in order to cope with the low data quality: 
+This work introduces MetaTracts, a novel method  for extracting and visualizing individual fiber bundles as well as their weaving patterns from X-ray computed tomography (XCT) scans of  endless carbon fiber reinforced  polymers (CFRP). The  proposed work flow is designed  to analyze large areas of CFRP material  such as complete unit cells integrating the recurring weaving pattern. It is designed to handle XCT scans of low resolution, in which  individual  fibers  are not  visible or are barely visible. 
 First, a coarse version of integral curves is used to trace subsections of the individual fiber bundles in the woven CFRP materials. We call these sections MetaTracts.
-In the second step these extracted fiber bundle sections (MetaTracts) are clustered using a two step approach, wherein the first step clusters according to orientation and the second step clusters by proximity of the MetaTracts. 
-Finally, the tool can also  generate volumetric representations as well as surface models of the extracted fiber bundles to be exported for further analysis.
-
-We evaluate the proposed workflow on a number of real world datasets and demonstrate that MetaTracts effectively and robustly identifies and separates different fiber bundles. 
+In the second step these extracted fiber bundle sections (MetaTracts) are clustered using a two step approach: first by orientation then by proximity.
+The tool can also  generate volumetric representations as well as surface models of the extracted fiber bundles to be exported for further analysis.
+We evaluate the proposed work flow on a number of real world datasets and demonstrate that MetaTracts effectively and robustly identifies and separates different fiber bundles. 
 %mention user study here?%
 %This work will provide a stepping stone to introduce novel non destructive testing techniques for reinforced fiber bundles analysis.
 } % end of abstract

@@ -273,7 +273,7 @@ Traditional integral curve based techniques cannot be used to extract fiber bund
 In $\mathbb{R}^2$ all the above properties hold except that cylinders are replaced by rectangles. We explain the process of MetaTracts generation in $\mathbb{R}^2$. The procedure trivially extends to $\mathbb{R}^3$. The reliable Hessian step  generates a local orientation in $\mathbb{R}^2$ and a $R_H$[0,1]. In Figure \ref{fig:algo} all regions which have reliable Hessian less than the threshold have been marked in blue(Fig.~\ref{fig:algo}B). Let the seed point associated with the MetaTract be grid point $C_{p}$ (Property 2, Section~\ref{subsec:mtprop}). The local orientation at $C_p$ as computed in the step above is $N_P$ and is given by the dark green arrow (Fig.~\ref{fig:algo}C). We generate a rectangle of length L and radius R, the green dashed rectangle shows the rectangle generated at $C_p$ (Property 3 and 5, Section~\ref{subsec:mtprop}). 
 \begin{figure}[tb]
   \begin{center}
- \includegraphics[ width=0.45\textwidth]{imagesMT2014/image4}
+ \includegraphics[ width=0.4\textwidth]{imagesMT2014/image4}
   \end{center}
   \vspace{-1em}
  \caption{MetaTracts generation: (B) MetaTract generation, region with $R_H$ less than threshold. (A) close up of marked region in (B). (C) Parts of a single MetaTract.}
@@ -347,7 +347,7 @@ MetaTracts in a given fiber bundle do not extend the full length of the bundle. 
 
 \begin{figure}[tb]
 \centering
-	\includegraphics[width=0.45\textwidth]{images_pvis/figure5}
+	\includegraphics[width=0.45\textwidth]{images_pvis/figure5.png}
 	%\includegraphics[width=0.45\textwidth,  trim = 0mm 100mm 0mm 50mm, clip]{imagesMT2014/image_length}
 	\caption{(A) MetaTracts colored according to mean orientations. (B) length distribution of individual MetaTracts for a particular bundle.(unit for length is grid cube edge length). A single fiber bundle is made of MetaTracts of varying length}
 	\label{fig:length_distribution}
@@ -392,7 +392,7 @@ For our test case there are two major directions of the fiber bundles. So $K$ wa
 
 \begin{figure}[tb] 
   \centering  	
- \includegraphics[width=0.45\textwidth]{images_pvis/figure6.pdf}
+  %\includegraphics[width=0.45\textwidth]{images_pvis/figure6.png}
 % \includegraphics[width=0.5\textwidth]{imagesMT2014/image_clustering.png}
   	\caption{(B) Result of K means clustering with data points projected to the top three eigenvectors as major axes. (A) MetaTracts belonging to orientation cluster 1. (C) MetaTracts belonging to orientation cluster 2. MetaTracts in gray(A,C) show context.
   	(D,E) shows the result of distance based clustering on the orientation cluster. (F) shows the combined result. }
@@ -533,7 +533,8 @@ To voxelize the space,  we compute a neighborhood around each voxel. We then enu
 
 \begin{figure}[t]
 \centering
-	\includegraphics[width=0.45\textwidth]{imagesMT2014/image8b}
+	%\includegraphics[width=0.45\textwidth]{imagesMT2014/image8b}
+	\includegraphics[width=0.4\textwidth, trim = 0mm 30mm 0mm 0mm, clip,]{images_pvis/figure8}
 	\caption{Data set with flat thin and compact bundles. (A) shows the volume rendering and a 2D slice with one of the boundaries marked in green, (B) shows the clusters according to individual orientation. (C) shows the complete result. (D) shows the voxelization of (C).}
 	\label{fig:prepreg}
 \end{figure}

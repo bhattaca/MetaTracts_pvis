@@ -131,7 +131,7 @@ Tools based on image analysis, fiber tracking and clustering into bundles in DTI
 \begin{figure}[tb]
 \centering
 %\includegraphics[width=0.45\textwidth]{imagesMT2014/MT_data_4_2.png}
-\includegraphics[width=0.5\textwidth, trim = 0mm 110mm 0mm 0mm, clip,]{imagesMT2014/image1B}
+\includegraphics[width=0.5\textwidth, trim = 0mm 110mm 0mm 0mm, clip,]{images_pvis/figure1}
 \caption{Data Characteristics. (A) shows a rendering of the data. (B) shows 2D slices along the X and (C) along the Z axis. (D) close up of the region marked in green in (C), multiple fiber bundles cross and are indistinguishable by visual inspection alone. }
 \label{fig:data-char}
 \end{figure}
@@ -169,7 +169,8 @@ We make the following assumptions on our data:
 \section {Extracting MetaTracts }
 \label{sec:approach}
 
-\begin{figure}[tb]
+\begin{figure}[t]
+	\centering
 %\includegraphics[width=0.45\textwidth]{imagesMT2014/algo.png}
 %\includegraphics[width=0.5\textwidth,  trim = 0mm 300mm 0mm 0mm, clip,]{imagesMT2014/image_algo}
 \includegraphics[width=0.5\textwidth]{images_pvis/workflow.png}
@@ -230,8 +231,8 @@ We note some intrinsic differences between the DTI and our XCT data. Fiber trace
 %
 \begin{figure}[tb]
 \centering
-%\includegraphics[width=0.45\textwidth]{imagesMT2014/MT_data_rh.png}
-\includegraphics[width=0.5\textwidth,  trim = 0mm 90mm 0mm 0mm, clip]{imagesMT2014/image2B.pdf}
+%\includegraphics[width=0.45\textwidth]{images_pvis/figure3}
+\includegraphics[width=0.5\textwidth,  trim = 0mm 90mm 0mm 0mm, clip]{images_pvis/figure3}
 \caption{Reliable Hessians. (A) Colored according to Orientation vector mapped to RGB. (B) 2D slice along Z and (C) along X axis. (D) close up of the region marked in green in C.}
 \label{fig:reliable_hessian}
 \end{figure}
@@ -392,7 +393,7 @@ For our test case there are two major directions of the fiber bundles. So $K$ wa
 
 \begin{figure}[tb] 
   \centering  	
-  \includegraphics[width=0.4\textwidth]{images_pvis/figure6.pdf}
+  \includegraphics[width=0.5\textwidth]{images_pvis/figure6.png}
   %\includegraphics[width=0.45\textwidth]{imagesMT2014/image_clustering}
   	\caption{(B) Result of K means clustering with data points projected to the top three eigenvectors as major axes. (A) MetaTracts belonging to orientation cluster 1. (C) MetaTracts belonging to orientation cluster 2. MetaTracts in gray(A,C) show context.
   	(D,E) shows the result of distance based clustering on the orientation cluster. (F) shows the combined result. }
@@ -566,7 +567,8 @@ We integrated MetaTracts into a tool and created a user evaluation questionnaire
 \label{sec:param_choices}
 \begin{figure}
 \centering
-	\includegraphics[width=0.5\textwidth,  trim = 10mm 40mm 0mm 15mm, clip]{imagesMT2014/image_length_histogram.pdf}
+	\includegraphics[width=0.5\textwidth,  trim = 0mm 260mm 0mm 15mm, clip]{images_pvis/figure9}
+	%\includegraphics[width=0.5\textwidth,  trim = 10mm 40mm 0mm 15mm, clip]{imagesMT2014/image_length_histogram.pdf}
 	\caption{Number of tracts and median, minimum and maximum length of individual MetaTracts in the orientation cluster Fig.~\ref{fig:orientation_clustering}, clustered into 10 clusters (Fig.~\ref{fig:crop-16-decomp}A top). The unit for length is the grid cube length. Figure~\ref{fig:length_distribution}(B) shows the length of individual MetaTracts in cluster 6. Clusters labeled 2,3,4,5 and 7 all have cardinality less than 10. }
 	\label{fig:len_dist_crop16}
 \end{figure}

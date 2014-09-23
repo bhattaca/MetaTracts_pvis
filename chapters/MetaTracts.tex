@@ -274,7 +274,7 @@ Traditional integral curve based techniques cannot be used to extract fiber bund
 In $\mathbb{R}^2$ all the above properties hold except that cylinders are replaced by rectangles. We explain the process of MetaTracts generation in $\mathbb{R}^2$. The procedure trivially extends to $\mathbb{R}^3$. The reliable Hessian step  generates a local orientation in $\mathbb{R}^2$ and a $R_H$[0,1]. In Figure \ref{fig:algo} all regions which have reliable Hessian less than the threshold have been marked in blue(Fig.~\ref{fig:algo}B). Let the seed point associated with the MetaTract be grid point $C_{p}$ (Property 2, Section~\ref{subsec:mtprop}). The local orientation at $C_p$ as computed in the step above is $N_P$ and is given by the dark green arrow (Fig.~\ref{fig:algo}C). We generate a rectangle of length L and radius R, the green dashed rectangle shows the rectangle generated at $C_p$ (Property 3 and 5, Section~\ref{subsec:mtprop}). 
 \begin{figure}[tb]
   \begin{center}
- \includegraphics[ width=0.4\textwidth]{imagesMT2014/image4}
+ \includegraphics[ width=0.3\textwidth]{imagesMT2014/image4}
   \end{center}
   \vspace{-1em}
  \caption{MetaTracts generation: (B) MetaTract generation, region with $R_H$ less than threshold. (A) close up of marked region in (B). (C) Parts of a single MetaTract.}
@@ -575,6 +575,15 @@ We integrated MetaTracts into a tool and created a user evaluation questionnaire
 The critical parameters are $K$ for the K-means in orientation based clustering and $h$ for the hierarchical clustering. K denotes the number of major directions, which is either known a priori or can be easily estimated by looking at the weaving pattern. 
 Our framework is robust to the choice of $h$ (Section~\ref{sec:results}). Large $h$ keeps the major bundles intact. For example, in  Fig.~\ref{fig:len_dist_crop16}, where $h$ was set to ten while the ground truth was five, we observe that the major clusters remain well segmented and small clusters can be removed if they have too few elements (clusters 2,3,4,5 and 7 in Fig.~\ref{fig:len_dist_crop16} all have less than 10 elements). This is an appealing trait of the proximity based clustering, thus providing good results even when exact $h$ might be unknown.
 The following parameters were fixed for all the tests. We set the reliable Hessian threshold $R_{h}$ to be 0.3 for all our tests. A $R_{h}$ of 0.0 would mean all points have reliable local orientation which would cause spurious MetaTracts detection. On the other hand a very high $ R_{h}$ would lead to be a decline in number of MetaTracts produced. The $\alpha$ and $\beta$ in $R_{h}$ are as explained in Frangi et al. \cite{Frangi1998} and set to 0.5. The length and the width parameters for the cylinders for the MetaTracts decide how coarse the fiber cylinders are. Larger cylinders will handle noisy local orientation better as it inspects a higher number of candidate points to extend the fiber. We used 10.00 and 2.00 for length and breadth, respectively for all tests. $\alpha$ and $\beta$ in equation~\ref{eqn:algo_1} decide how quickly the value of the factor decays, we have used [7-10] and half the length of cylinder (5.0). Our number of fiber bundle directions are limited, thus even for small $\eta$, the distinction between the orientation clusters is preserved quite well. We compared  $\eta=3-7$ experimentally without any dramatic change in results. 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth, trim = 10mm 100mm 0mm 170mm, clip]{images_pvis/figure10}
+	%\includegraphics[width=0.5\textwidth, trim = 0mm 70mm 0mm 20mm, clip]{imagesMT2014/image7b.pdf}
+	%\includegraphics[width=0.45\textwidth]{imagesMT2014/crop-16/bundles}~ 
+	%\includegraphics[height=0.35\textwidth]{imagesMT2014/crop-16/vol_mesh.png} 
+	\caption{(A) Volume rendering of data set Figure~\ref{fig:data-char}A.(B) shows a single slice of the data set. (C) shows two of the extracted meshes together. (D) shows the meshes separately.}
+	\label{fig:comparison}
+\end{figure} 
 %\begin{figure}
 %\centering
 % \subfloat[$\eta=7$]{\includegraphics[width=0.3\linewidth]{imagesMetaTracts/Rplot-ndim3k2}}

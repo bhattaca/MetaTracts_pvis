@@ -174,7 +174,7 @@ We make the following assumptions on our data:
 	\centering
 %\includegraphics[width=0.45\textwidth]{imagesMT2014/algo.png}
 %\includegraphics[width=0.5\textwidth,  trim = 0mm 300mm 0mm 0mm, clip,]{imagesMT2014/image_algo}
-\includegraphics[width=0.5\textwidth]{images_pvis/workflow.png}
+\includegraphics[width=0.5\textwidth]{images_pvis/workflow.pdf}
 \caption{Flow chart of the MetaTracts approach for fiber bundle extraction}
 \label{fig:flowchart}
 \end{figure}
@@ -394,7 +394,7 @@ For our test case there are two major directions of the fiber bundles and $K$ wa
 
 \begin{figure}[tb] 
   \centering  	
-  \includegraphics[width=0.5\textwidth]{images_pvis/figure6.png}
+  \includegraphics[width=0.5\textwidth]{images_pvis/figure6.pdf}
   %\includegraphics[width=0.45\textwidth]{imagesMT2014/image_clustering}
   	\caption{(B) Result of K means clustering with data points projected to the top three eigenvectors as major axes. (A) MetaTracts belonging to orientation cluster 1. (C) MetaTracts belonging to orientation cluster 2. MetaTracts in gray(A,C) show context.
   	(D,E) shows the result of distance based clustering on the orientation cluster. (F) shows the combined result. }
@@ -457,6 +457,8 @@ We repeated both until a steady state of clusters is reached and no new small fi
 
 
 In comparison Fig.~\ref{fig:comparison} shows the MetaTracts in Fig.~\ref{fig:length_distribution}(A) being hierarchically clustered directly using proximity alone into 10,15 and 20 clusters (ground truth being 11). As discussed above, single linkage hierarchical clustering in the presence of overlapping fibers tends to create large clusters and small, low cardinality outliers. In Fig.~\ref{fig:comparison} when ``h" is 10 two large multi-bundle incorrect cluster is generated and the rest are outliers. As ``h" increases, some appropriate bundles start to form. Even at ``h" equals 20, the top bundles all clusters together into one large incorrectly identified bundle.
+
+On the other hand, Fig.~\ref{fig:comparison_orient} shows the MetaTracts in Fig.~\ref{fig:length_distribution}(A) being clustered using K-means clustering after being embedded  in a m-dimensional (lower) space using proximity alone into 10, 15, 20 clusters (ground truth being 11). In the lower dimensional space the spatial context is lost and fibers which are in reality far away are grouped together.   
 \begin{figure}[tb]
 \centering
 		\includegraphics[width=0.4\textwidth]{images_pvis/figure7}
@@ -571,7 +573,7 @@ Finally, the majority participants agreed that the extracted meshes provides bet
 \label{sec:param_choices}
 \begin{figure}[tb]
 \centering
-	\includegraphics[width=0.45\textwidth,  trim = 0mm 260mm 0mm 15mm, clip]{images_pvis/figure9}
+	\includegraphics[width=0.5\textwidth,  trim = 0mm 260mm 0mm 15mm, clip]{images_pvis/figure9}
 	%\includegraphics[width=0.5\textwidth,  trim = 10mm 40mm 0mm 15mm, clip]{imagesMT2014/image_length_histogram.pdf}
 	\caption{Number of tracts and median, minimum and maximum length of individual MetaTracts in the orientation cluster Fig.~\ref{fig:orientation_clustering}A, clustered into 10 clusters. The unit for length is the grid cube length. Fig.~\ref{fig:length_distribution}(B) shows the length of individual MetaTracts in cluster 6. Clusters labeled 2,3,4,5 and 7 all have cardinality less than 10. }
 	\label{fig:len_dist_crop16}
@@ -584,6 +586,14 @@ The following parameters were fixed for all the tests. We set the reliable Hessi
 	\includegraphics[width=0.5\textwidth, trim = 0mm 80mm 0mm 170mm, clip]{images_pvis/figure10}
 	\caption{Direct hierarchical clustering of MetaTracts Fig.~\ref{fig:length_distribution}(A) by proximity into 10,15 and 20 clusters.}
 	\label{fig:comparison}
+\end{figure}
+
+
+\begin{figure}[tb]
+	\centering
+	\includegraphics[width=0.5\textwidth, trim = 0mm 80mm 0mm 170mm, clip]{images_pvis/comparison_orient}
+	\caption{Direct K-means clustering of MetaTracts Fig.~\ref{fig:length_distribution}(A), embedded in a m dimensional space using laplacian eigenmaps by proximity into 10,15 and 20 clusters.}
+	\label{fig:comparison_orient}
 \end{figure} 
 %\begin{figure}
 %\centering

@@ -548,7 +548,7 @@ To voxelize the space,  we compute a neighborhood around each voxel. We then enu
 
  %glass
 We tested our method on multiple datasets with varying characteristics. 
-Figure~\ref{fig:orientation_clustering} shows the result of data set~\ref{fig:data-char} decomposed into 2 orientation and each orientation decomposed into ``h" equlas 10 clusters (the ground truth is 6 and 5 respectively). The hierarchical clustering is robust to over segmentation.
+Figure~\ref{fig:orientation_clustering} shows the result of data set~\ref{fig:data-char} decomposed into 2 orientation and each orientation decomposed into ``h" equals 10 clusters (the ground truth is 6 and 5 respectively). The hierarchical clustering is robust to over segmentation.
 Figure~\ref{fig:len_dist_crop16} shows the median, minimum and maximum lengths per cluster. We generate the correct clusters and outlier bundles with very few elements which can be discarded. As noted in section~\ref{subsec:dist_clustering} the tracts do not run the entire length of the dataset, the median length of MetaTracts in cluster 6 (Fig.~\ref{fig:length_distribution}) is 200 while the maximum MetaTract length in the bundle is about 500 (measured in units of grid cube length: $2\mu m$). Fig.~\ref{fig:length_distribution}(B) shows the length per MetaTract distribution for a particular fiber bundle. 
 Fig.~\ref{fig:prepreg} shows the results on our dataset2. This dataset is dense with \textit{flat and thin} bundles. The dimensions are 300x350x300 and the datatype is uint16 (compared to dataset1 which was only uint8). The bundles are indistinguishable in the original data set Fig.~\ref{fig:prepreg}(A). A green dotted line shows one of the fiber bundle boundary. Fig.~\ref{fig:prepreg}(B) shows the fiber bundles for the two orientation. Fig.~\ref{fig:prepreg}(C) shows the combined results.Fig.~\ref{fig:prepreg}(D) shows the volume after voxelization.
 The fiber bundle extraction using MetaTracts was implemented in C++ using ITK. All clustering was done in R. The preprocessing consists of MetaTract generation the distance computation and the orientation clustering. The hierarchical clustering separately, on the results of the orientation clusters can be done quickly in a few minutes on a Intel Xeon E5-2667 workstation according to user input `h'(section~\ref{sec:param_choices}). We store the normalized direction at each fiber point, thus both distance measures can be extracted simultaneously without extra computation.
@@ -556,22 +556,22 @@ The fiber bundle extraction using MetaTracts was implemented in C++ using ITK. A
 
 \section {User Evaluation}
 \label {sec:user_eval}
-We integrated MetaTracts into a tool and created a user evaluation questionnaire which we distributed.
-%\begin{figure}[h]
-%\centering
-%\subfloat[]{\includegraphics[width=0.25\textwidth]{imagesMT2014/crop-6-F.PNG}}
-%\subfloat[]{\includegraphics[width=0.25\textwidth]{imagesMT2014/orientB.PNG}}
-%\caption{Contextual information: (a) Shows the four largest clusters in the data set in Fig~\ref{fig:prepreg}.
-%(b) shows how the red bundle `bends' under the green bundle, which is not immediately apparent from just the volume rendering.}
-%\label{fig:context}
-%\end{figure}
-
-
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth,  trim = 0mm 60mm 0mm 0mm, clip]{images_pvis/usereval}
+	%\includegraphics[width=0.5\textwidth,  trim = 10mm 40mm 0mm 15mm, clip]{imagesMT2014/image_length_histogram.pdf}
+	\caption{The user evaluation consists of a set of queries on videos of our results, volume rendering and Hessian colormap. The questionnaire tests the effectiveness of MetaTracts in visualizing ``geometric structure" and ``spatial context". The Likert scale goes from 1-5: strongly disagree, disagree, neutral, agree and strongly agree. }
+	\label{fig:userstudy}
+\end{figure}
+We integrated MetaTracts into a tool and created a user evaluation questionnaire. We approached four NDT practitioners who are familiar with X-Ray computed tomography and its visual representations, four material scientists who are experienced in analyzing fiber reinforced polymers and four practitioners of visualization to evaluate our work. The questionnaire uses Likert scale (LS). LS consists of 5 levels from ``Strongly disagree" to ``Strongly agree". Figure~\ref{fig:comparison} shows the results. Task 1 of the questionnaire was to ``identify the number of fiber bundles" from a video of 360 degree rotation of the volume rendering of dataset 1 (Fig.~\ref{fig:data-char}A). This task tests the perception of geometric structure and how common problems like uniform gray scale values and occlusion effects the user. As expected, Fig.~\ref{fig:comparison} shows that evaluators found it difficult to compute the number of bundles from volume rendering alone. Another common approach is to color map the top eigenvector of Hessian matrix to the RGB space. We show a video of the color mapped eigenvector (similar to fig.~\ref{fig:reliable_hessian}A) and asked the same query. Compared to the volume rendering, the Hessian color map provides more information about the major orientations and we see that the evaluators performed relatively better in this test than the direct volume rendering. Majority evaluators agreed or strongly agreed (LS) that Hessian color map was more effective. Finally, we showed the MetaTracts extracted bundles (for orientation 1 and 2 separately fig~\ref{fig:orientation_clustering}D,E). All evaluators could correctly identify the number of fiber bundles. All evaluators agreed that MetaTracts was more effective in perceiving geometric structure than direct volume rendering. They especially liked the 2D slices of the MetaTracts (Fig.~\ref{fig:crop-16-decomp}B, compared to Fig~\ref{fig:data-char}C).
+The next set of tasks (on the MetaTracts results) tests the spatial context perceived from MetaTracts. We achieve this by asking the evaluators to select the largest fiber bundle from a subset of fiber bundles, selecting the smallest from a subset and given a fiber bundle selecting the most similar one from a subset. Due to the problems of occlusions and similar gray scale values these tests are difficult on volume rendering itself, but is straight forward from MetaTracts. In the Likert scale,  majority strongly agreed that the tasks are undemanding compared to volume rendering.
+Finally, the majority evaluators agreed that the extracted meshes provides better spatial context than volume rendering. 
+ 
 \section{Parameter choices}
 \label{sec:param_choices}
 \begin{figure}
 \centering
-	\includegraphics[width=0.5\textwidth,  trim = 0mm 260mm 0mm 15mm, clip]{images_pvis/figure9}
+	\includegraphics[width=0.45\textwidth,  trim = 0mm 260mm 0mm 15mm, clip]{images_pvis/figure9}
 	%\includegraphics[width=0.5\textwidth,  trim = 10mm 40mm 0mm 15mm, clip]{imagesMT2014/image_length_histogram.pdf}
 	\caption{Number of tracts and median, minimum and maximum length of individual MetaTracts in the orientation cluster Fig.~\ref{fig:orientation_clustering}A, clustered into 10 clusters. The unit for length is the grid cube length. Figure~\ref{fig:length_distribution}(B) shows the length of individual MetaTracts in cluster 6. Clusters labeled 2,3,4,5 and 7 all have cardinality less than 10. }
 	\label{fig:len_dist_crop16}

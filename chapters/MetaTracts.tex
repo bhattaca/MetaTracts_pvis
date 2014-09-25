@@ -60,11 +60,11 @@ To the best of our knowledge, there is no current work that can resolve simple q
 
 Answering the above queries from the volume renderings of XCT datasets, or from visual inspection of particular 2D slices is non-trivial, even for experts. We detail and evaluate a method which uses visualization techniques to gain insight into our data. We demarcate the above queries into two parts: \textit{geometric structure} and \textit{spatial context}. Geometric structure refers to the shape, size, and orientation of a fiber bundle or a group of bundles. Spatial context refers to how two or more bundles interact with each other. 
 We advance and interpret techniques from diffusion tensor imaging to extract and visualize geometric structures from 3D X-ray computed tomography data of the woven carbon fiber reinforced composites. The main goal of this work is to expand the state of the art in non-destructive testing through visualization of composite structures in \textit{lower resolutions} and thus \textit{larger areas} of woven fabrics.
-\begin{figure}[h]
+\begin{figure}[tb]
 	\centering
 	%\includegraphics[width=0.45\textwidth]{imagesMT2014/algo.png}
 	%\includegraphics[width=0.5\textwidth,  trim = 0mm 300mm 0mm 0mm, clip,]{imagesMT2014/image_algo}
-	\includegraphics[width=0.5\textwidth]{images_pvis/workflow.png}
+	\includegraphics[width=0.475\textwidth]{images_pvis/workflow.pdf}
 	\caption{Flow chart of the MetaTracts approach for fiber bundle extraction}
 	\label{fig:flowchart}
 \end{figure}
@@ -141,7 +141,7 @@ Tools based on image analysis, fiber tracking and clustering into bundles in DTI
 \begin{figure}[tb]
 \centering
 %\includegraphics[width=0.5\textwidth, trim = 0mm 110mm 0mm 0mm, clip,]{images_pvis/figure1}
-\includegraphics[width=0.5\textwidth]{images_pvis/data-char.pdf}
+\includegraphics[width=\linewidth]{images_pvis/data-char.pdf}
 \caption{Data characteristics: (a) Rendering of the data. (b) 2D slices along the X-axis and (c) 2D slice along the Z-axis. (d) Magnified region marked in green square (c). Multiple fiber bundles cross and are indistinguishable by visual inspection alone. }
 \label{fig:data-char}
 \end{figure}
@@ -234,7 +234,7 @@ We note some intrinsic differences between the DTI and our XCT data. Fiber trace
 \centering
 %\includegraphics[width=0.45\textwidth]{images_pvis/figure3}
 %\includegraphics[width=0.5\textwidth,  trim = 0mm 90mm 0mm 0mm, clip]{images_pvis/figure3}
-\includegraphics[width=0.5\textwidth]{images_pvis/reliable_hessian.pdf}
+\includegraphics[width=\linewidth]{images_pvis/reliable_hessian.pdf}
 \caption{Reliable Hessians. (a) Colored according to Orientation vector mapped to RGB. (b) 2D slice along Z and (c) along X axis. (d) Magnified region marked in green square (in c).}
 \label{fig:reliable_hessian}
 \end{figure}
@@ -277,7 +277,7 @@ Traditional integral curve based techniques cannot be used to extract fiber bund
 
 \begin{figure}[tb]
   \begin{center}
- \includegraphics[ width=0.3\textwidth]{imagesMT2014/image4}
+ \includegraphics[ width=\linewidth]{images_pvis/mt_gen.pdf}
   \end{center}
   \vspace{-1em}
  \caption{MetaTracts generation: (B) MetaTract generation, region with $R_H$ less than threshold. (A) close up of marked region in (B). (C) Parts of a single MetaTract.}
@@ -399,7 +399,7 @@ For our test case there are two major directions of the fiber bundles and $K$ wa
 
 \begin{figure}[tb] 
   \centering  	
-  \includegraphics[width=0.5\textwidth]{images_pvis/figure6.png}
+  \includegraphics[width=\linewidth]{images_pvis/clustering.pdf}
   %\includegraphics[width=0.45\textwidth]{imagesMT2014/image_clustering}
   	\caption{(B) Result of K means clustering with data points projected to the top three eigenvectors as major axes. (A) MetaTracts belonging to orientation cluster 1. (C) MetaTracts belonging to orientation cluster 2. MetaTracts in gray(A,C) show context.
   	(D,E) shows the result of distance based clustering on the orientation cluster. (F) shows the combined result. }
@@ -576,7 +576,7 @@ To voxelize the space,  we compute a neighborhood around each voxel. We then enu
 \begin{figure}[tb]
 \centering
 	%\includegraphics[width=0.45\textwidth]{imagesMT2014/image8b}
-	\includegraphics[width=0.4\textwidth, trim = 0mm 30mm 0mm 0mm, clip,]{images_pvis/figure8}
+	\includegraphics[width=\linewidth]{images_pvis/dataset2.pdf}
 	\caption{Data set with flat thin and compact bundles. (A) shows the volume rendering and a 2D slice with one of the boundaries marked in green, (B) shows the clusters according to individual orientation. (C) shows the complete result. (D) shows the voxelization of (C).}
 	\label{fig:prepreg}
 \end{figure}

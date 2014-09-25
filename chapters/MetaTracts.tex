@@ -54,7 +54,7 @@ We advance and interpret techniques from diffusion tensor imaging to extract and
 	\centering
 	%\includegraphics[width=0.45\textwidth]{imagesMT2014/algo.png}
 	%\includegraphics[width=0.5\textwidth,  trim = 0mm 300mm 0mm 0mm, clip,]{imagesMT2014/image_algo}
-	\includegraphics[width=0.45\textwidth]{images_pvis/workflow.png}
+	\includegraphics[width=0.475\textwidth]{images_pvis/workflow.pdf}
 	\caption{Flow chart of the MetaTracts approach for fiber bundle extraction}
 	\label{fig:flowchart}
 \end{figure}
@@ -262,7 +262,7 @@ Traditional integral curve based techniques cannot be used to extract fiber bund
 %
 \begin{figure}[tb]
   \begin{center}
- \includegraphics[ width=0.3\textwidth]{imagesMT2014/image4}
+ \includegraphics[ width=\linewidth]{images_pvis/mt_gen.pdf}
   \end{center}
   \vspace{-1em}
  \caption{MetaTracts generation: (B) MetaTract generation, region with $R_H$ less than threshold. (A) close up of marked region in (B). (C) Parts of a single MetaTract.}
@@ -382,7 +382,7 @@ For our test case there are two major directions of the fiber bundles and $K$ wa
 
 \begin{figure}[tb] 
   \centering  	
-  \includegraphics[width=0.45\textwidth]{images_pvis/figure6.png}
+  \includegraphics[width=\linewidth]{images_pvis/clustering.pdf}
   %\includegraphics[width=0.45\textwidth]{imagesMT2014/image_clustering}
   	\caption{(B) Result of K means clustering with data points projected to the top three eigenvectors as major axes. (A) MetaTracts belonging to orientation cluster 1. (C) MetaTracts belonging to orientation cluster 2. MetaTracts in gray(A,C) show context.
   	(D,E) shows the result of distance based clustering on the orientation cluster. (F) shows the combined result. }
@@ -462,16 +462,10 @@ In comparison Fig.~\ref{fig:comparison} shows the MetaTracts in Fig.~\ref{fig:le
 On the other hand, Fig..~\ref{fig:comparison_orient} shows the MetaTracts in Fig..~\ref{fig:length_distribution}a, being clustered using K-means clustering after being embedded  in a m-dimensional (lower) space using proximity alone, without a second hierarchical clustering step. We set ``k" to be  10, 15, 20 clusters. In the lower dimensional space the spatial context is lost and fibers which are in reality far away are grouped together.
 \begin{figure}[hb]
 	\centering
-	\includegraphics[width=0.45\textwidth,  trim = 0mm 10mm 0mm 10mm, clip]{images_pvis/comparison_proximity.pdf}
-	\caption{MetaTracts data (left) and its straight-forward hierarchical clustering for various numbers of clusters.}
+	\includegraphics[width=0.45\linewidth]{images_pvis/comparison_all.pdf}
+	\caption{Applying only hierarchical (a) and K-means (b) clustering methods of MetaTracts for various numbers of clusters.}
 	\label{fig:comparison}
 \end{figure} 
-\begin{figure}[hb]
-	\centering
-	\includegraphics[width=0.45\textwidth]{images_pvis/comparison_orient.pdf}
-	\caption{Direct K-means clustering of MetaTracts (left) embedded in a m dimensional space using laplacian eigenmaps by proximity into 10,15 and 20 clusters.}
-	\label{fig:comparison_orient}
-\end{figure}
 
 % We in our approach use Zhang et al.~\cite{Zhang2008} Hierarchical clustering approach. Zhang et al.\cite{Zhang2008} define the distance between two DTI fibers Q and R as the larger mean of thresholded closest distances (equation \ref{eqn:dist}).
 %In the above discussion,DTI fibers are represented as points in $\mathbb{R}^3$. MetaTracts can be correspondingly represented as points in  $\mathbb{R}^3$ in terms of the start points of the cylinders. In our implementation Q and R are sets of `$C_{p}$'s. We in our implementation set $t$ to be same radius of the cylinders for all our tests. If two MetaTracts are less than a width of the cylinder apart then they are describing the same region. We use $D_{Lt}$ as our proximity measure.
@@ -558,7 +552,7 @@ To voxelize the space,  we compute a neighborhood around each voxel. We then enu
 \begin{figure}[tb]
 \centering
 	%\includegraphics[width=0.45\textwidth]{imagesMT2014/image8b}
-	\includegraphics[width=0.45\textwidth, trim = 0mm 30mm 0mm 0mm, clip,]{images_pvis/figure8}
+	\includegraphics[width=0.45\linewidth]{images_pvis/dataset2.pdf}
 	\caption{Data set with flat thin and compact bundles. (A) shows the volume rendering and a 2D slice with one of the boundaries marked in green, (B) shows the clusters according to individual orientation. (C) shows the complete result. (D) shows the voxelization of (C).}
 	\label{fig:prepreg}
 \end{figure}

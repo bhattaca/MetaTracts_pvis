@@ -475,20 +475,16 @@ As opposed to the two phase clustering we experimented with using proximity alon
 %\end{figure}  
   
   
-In comparison Figure~\ref{fig:comparison} shows the MetaTracts in Figure~\ref{fig:length_distribution}a being hierarchically clustered directly using proximity alone into 10, 15, and 20 clusters (ground truth is 11 clusters) without first performing orientation clustering. As discussed above, single linkage hierarchical clustering in the presence of overlapping fibers tends to create large clusters and small, low-cardinality outliers. When number of clusters ($h$) is 10 two large incorrect clusters are generated and the rest are outliers. As $h$ increases, some appropriate bundles start to form. Even at $h=20$, the top bundles all clusters together into one large incorrectly identified bundle.
-\begin{figure}[h]
+Figure~\ref{fig:comparison}a shows the MetaTracts that are hierarchically clustered directly using proximity alone into 10, 15, and 20 clusters (ground truth is 11 clusters) without first performing orientation clustering. As discussed above, single linkage hierarchical clustering in the presence of overlapping fibers tends to create large clusters and small, low-cardinality outliers. When number of clusters ($h$) is 10 two large incorrect clusters are generated and the rest are outliers. As $h$ increases, some appropriate bundles start to form. Even at $h=20$, the top bundles all clusters together into one large incorrectly identified bundle.
+
+\begin{figure}[tb]
 	\centering
-	\includegraphics[width=0.5\textwidth,  trim = 0mm 10mm 0mm 10mm, clip]{images_pvis/comparison_proximity.pdf}
-	\caption{MetaTracts data (left) and its straight-forward hierarchical clustering for various numbers of clusters.}
+	\includegraphics[width=\linewidth]{images_pvis/comparison_all.pdf}
+	\caption{Applying only hierarchical (a) and K-means (b) clustering methods of MetaTracts for various numbers of clusters.}
 	\label{fig:comparison}
 \end{figure} 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\textwidth]{images_pvis/comparison_orient.pdf}
-	\caption{Direct K-means clustering of MetaTracts (left) embedded in a m dimensional space using laplacian eigenmaps by proximity into 10,15 and 20 clusters.}
-	\label{fig:comparison_orient}
-\end{figure}
-On the other hand, Figure.~\ref{fig:comparison_orient} shows the MetaTracts in Figure.~\ref{fig:length_distribution}a, being clustered using K-means clustering after being embedded  in a m-dimensional (lower) space using proximity alone, without a second hierarchical clustering step. We set ``k" to be  10, 15, 20 clusters. In the lower dimensional space the spatial context is lost and fibers which are in reality far away are grouped together.
+
+On the other hand, Figure.~\ref{fig:comparison}b shows the MetaTracts, clustered using K-means clustering after being embedded in a $m$-dimensional (lower) space using proximity alone, without a second hierarchical clustering step for 10, 15, and 20 clusters. In the lower dimensional space the spatial context is lost and fibers which are in reality far away are grouped together.
 
 
 % We in our approach use Zhang et al.~\cite{Zhang2008} Hierarchical clustering approach. Zhang et al.\cite{Zhang2008} define the distance between two DTI fibers Q and R as the larger mean of thresholded closest distances (equation \ref{eqn:dist}).

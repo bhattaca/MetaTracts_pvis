@@ -5,29 +5,19 @@
 
 \section{Introduction and Motivation}
 \label{sec:intro}
-Modern industry is increasingly demanding function orientation, integration, and efficiency of novel materials and components. The materials of choice for a growing number of applications are carbon fiber reinforced polymers (CFRP), which allow an integration of those continuously rising demands in industry. CFRPs have been successfully introduced in aeronautic and automotive applications within recent years, replacing  parts made of conventional materials such as aluminum or steel. CFRP is also being used in a wide range of applications such as marine and civil engineering, automotive and wind turbine design, and also sporting goods manufacturing. 
+Modern industry is increasingly demanding function orientation, integration, and efficiency of novel materials and components. The material of choice for a growing number of applications are carbon fiber reinforced polymers (CFRP), which allow an integration of those continuously rising demands. CFRPs have been successfully introduced in aeronautic and automotive applications within recent years, replacing parts made of conventional materials such as aluminum or steel. But the application areas of CFRPs are not limited on these two industries. For a wide range of different areas ranging from marine and civil engineering, wind energy, to sporting goods manufacturing, CFRP is highly interesting. The main reason therefore is found in CFRP materials having desirable characteristics such as high specific stiffness, high specific strength and high corrosion resistance. CFRP materials show these characteristics at considerably lower weight compared to conventional materials. At the same time, highly complex and integrated components which were previously impossible to manufacture may be produced from CFRPs. Primary structures and highly loaded components in aeronautics are one example.
 
-In general, CFRP materials have desirable characteristics such as high specific stiffness, high specific strength and high corrosion resistance. CFRP materials have these characteristics  at considerably lower weight compared to conventional materials.
-At the same time, highly complex and integrated components which were previously impossible to manufacture may be produced from CFRPs.
-Primary structures and highly loaded components in aeronautics are one example.
+Typically, carbon fiber reinforced polymer components, more specifically CFRP laminates we are addressing in this work, consist of two main components:
+a matrix on one side, which acts as a bonding component, and  reinforcements on the other side, which allow for achieving the desired characteristics.  Various production processes are used to manufacture CFRP laminates with endless carbon fibers. Most of these processes start with the reinforcement component by weaving individual carbon fiber bundles (yarn) into sheets of carbon fiber cloth in a predefined pattern. These sheets of woven carbon fiber cloth, which form the geometrical structure of the final CFRP materials, are also referred to as fabric. Depending on the requirements of the final component as well as on the manufacturing process, fabrics may be stacked in multiple layers of the cloth. Both alignment of fabrics and the weaving pattern of the individual carbon fiber bundles strongly influence the properties of the CFRP laminate. Resins are integrated in the material system to fill the gaps in the fabric, forming the matrix component. The main function of this matrix component is to act as a bonding between the individual carbon fiber bundles. After curing, the production process of the CFRP laminate is finished. 
 
-
-
-
-Typically, carbon fiber reinforced polymer components, more specifically CFRP laminates, consist of two main components:
-a matrix on one side, which acts as a bonding component, and  reinforcements on the other side, which allow for achieving the desired characteristics.  Various production processes are used to manufacture CFRP laminates with endless carbon fibers. Most of these processes start with the reinforcement component by weaving individual carbon fiber bundles (yarn) into sheets of carbon fiber cloth in a predefined pattern. These sheets of woven carbon fiber cloth, which form the geometrical structure of the final CFRP materials, are also referred to as fabric. Depending on the requirements of the final component as well as on the manufacturing process, fabrics may be stacked in multiple layers of the cloth. Both alignment of fabrics and the weaving pattern of the individual carbon fiber bundles strongly influence the strength, durability and stiffness properties. Resins are integrated in the material system to fill the gaps in the fabric, forming the matrix component. The main function of this matrix component is to act as a bonding between the individual carbon fiber bundles. 
-The increasing share of CFRPs as well as the complexity of material system and final components generated a strong demand for non-destructive testing (NDT) techniques for quality control~\cite{Red2012}. Ultrasonic testing is the most commonly used method for non-destructive testing of carbon fiber reinforce polymers. On one hand, ultrasonic testing provides a quick and cost-efficient overview of the material. On the other hand, it shows low resolution and may generate arbitrary results, e.g. due to the geometry of the final component. 
-
-Industrial 3D X-ray computed tomography (XCT, also referred to as 3DXCT or cone beam XCT) is increasingly applied for non-destructive testing of fiber reinforced polymers~\cite{Kastner2012}. XCT generates a 3D volumetric representation of the scanned specimen, reconstructed from a series of 2D penetration images, which are taken throughout a full rotation of the specimen. Typical scanning geometry in industrial XCT is the specimen placed on a rotary table between X-ray source and detector. X-rays are emitted by the source in the form of a conic beam. When passing through the specimen the X-rays are attenuated by the material in the specimen. The detector records the corresponding 2D attenuation image (penetration image) by transferring the X-rays in a scintillator layer into visible light. To generate the required series of 2D penetration images of a full $360^\circ$ rotation for a complete reconstruction of the data volume, the specimen is rotated stepwise and at each position a cone beam penetration image is recorded~\cite{heinzl-2008-thesis}. Finally the series of penetration images is  reconstructed as a 3D volumetric dataset of the specimen. 
+The increasing share of CFRPs as well as the complexity of material system and final components generated a strong demand for non-destructive testing (NDT) techniques for quality control~\cite{Red2012}. Ultrasonic testing is the most commonly used method for non-destructive testing of carbon fiber reinforce polymers. On one hand, ultrasonic testing provides a quick and cost-efficient overview of the material. On the other hand, it shows low resolution and may generate arbitrary results, e.g. due to the geometry of the final component. Industrial 3D X-ray computed tomography (XCT, also referred to as 3DXCT or cone beam XCT) is increasingly applied for non-destructive testing of fiber reinforced polymers~\cite{Kastner2012}. XCT generates a 3D volumetric representation of the scanned specimen, reconstructed from a series of 2D penetration images, which are taken throughout a full rotation of the specimen. In the typical scanning geometry of industrial XCT, the specimen is placed on a rotary table between X-ray source and detector. X-rays are emitted by the source in the form of a conic beam. When passing through the specimen the X-rays are attenuated by the material in the specimen. The detector records the corresponding 2D attenuation image (penetration image) by transferring the X-rays in a scintillator layer into visible light. To generate the required series of 2D penetration images of a full $360^\circ$ rotation for a complete reconstruction of the data volume, the specimen is rotated stepwise and at each position a cone beam penetration image is recorded~\cite{heinzl-2008-thesis}. Finally the series of penetration images is  reconstructed as a 3D volumetric dataset of the specimen. 
 In state of the art devices, XCT can reach voxel sizes below 500 $nm$. XCT generates high resolution volume data for comprehensive and detailed analyses of the test specimens. Unfortunately, there is still a trade-off between viewport and image resolution in XCT using cone beam geometry. The magnification reached within an XCT scan is determined by the specified distances between source and specimen as well as source and detector. The magnification therefore directly influences both resolution and viewport: higher resolutions decrease the viewport but show more details while lower resolutions allow for larger viewports and thus larger portions of the specimen.
 
-In this work, we focus on datasets with larger viewports and lower resolutions where the individual carbon fibers (filaments) are indiscernible or are barely visible. Our domain experts are mainly interested in visualizing the geometric structures in the weaving pattern of fiber bundles in endless carbon fiber reinforced composites instead of high resolution studies of individual fibers.
+In this work, we focus on datasets with larger viewports and lower resolutions where the individual carbon fibers (filaments) are indiscernible or barely visible. Our domain experts are mainly interested in visualizing the geometric structures in the weaving pattern of fiber bundles in endless carbon fiber reinforced composites instead of high resolution studies of individual fibers.
 %of short fiber reinforced composites as presented by Weissenbock2014 et al.~\cite{Weissenbock2014}.
-
-Figure~\ref{fig:data-char} provides an example of our targeted dataset. It also shows the recurring fiber bundle pattern in the final CFRP laminate, called a \textit{unit cell}.
-Our work is motivated from the recent progress in two interrelated fields: On one hand, CFRP components have gained wide application in a variety of industries  because of its superior material and physical properties in comparison to conventional materials~\cite{Karpat2012}. On the other hand, recent developments of industrial 3D X-ray computed tomography (XCT) with regard to larger detectors, larger field of views, and better resolutions opened XCT for this new application area of non destructive testing for fiber reinforced components~\cite{Schilling2005}. 
-
-
+Fig.~\ref{fig:data-char} provides an example of our targeted dataset. It also shows the recurring fiber bundle pattern in the final CFRP laminate, called a \textit{unit cell}.
+Our work is motivated from the recent progress in two interrelated fields: On one hand, CFRP components have gained wide application in industry because of its superior material and physical properties in comparison to conventional materials~\cite{Karpat2012}. On the other hand, recent developments of industrial 3D X-ray computed tomography (XCT) with regard to larger detectors, larger field of views, and better resolutions opened XCT for this new application area of non destructive testing for fiber reinforced components~\cite{Schilling2005}. 
+%
 % Fiber bundles determine to a large extent the properties in terms of specific stiffness, specific strength, or durability of the final component. However, when scanning reinforced polymers using modern XCT devices, there is still a trade-off between view port and image resolution. Due to the intrinsic concept of cone beam and fan beam XCT setups, the magnification reached within a scan is determined by the used distances between source and specimen as well as source and detector. Furthermore the magnification directly influences both resolution and viewport: Higher resolutions decrease the viewport or how much of the structure can be imaged while lower resolutions allow for larger view ports.
 %\begin{figure}
 %\begin{center}
@@ -43,12 +33,12 @@ Our work is motivated from the recent progress in two interrelated fields: On on
 %Seed point selection 
 %distance between tracks 
 %how well do we do in noise , may be data set 1
-
+%
 %!!!!! I have replaced this with the following para !!!!!
 %In this work, we present a framework which interprets and advances these techniques in order to extract and visualize fiber bundles in industrial 3D X-Ray computed tomography data of woven fiber reinforced composites. The main goal of this work is to expand the state of the art in nondestructive testing of composite structures towards lower resolutions and thus larger areas of woven fabrics.
-
+%
 %While the importance of fiber bundles in determining the final properties of the components have  become evident,  the tools for visualization of the same have not developed at the same pace.
-
+%
 While fiber bundles are now understood as highly important in determining component properties, the tools for visualization of the internal structure have not developed at the same pace.
 To the best of our knowledge, there is no current work that can resolve simple queries such as:
 \begin{itemize}[noitemsep]
@@ -60,15 +50,15 @@ To the best of our knowledge, there is no current work that can resolve simple q
 
 Answering the above queries from the volume renderings of XCT datasets, or from visual inspection of particular 2D slices is non-trivial, even for experts. We detail and evaluate a method which uses visualization techniques to gain insight into our data. We demarcate the above queries into two parts: \textit{geometric structure} and \textit{spatial context}. Geometric structure refers to the shape, size, and orientation of a fiber bundle or a group of bundles. Spatial context refers to how two or more bundles interact with each other. 
 We advance and interpret techniques from diffusion tensor imaging to extract and visualize geometric structures from 3D X-ray computed tomography data of the woven carbon fiber reinforced composites. The main goal of this work is to expand the state of the art in non-destructive testing through visualization of composite structures in \textit{lower resolutions} and thus \textit{larger areas} of woven fabrics.
-\begin{figure}[h]
+\begin{figure}[tb]
 	\centering
 	%\includegraphics[width=0.45\textwidth]{imagesMT2014/algo.png}
 	%\includegraphics[width=0.5\textwidth,  trim = 0mm 300mm 0mm 0mm, clip,]{imagesMT2014/image_algo}
-	\includegraphics[width=0.5\textwidth]{images_pvis/workflow.png}
+	\includegraphics[width=0.45\textwidth]{images_pvis/workflow.png}
 	\caption{Flow chart of the MetaTracts approach for fiber bundle extraction}
 	\label{fig:flowchart}
 \end{figure}
-Figure~\ref{fig:flowchart} shows an over view of our approach. Starting from the XCT data, we first generate MetaTracts, cluster the MetaTracts to create fiber bundles and then generate visualizations from the clusters. For a detailed description of the MetaTracts generation process, see section~\ref{subsec:MetaTracts-generation}. For the description of plausible fiber bundle generation see section~\ref{subsec:fiber-bundles}. For a discussion of the visualizations we create for our domain experts see section ~\ref{sec:vis}. Section~\ref{sec:results} describes our experimental results, Section~\ref{sec:param_choices} presents our parameter choices and  Section~\ref{sec:user_eval} summarizes our user evaluations.
+Fig.~\ref{fig:flowchart} shows an over view of our approach. Starting from the XCT data, we first generate MetaTracts, cluster the MetaTracts to create fiber bundles and then generate visualizations from the clusters. For a detailed description of the MetaTracts generation process, see Sec.~\ref{subsec:MetaTracts-generation}. For the description of plausible fiber bundle generation see Sec.~\ref{subsec:fiber-bundles}. For a discussion of the visualizations we create for our domain experts see Sec.~\ref{sec:vis}. Sec.~\ref{sec:results} describes our experimental results, Sec.~\ref{sec:param_choices} presents our parameter choices and  Sec.~\ref{sec:user_eval} summarizes our user evaluations.
 
 
 
@@ -85,8 +75,8 @@ We broadly divide the related work on DTI into two parts that are of immediate r
 \subsection {Fiber Tracking in Diffusion Tensor Imaging}
 \label{subsec:fiberEx} 
 A basic assumption in DTI analysis is that the principal eigenvector of the diffusion tensor is parallel to the underlying dominant fiber direction in each image voxel~\cite{Basser2002, Basser2000, Mori1999, Mori2002}. Continuous tracts are created by propagating virtual particles along fiber directions until they reach some termination criterion. 
- This is usually done by solving a second-order Runge-Kutta integration. The principal diffusion direction at each discrete location is interpolated to form a continuous velocity field. 
- Because decisions are made locally, these methods perform poorly in noisy regions and often generate small fibers. Basser et al.~\cite{Basser2002,Basser2000} proposed that white matter tracts could be represented as 3D curves in space. They showed that numerical methods could be used to follow fibers and fiber bundles and to generate tracts in human brain data. 
+This is usually done by solving a second-order Runge-Kutta integration. The principal diffusion direction at each discrete location is interpolated to form a continuous velocity field. 
+Because decisions are made locally, these methods perform poorly in noisy regions and often generate small fibers. Basser et al.~\cite{Basser2002,Basser2000} proposed that white matter tracts could be represented as 3D curves in space. They showed that numerical methods could be used to follow fibers and fiber bundles and to generate tracts in human brain data. 
 Mori et al.~\cite{Mori1999,Mori2002} divided reconstruction techniques into line-propagation or energy minimization techniques. In line propagation approaches, trajectories are computed based on local neighborhoods and in energy minimization approaches the most  favorable trajectory connecting two given endpoints is selected. 
 
 
@@ -94,7 +84,7 @@ Mori et al.~\cite{Mori1999,Mori2002} divided reconstruction techniques into line
 \label {subsec:fiberClus}
 In DTI, a similarity measure based on factors such as proximity between fibers is used to group fiber tracts into bundles. Extensive research has been done on automatic DTI fiber clustering methods~ \cite{Brun2004,Brun2003,Corouge2004,westinMEDIA02,Zhang2008}. 
 Clustering requires choosing a suitable proximity measure and choosing a method for grouping ``close" fibers.
-Pairwise proximity measures include endpoint distances~\cite{Brun2003} and mean of the closest distances between points on two fibers~\cite{Corouge2004}. Zhang et al.~\cite{Zhang2008} introduced a thresholded version of the of mean of closest distances, so that fibers that are close for certain distance and then diverge are clustered separately. Brun et al.~\cite{Brun2004} uses normalized cuts along with a pairwise distances  measure computed using a 9-D fiber shape descriptors. The choice of the clustering algorithm can be broadly divided into those approaches using hierarchical clustering~\cite{Moberts2005, Zhang2008} and those using spectral clustering~\cite{ Brun2004,jonasson2005, ODonnell2007}.
+Pairwise proximity measures include endpoint distances~\cite{Brun2003} and mean of the closest distances between points on two fibers~\cite{Corouge2004}. Zhang et al.~\cite{Zhang2008} introduced a thresholded version of the of mean of closest distances, so that fibers that are close for certain distance and then diverge, are clustered separately. Brun et al.~\cite{Brun2004} uses normalized cuts along with a pairwise distances  measure computed using a 9-D fiber shape descriptors. The choice of the clustering algorithm can be broadly divided into those approaches using hierarchical clustering~\cite{Moberts2005, Zhang2008} and those using spectral clustering~\cite{ Brun2004,jonasson2005, ODonnell2007}.
  
 Brun et al.~\cite{Brun2003} described how a spectral non-linear dimensionality reduction technique,  Laplacian eigenmaps (Belkin and Niyogi~\cite{Belkin01}), can be applied to the problem of organizing fiber tracts data. The key notion of the Laplacian eigenmaps algorithm is to represent the underlying data as a graph. Each node represents a data point and the edges connect neighboring data points. An eigenvalue problem is solved to represent the data in a lower dimensional space while preserving the local graph structure. In the case of fiber bundles, the individual points are fiber tracts. In the ideal case fiber tracts that belong to the same bundle must remain ``close" to each other in the lower dimensional space. Westin et al.~\cite{westinMEDIA02} also use spectral clustering on a Hausdorff distance measure defined as the maximum of point wise minimum distances between two fibers. Jonasson et al.~\cite{jonasson2005} run k-means clustering on the eigenvectors of the affinity matrix defined as the co-occurrence of fibers in the data.
 %The clustering methods have also been evaluated to be generally accurate in capturing fiber bundles as seen in Moberts et al.~\cite{Moberts2005} and Corouge et al.~\cite{Corouge2004}. 
@@ -103,7 +93,6 @@ The agglomerative hierarchical clustering method \cite{DudaHartStork01} has gain
 These approaches build on the assumption that proximity measures that compare DTI fiber trajectories can also represent anatomical relationships. An agglomerative hierarchical clustering method starts with each data point/fiber in an individual cluster. At each stage of the algorithm the two most similar clusters are merged based on some criterion. The two basic cluster similarity measures are single-link and complete-link. With the single link measure the distance between the clusters is the distance between the closest pair of items. 
 Moberts et al.~\cite{Moberts2005} implemented several distance measures in their evaluation of fiber clustering and concluded that clustering methods are generally accurate in capturing fiber bundles. 
 %Mean of closest distances performs better than closest point distance computations or Hausdorff distance measures and hierarchical clustering using single-link measure gave the best results. 
-
 There are a number of difficulties in hierarchical clustering. First, computing all pairs distances for tracts to generate the distance matrix is time consuming (see~\cite{Garyfallidis2012} for a recent work on decreasing computation times). Second, a ``correct'' distance measure to compare tracts must be chosen. Third, hierarchical clustering is best suited for similar length fibers.
 Spectral methods are also hindered by long matrix computations.
 
@@ -114,9 +103,7 @@ Unlike DTI, we do not have diffusion tensor data. Instead, we have a scalar volu
 
 
 \subsection {Visual Analysis of Fiber Reinforced Composites}
-The approaches presented in visualization and analysis of composites mainly focus on individual objects such as fibers or pores. Fritz et al.~\cite{Fritz2009} proposed interactive workflows for non destructive testing practitioners to explore and quantify steel fibers in reinforced sprayed concrete. This approach allows analyzing fiber orientations based on direction transfer functions. Salaberger et al.~\cite{Salaberger2011} introduced a pipeline to extract and characterize individual fibers of fiber reinforced composites. They encode the extracted fibers as color-coded line segments in 3D and visually identifying fibers with similar orientations. Reh et al.~\cite{PMI_AR_2012} introduced an approach to explore pores of carbon fiber reinforced composites. Recently, Weissenbock et al.~\cite{Weissenbock2014} introduced a system for interactive exploration and analysis of fibers in fiber reinforced polymers. 
-Like~\cite{Weissenbock2014}, most carbon fiber extraction literature deals with fiber extraction from high resolution data where the individual fibers are clearly discernible.
-
+The approaches presented in visualization and analysis of composites mainly focus on individual objects such as fibers or pores and deals with fiber extraction from high resolution data where the individual fibers are clearly discernible. Fritz et al.~\cite{Fritz2009} proposed interactive workflows for non destructive testing practitioners to explore and quantify steel fibers in reinforced sprayed concrete. This approach allows analyzing fiber orientations based on direction transfer functions. Salaberger et al.~\cite{Salaberger2011} introduced a pipeline to extract and characterize individual fibers of fiber reinforced composites. They encode the extracted fibers as color-coded line segments in 3D and visually identifying fibers with similar orientations. Reh et al.~\cite{PMI_AR_2012} introduced an approach to explore pores of carbon fiber reinforced composites. Recently, Weissenbock et al.~\cite{Weissenbock2014} introduced a system for interactive exploration and analysis of fibers in fiber reinforced polymers. 
 Tools based on image analysis, fiber tracking and clustering into bundles in DTI and their subsequent visualization through stream tubes and coloring schemes have received extensive research. Recently, similar techniques have been applied to fiber tracing in composite materials. To the best of our knowledge there is no approach focusing on direct extraction of fiber bundle structures from low resolution XCT of composite fibers, which is the main scope of this work.
 
 %To the best of our knowledge there is no approach focusing extraction of fiber bundles structures of low resolution XCT  of composite fibers, which is the main scope of this work.
@@ -141,16 +128,15 @@ Tools based on image analysis, fiber tracking and clustering into bundles in DTI
 \begin{figure}[tb]
 \centering
 %\includegraphics[width=0.5\textwidth, trim = 0mm 110mm 0mm 0mm, clip,]{images_pvis/figure1}
-\includegraphics[width=0.5\textwidth]{images_pvis/data-char.pdf}
+\includegraphics[width=0.45\textwidth]{images_pvis/data-char.pdf}
 \caption{Data characteristics: (a) Rendering of the data. (b) 2D slices along the X-axis and (c) 2D slice along the Z-axis. (d) Magnified region marked in green square (c). Multiple fiber bundles cross and are indistinguishable by visual inspection alone. }
 \label{fig:data-char}
 \end{figure}
 \section {Data Characteristic and Assumptions}
 \label{sec:char_data}
-Figure \ref{fig:data-char} shows dataset 1 with woven fiber bundles. Dataset 1 is 450$\times$300$\times$500 voxels in size with isotropic resolution of 2$\mu m$. The data type is unsigned 8 bit integer. Figure~\ref{fig:data-char} clearly shows the weaving structure of the composite unit cell as regional subset of the recurring fiber bundle weaving pattern. The unit cell is used as a basis structure for CFRP manufacturing. The alignment and weaving pattern of the fiber bundles in the cloth influences the strength and stiffness properties of the resulting material. Figure~\ref{fig:data-char}a shows a volume rendering of the dataset. Figure~\ref{fig:data-char}b shows 2D slices along the $X$- and Figure~\ref{fig:data-char}c in $Z$-axis. Figure~\ref{fig:data-char}d shows the magnified version of the green region of interest. 
-The resolution of dataset 1 renders the individual carbon fibers in a fiber bundle hard to resolve using 2D slice images only. Figure~\ref{fig:data-char}d contains two bundles going in opposite directions. The separation between two fiber bundles is barely visible. The carbon fibers themselves do not differ much from the underlying epoxy matrix in terms of attenuation which poses an additional challenge for characterization. The fiber bundles may differ in terms of the amount of fibers in the bundle. Figure~\ref{fig:data-char}a shows the large variation in cross section sizes among the bundles.
+Fig. \ref{fig:data-char} shows dataset 1 with woven fiber bundles. Dataset 1 is 450$\times$300$\times$500 voxels in size with isotropic resolution of 2$\mu m$. The data type is unsigned 8 bit integer. Fig.~\ref{fig:data-char} clearly shows the weaving structure of the composite unit cell as regional subset of the recurring fiber bundle weaving pattern. The unit cell is used as a basis structure for CFRP manufacturing. The alignment and weaving pattern of the fiber bundles in the cloth influences the strength and stiffness properties of the resulting material. Fig.~\ref{fig:data-char}a shows a volume rendering of the dataset. Fig.~\ref{fig:data-char}b shows 2D slices along the $X$- and Fig.~\ref{fig:data-char}c in $Z$-axis. Fig.~\ref{fig:data-char}d shows the magnified version of the green region of interest. 
+The resolution of dataset 1 renders the individual carbon fibers in a fiber bundle hard to resolve in the 2D slice images. Fig.~\ref{fig:data-char}d contains two bundles going in opposite directions. The separation between two fiber bundles is barely visible. The carbon fibers themselves do not differ much from the underlying epoxy matrix in terms of attenuation which poses an additional challenge for characterization. The fiber bundles may differ in terms of the amount of fibers in the bundle. Fig.~\ref{fig:data-char}a shows the large variation in cross section sizes among the bundles.
 Depending on the weaving pattern, the fiber bundles cross each other in different orientations. In general, the number of orientations is limited by the weaving pattern. Nevertheless, the weaving pattern may cause the individual bundles to be curved. In consequence individual fibers may be adjacent in Euclidean distance but belong to different bundles. 
-
 We make the following assumptions on our data:
 \begin{itemize}[noitemsep]
 \item The structure embedded in the data contains fiber bundles of indiscernible fibers.
@@ -178,7 +164,7 @@ We make the following assumptions on our data:
 
 \section {Extracting MetaTracts }
 \label{sec:approach}
-Extracting the MetaTracts consists of two  major steps. First we extract a local orientation vector at each grid location (section~\ref{subsec:rh}). Second, we compute coarse poly-cylinders called MetaTracts which traverse the data (section~\ref{subsec:mtprop}).
+Extracting the MetaTracts consists of two  major steps. First we extract a local orientation vector at each grid location (Sec.~\ref{subsec:rh}). Second, we compute coarse poly-cylinders called MetaTracts which traverse the data (Sec.~\ref{subsec:mtprop}).
 
 %\subsection {Extracting MetaTracts}
 %\label{subsec:ExFiberCyl}
@@ -210,8 +196,7 @@ Variable $s$ is the Frobenius norm of the Hessian matrix. The value of $(1-e^{\f
 First, vesselness in biology is computed for different scales because the vessels can be of different sizes. In our case, usually the width of individual fibers are known a priori.
 Second, and more importantly, we do not have clear tubular structures embedded in a dark contrast matrix such as in blood vessels.
 Instead, we are trying to associate each grid location  with a probable orientation based on its local second order structure. The $R_{H}$ is interpreted as a reliability measure of the local orientation.
-Grid locations where the $R_{H}$ is above a certain threshold are marked as regions with reliable orientations.
-We use 0.3 as the cutoff for all our test cases. (See Section~\ref{sec:param_choices} on the choice of 0.3).
+Grid locations where the $R_{H}$ is above a cutoff threshold are marked as regions with reliable orientations (see Sec.~\ref{sec:param_choices} on parameter choices).
 %\begin{figure}[h]
 %	\centering
 % \subfloat[]{ \includegraphics[width=0.2\textwidth,clip=true,trim=0cm 1cm 0cm 1cm]{imagesMetaTracts/crop-13-tracks-hess.eps}\label{fig:r_h:a}}
@@ -223,7 +208,7 @@ We use 0.3 as the cutoff for all our test cases. (See Section~\ref{sec:param_cho
 %\includegraphics[width=0.4\textwidth,scale=0.1,clip=true,trim=0cm 1cm 0cm 1cm]{imagesMetaTracts/crop-13-hess-2}
 % \caption{Reliable Hessians: Left, shows $R_{H}$ colored according to the absolute value of the normalized major eigenvector (local orientation) mapped to RGB color space. Right, shows a single slice along the X axis. Spurious specks shows that the local orientation is still noisy. Black denotes area below the $R_H$ threshold.}\label{fig:r_h}
 %\end{figure}
-In Figure~\ref{fig:reliable_hessian} we see the intermediate results of the local orientation computation only at locations where $R_{H}$ is greater than the cutoff threshold. The unit vector representing the principal direction has been mapped to RGB color space. Figure~\ref{fig:reliable_hessian}a shows the entire data set. Regions where the principal direction is parallel to the X axis are red in color, directions parallel to Y are green and those parallel to the Z are blue. Figure~\ref{fig:reliable_hessian}b,c show 2D slices along the Z and X axes respectively. Figure~\ref{fig:reliable_hessian}d shows a magnified region of interest. Note, the dark regions within a bundles are regions where the $R_H$ is less than the threshold and are unreliable. The bundles are not uniformly colored, the Hessians and the corresponding directions are noisy.
+In Fig.~\ref{fig:reliable_hessian} we see the intermediate results of the local orientation computation only at locations where $R_{H}$ is greater than the cutoff threshold. The unit vector representing the principal direction has been mapped to RGB color space. Fig.~\ref{fig:reliable_hessian}a shows the entire data set. Regions where the principal direction is parallel to the X axis are red in color, directions parallel to Y are green and those parallel to the Z are blue. Fig.~\ref{fig:reliable_hessian}b,c show 2D slices along the Z and X axes respectively. Fig.~\ref{fig:reliable_hessian}d shows a magnified region of interest. Note, the dark regions within a bundles are regions where the $R_H$ is less than the threshold and are unreliable. The bundles are not uniformly colored, the Hessians and the corresponding directions are noisy.
 
 % We note some intrinsic differences between the DTI and our XCT data. The Hessian computation works best when the tubular structures are well separated from the surrounding, unfortunately, this is not the case for our data (Fig.~\ref{fig:r_h}). Thus the local orientation at each voxel for XCT data is inherently more noisy (Fig.~\ref{fig:r_h} Right) than those computed from eigen analysis of diffusion tensors in DTI datasets.
  
@@ -234,7 +219,7 @@ We note some intrinsic differences between the DTI and our XCT data. Fiber trace
 \centering
 %\includegraphics[width=0.45\textwidth]{images_pvis/figure3}
 %\includegraphics[width=0.5\textwidth,  trim = 0mm 90mm 0mm 0mm, clip]{images_pvis/figure3}
-\includegraphics[width=0.5\textwidth]{images_pvis/reliable_hessian.pdf}
+\includegraphics[width=0.45\textwidth]{images_pvis/reliable_hessian.pdf}
 \caption{Reliable Hessians. (a) Colored according to Orientation vector mapped to RGB. (b) 2D slice along Z and (c) along X axis. (d) Magnified region marked in green square (in c).}
 \label{fig:reliable_hessian}
 \end{figure}
@@ -273,8 +258,8 @@ Traditional integral curve based techniques cannot be used to extract fiber bund
 
 \subsection {MetaTracts generation}
 \label{subsec:MetaTracts-generation}
- In this section we explain the process of MetaTracts generation in $\mathbb{R}^2$.The procedure trivially extends to $\mathbb{R}^3$. In $\mathbb{R}^2$, all the above properties hold except that cylinders are replaced by rectangles. The reliable Hessian step  generates a local orientation in $\mathbb{R}^2$ and a reliability measure $R_H$[0,1]. In Figure \ref{fig:algo}, all regions which have unreliable Hessian have been marked in blue. Figure~\ref{fig:algo}c shows a single cylinder of a MetaTracts. Let the seed point associated with the MetaTract be grid point $C_{p}$ (property 2 in Section~\ref{subsec:mtprop}). The local orientation at $C_p$ as computed in the step above is $N_P$ and is given by the dark green arrow. We generate a rectangle of length $L$ and radius $R$, the green dashed rectangle shows the rectangle generated at $C_p$ (properties 3 and 5 in Section~\ref{subsec:mtprop}). 
-
+ In this section we explain the process of MetaTracts generation in $\mathbb{R}^2$.The procedure trivially extends to $\mathbb{R}^3$. In $\mathbb{R}^2$, all the above properties hold except that cylinders are replaced by rectangles. The reliable Hessian step  generates a local orientation in $\mathbb{R}^2$ and a reliability measure $R_H$[0,1]. In Fig. \ref{fig:algo}, all regions which have unreliable Hessian have been marked in blue. Fig.~\ref{fig:algo}c shows a single cylinder of a MetaTracts. Let the seed point associated with the MetaTract be grid point $C_{p}$ (property 2 in Sec.~\ref{subsec:mtprop}). The local orientation at $C_p$ as computed in the step above is $N_P$ and is given by the dark green arrow. We generate a rectangle of length $L$ and radius $R$, the green dashed rectangle shows the rectangle generated at $C_p$ (properties 3 and 5 in Section~\ref{subsec:mtprop}). 
+%
 \begin{figure}[tb]
   \begin{center}
  \includegraphics[ width=0.3\textwidth]{imagesMT2014/image4}
@@ -291,13 +276,11 @@ The set of vertices which are in the green region but not overlapped by blue are
 %\caption{Angle between the local orientation of two cylinders that are part of the same MetaTract.}
 %\label{fig:angle-diff}
 %\end{figure}
-Based on such assumptions on our data as local orientation and connectivity (Section~\ref{sec:char_data}), the order of the candidate vertices is based on the following characteristics:
+Based on such assumptions on our data as local orientation and connectivity (Sec.~\ref{sec:char_data}), the order of the candidate vertices is based on the following characteristics:
 
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item \textit{Orientation similarity}: The orientation of the start points ($N_p$) for the consecutive cylinders should be similar. 
-\item \textit{Large distance}: The MetaTracts should traverse the data using as few cylinders as possible. Thus, the distance between $C_p$ and the start point for the next cylinder should be as large as possible. We measure the distance of a candidate vertex from $C_p$ by projecting the Euclidean distance between them onto $N_p$. 
-
-For example, in Figure~\ref{fig:algo}b the distance is measured as the Euclidean distance between the purple and the orange vertices projected on to $N_p$. We refer to this perpendicular projection distance as \textit{`projected\_dist'}. 
+\item \textit{Large distance}: The MetaTracts should traverse the data using as few cylinders as possible. Thus, the distance between $C_p$ and the start point for the next cylinder should be as large as possible. We measure the distance of a candidate vertex from $C_p$ by projecting the Euclidean distance between them onto $N_p$. For example, in Fig.~\ref{fig:algo}b the distance is measured as the Euclidean distance between the purple and the orange vertices projected on to $N_p$. We refer to this perpendicular projection distance as \textit{`projected\_dist'}. 
 
 \end{itemize}
 % \begin{equation}\label{eqn:algo_1}
@@ -310,10 +293,10 @@ Priority = \gamma_1 e^{(-angle^2 / \alpha^2)} + \gamma_2e^{(-projected\_dist^2 /
 \label{eqn:algo_1}
 \end{equation}
 $\gamma_1$, $\gamma_2$ are the  weights ($\mathbb{R}_{\ge 0}$)  which decide how the priority depends on the affine combination of the two factors. For all our cases, we use $\gamma_1$ = $1 / 3 $ and $\gamma_2$ = $2 / 3$. In general, we suggest $\gamma_1 +\gamma_2 = 1 $ and $\gamma_1 \leq \gamma_2$. At each iteration, we pick the top element in the priority queue to generate the corresponding cylinder, and repeat the steps. Essentially, Equation~\ref{eqn:algo_1} selects a grid point which is furthest from the current point and is going in a similar direction. This approach tackles noise/errors in local orientation better than integral curves by looking at multiple choices for vertices and avoiding intra cell interpolation in an already noisy environment. 
- 
-In the example in Figure~\ref{fig:algo}b we select the orange grid vertex next and repeat the process. We do not select the purple vertex (Figure~\ref{fig:algo}c) because it is not a candidate vertex. If we generate tracts that have erroneous local orientations they will not be able to find further possible candidate vertices and will be of short length. Short tracts (less than 0.01 times the smallest axes size) are removed. The MetaTracts generated are shown in Figure~\ref{fig:length_distribution}a. The MetaTracts are colored with the mean orientation direction mapped to the RGB space. Figure~\ref{fig:length_distribution}a shows a single slice of YZ plane. Consistent orientation is a key intrinsic feature in the data becomes visually pronounced.
-We apply uniform, dense seeding to the XCT volume data to trace and generate the tracts of fiber bundles. Figure~\ref{fig:length_distribution}b shows the MetaTracts of a particular bundle colored according to their individual length.
-
+% 
+In the example in Fig.~\ref{fig:algo}b we select the orange grid vertex next and repeat the process. We do not select the purple vertex (Fig.~\ref{fig:algo}c) because it is not a candidate vertex. If we generate tracts that have erroneous local orientations they will not be able to find further possible candidate vertices. Therefore these short tracts are removed. The MetaTracts generated are shown in Fig.~\ref{fig:length_distribution}a. The MetaTracts are colored with the mean orientation direction mapped to the RGB space. Fig.~\ref{fig:length_distribution}a shows a single slice of YZ plane. Consistent orientation is a key intrinsic feature in the data becomes visually pronounced.
+We apply uniform, dense seeding to the XCT volume data to trace and generate the tracts of fiber bundles. Fig.~\ref{fig:length_distribution}b shows the MetaTracts of a particular bundle colored according to their individual length.
+%
 MetaTracts in a given fiber bundle do not extend the full length of the bundle. MetaTracts may have different lengths and may partially overlap.
  
 % \begin{figure}[h]
@@ -366,7 +349,7 @@ MetaTracts in a given fiber bundle do not extend the full length of the bundle. 
 \label{subsec:fiber-bundles}
 
 The output of the above step is a set of MetaTracts. The next step is to cluster the MetaTracts into bundles. 
-Carbon fibers have both orientation and geometric proximity information, both of which can be used for clustering. Experimentally we found that the orientation measure was very reliable, while measures of geometric proximity had problems with fibers which partially overlap (Figure~\ref{fig:length_distribution}b).  
+Carbon fibers have both orientation and geometric proximity information, both of which can be used for clustering. Experimentally we found that the orientation measure was very reliable, while measures of geometric proximity had problems with fibers which partially overlap (Fig.~\ref{fig:length_distribution}b).  
 Instead of creating a heuristic which artificially combines the orientation and geometric proximity measures, we first cluster based on orientation and then further subdivide each orientation cluster using geometric proximity.
 We found that different clustering techniques performed preferably for different measures.  The two step clustering also made the problem more tractable and  the parameters intuitive for the end users. For the orientation clustering, we use dimension reduction followed by K-means clustering. We then use hierarchical clustering to further subdivide each cluster based on the geometric proximity measures. 
 
@@ -380,12 +363,12 @@ We found that different clustering techniques performed preferably for different
 \subsection {Orientation based clustering}
 %We use the inherent features expressed as weaving pattern of our data to pre-cluster the metaTracts into the number of classes based on the major directions of the pattern.
 %It is important to note that this step broadly divides the MetaTracts into classes based on the major orientations and not individual fiber bundles. 
-This step divides the individual MetaTracts into classes based on their major orientations. In order to cluster MetaTracts going in same directions, we use a spectral embedding technique called Laplacian eigenmaps which was originally introduced by Belkin and Niyogi \cite{Belkin01}. An eigenvalue problem is solved, which maps the manifold embedded in the graph into a lower dimensional space while preserving the graph structure.
+This step divides the individual MetaTracts into classes based on their major orientations. In order to cluster MetaTracts going in the same directions, we use a spectral embedding technique called Laplacian eigenmaps which was originally introduced by Belkin and Niyogi \cite{Belkin01}. An eigenvalue problem is solved, which maps the manifold embedded in the graph into a lower dimensional space while preserving the graph structure.
 Let $G$ be the graph, we compute the eigenvalues and eigenvectors for the generalized eigenvector problem $L\textit{\textbf{f}}=\lambda D\textit{\textbf{f}}$,
 %\begin{equation}\label{equn:eigenMaps}
 %L\textbf{f}=\lambda D\textbf{f}
 %\end{equation}
-where $D$ is the diagonal weight matrix and $L$ is the Laplacian matrix. The eigenvector \textbf{${f}_{0}$} corresponding to the eigenvalue 0 is left out and the next $m$, {\textbf{${f}_{1}$} through \textbf{${f}_{m}$}} eigenvectors are used to embed in an $m$-dimensional space (see section~\ref{sec:param_choices} for values of m).
+where $D$ is the diagonal weight matrix and $L$ is the Laplacian matrix. The eigenvector \textbf{${f}_{0}$} corresponding to the eigenvalue 0 is left out and the next $m$, {\textbf{${f}_{1}$} through \textbf{${f}_{m}$}} eigenvectors are used to embed in an $m$-dimensional space (see Sec.~\ref{sec:param_choices} for values of m).
  In our case, each MetaTract is a data point. We introduce a simple \textit{orientation based similarity measure}. There is no spatial information involved, just a partition of the MetaTracts based on orientation which is already inherent in the data.
 Following this, given a pair of  MetaTracts, we define the edge weights between two tracts as the cosine of the maximum angle between the local orientations ($N_P$) of all pairs of start points ($C_P$) between the two MetaTracts. The edge weights give a distance matrix representing the distance between each pair of points. Using the Belkin and Niyogi algorithm we ``embed" these points in a low dimensional space where the Euclidean distance between points approximates the distance between points given by the distance matrix. 
 %
@@ -394,12 +377,12 @@ Following this, given a pair of  MetaTracts, we define the edge weights between 
 %For all our test cases we set $\eta$ to be five (see sec~\ref{sec:param_choices} for parameter choices for $\eta$.).
 %  
 We used conventional K-means for clustering this lower dimensional space. Here $K$ is supplied by domain knowledge of the number of major fiber bundle directions of the woven structure.
-For our test case there are two major directions of the fiber bundles and $K$ was set to 2. Due to the advantages offered by the dimensionality reduction, even if there are curved fibers bundles the user has to provide just the major fiber bundle directions of the weaving pattern. Figure~\ref{fig:orientation_clustering}b shows the result of the K-means clustering with the data points projected to the top three eigenvectors as the major axes. As is expected there is a clear distinction based on fiber orientation. Figure~\ref{fig:orientation_clustering}a,c shows the MetaTracts colored according to clustering results.
+For our test case there are two major directions of the fiber bundles and $K$ was set to 2. Due to the advantages offered by the dimensionality reduction, even if there are curved fiber bundles the user has to provide just the major fiber bundle directions of the weaving pattern. Fig.~\ref{fig:orientation_clustering}b shows the result of the K-means clustering with the data points projected to the top three eigenvectors as the major axes. As is expected there is a clear distinction based on fiber orientation. Fig.~\ref{fig:orientation_clustering}a,c shows the MetaTracts colored according to clustering results.
 
 
 \begin{figure}[tb] 
   \centering  	
-  \includegraphics[width=0.5\textwidth]{images_pvis/figure6.png}
+  \includegraphics[width=0.45\textwidth]{images_pvis/figure6.png}
   %\includegraphics[width=0.45\textwidth]{imagesMT2014/image_clustering}
   	\caption{(B) Result of K means clustering with data points projected to the top three eigenvectors as major axes. (A) MetaTracts belonging to orientation cluster 1. (C) MetaTracts belonging to orientation cluster 2. MetaTracts in gray(A,C) show context.
   	(D,E) shows the result of distance based clustering on the orientation cluster. (F) shows the combined result. }
@@ -436,13 +419,13 @@ Each MetaTract is represented as a set of points ($C_P$). Formally, the directed
 $H_{dir}(P,Q) = max_{p \in P} min_{q \in Q} d(p,q)$ .
 The Hausdorff distance is defined as $H(P,Q) = max(H_{dir}(P,Q),H_{dir}(Q,P))$.
 The Hausdorff distance is a metric so $H(P,Q) \le H(P,Q') + H(Q',Q)$ but the directed Hausdorff is not.
-
-Unfortunately, the Hausdorff distance does not work well for our application since a fiber bundle may have many MetaTracts, which only partially cover the bundle (Figure~\ref{fig:length_distribution}b). If a MetaTract $P$ covers only part of the fiber bundle covered by $Q$, then $H_{dir}(P,Q)$ will be very small while $H_{dir}(Q,P)$ will be large.
-
+%
+Unfortunately, the Hausdorff distance does not work well for our application since a fiber bundle may have many MetaTracts, which only partially cover the bundle (Fig.~\ref{fig:length_distribution}b). If a MetaTract $P$ covers only part of the fiber bundle covered by $Q$, then $H_{dir}(P,Q)$ will be very small while $H_{dir}(Q,P)$ will be large.
+%
 Thus, $H(P,Q)$ will be large, even though $P$ and $Q$ are in the same fiber bundle.
 Instead of using the Hausdorff distance, $\max(H_{dir}(P,Q),H_{dir}(Q,P)$, we use $\min(H_{dir}(P,Q),H_{dir}(Q,P))$. If $P$ covers only part of the fiber bundle covered by $Q$, then $\min(H_{dir}(P,Q),H_{dir}(Q,P))$ is very small.
 Note that if $P$ and $Q$ overlap but do not cover the same parts of the fiber bundle, then $H_{dir}(P,Q)$ and $H_{dir}(Q,P)$ and $\min(H_{dir}(P,Q),H_{dir}(Q,P))$ will be large.
- 
+% 
 The directed Hausdorff distance is very sensitive to outliers in the data.
 However, because MetaTracts after orientation clustering are constructed using cylinders with similar orientations, they are not plagued by outliers.
 To cluster based on MetaTract proximity, we used single linkage hierarchical clustering.
@@ -459,7 +442,7 @@ To address the problem of small clusters, we applied hierarchical clustering and
 We removed the MetaTracts that were in those clusters from the data set and reapplied hierarchical clustering.
 To address the problem of short MetaTracts joining different fiber bundles, we applied hierarchical clustering and then removed the
 shortest fibers (fibers less than 0.6 times the median length) in each bundle. We then reapplied hierarchical clustering.
-We repeated both until a steady state of clusters is reached and no new small fibers can be removed. The results of clustering the orientation clusters (see Figure~\ref{fig:orientation_clustering}a,c) are shown in Figure~\ref{fig:orientation_clustering}d,e respectively. Note how the thin and curved purple cluster bundle 7 is extracted well (Figure~\ref{fig:orientation_clustering}e). 
+We repeated both until a steady state of clusters is reached and no new small fibers can be removed. The results of clustering the orientation clusters (see Fig.~\ref{fig:orientation_clustering}a,c) are shown in Fig.~\ref{fig:orientation_clustering}d,e respectively. Note how the thin and curved purple cluster bundle 7 is extracted well (Fig.~\ref{fig:orientation_clustering}e). 
 
 
 \subsection{Choice of clustering techniques}
@@ -473,23 +456,22 @@ As opposed to the two phase clustering we experimented with using proximity alon
 %	\caption{(A) Volume rendering of data set Fig.~\ref{fig:data-char}A.(B) shows a single slice of the data set. (C) shows two of the extracted meshes together. (D) shows the meshes separately.}
 %	\label{fig:crop-16-decomp}
 %\end{figure}  
-  
-  
-In comparison Figure~\ref{fig:comparison} shows the MetaTracts in Figure~\ref{fig:length_distribution}a being hierarchically clustered directly using proximity alone into 10, 15, and 20 clusters (ground truth is 11 clusters) without first performing orientation clustering. As discussed above, single linkage hierarchical clustering in the presence of overlapping fibers tends to create large clusters and small, low-cardinality outliers. When number of clusters ($h$) is 10 two large incorrect clusters are generated and the rest are outliers. As $h$ increases, some appropriate bundles start to form. Even at $h=20$, the top bundles all clusters together into one large incorrectly identified bundle.
-\begin{figure}[h]
+%  
+In comparison Fig.~\ref{fig:comparison} shows the MetaTracts in Fig.~\ref{fig:length_distribution}a being hierarchically clustered directly using proximity alone into 10, 15, and 20 clusters (ground truth is 11 clusters) without first performing orientation clustering. As discussed above, single linkage hierarchical clustering in the presence of overlapping fibers tends to create large clusters and small, low-cardinality outliers. When number of clusters ($h$) is 10 two large incorrect clusters are generated and the rest are outliers. As $h$ increases, some appropriate bundles start to form. Even at $h=20$, the top bundles all clusters together into one large incorrectly identified bundle.
+%
+On the other hand, Fig..~\ref{fig:comparison_orient} shows the MetaTracts in Fig..~\ref{fig:length_distribution}a, being clustered using K-means clustering after being embedded  in a m-dimensional (lower) space using proximity alone, without a second hierarchical clustering step. We set ``k" to be  10, 15, 20 clusters. In the lower dimensional space the spatial context is lost and fibers which are in reality far away are grouped together.
+\begin{figure}[hb]
 	\centering
-	\includegraphics[width=0.5\textwidth,  trim = 0mm 10mm 0mm 10mm, clip]{images_pvis/comparison_proximity.pdf}
+	\includegraphics[width=0.45\textwidth,  trim = 0mm 10mm 0mm 10mm, clip]{images_pvis/comparison_proximity.pdf}
 	\caption{MetaTracts data (left) and its straight-forward hierarchical clustering for various numbers of clusters.}
 	\label{fig:comparison}
 \end{figure} 
-\begin{figure}[h]
+\begin{figure}[hb]
 	\centering
-	\includegraphics[width=0.5\textwidth]{images_pvis/comparison_orient.pdf}
+	\includegraphics[width=0.45\textwidth]{images_pvis/comparison_orient.pdf}
 	\caption{Direct K-means clustering of MetaTracts (left) embedded in a m dimensional space using laplacian eigenmaps by proximity into 10,15 and 20 clusters.}
 	\label{fig:comparison_orient}
 \end{figure}
-On the other hand, Figure.~\ref{fig:comparison_orient} shows the MetaTracts in Figure.~\ref{fig:length_distribution}a, being clustered using K-means clustering after being embedded  in a m-dimensional (lower) space using proximity alone, without a second hierarchical clustering step. We set ``k" to be  10, 15, 20 clusters. In the lower dimensional space the spatial context is lost and fibers which are in reality far away are grouped together.
-
 
 % We in our approach use Zhang et al.~\cite{Zhang2008} Hierarchical clustering approach. Zhang et al.\cite{Zhang2008} define the distance between two DTI fibers Q and R as the larger mean of thresholded closest distances (equation \ref{eqn:dist}).
 %In the above discussion,DTI fibers are represented as points in $\mathbb{R}^3$. MetaTracts can be correspondingly represented as points in  $\mathbb{R}^3$ in terms of the start points of the cylinders. In our implementation Q and R are sets of `$C_{p}$'s. We in our implementation set $t$ to be same radius of the cylinders for all our tests. If two MetaTracts are less than a width of the cylinder apart then they are describing the same region. We use $D_{Lt}$ as our proximity measure.
@@ -515,16 +497,16 @@ On the other hand, Figure.~\ref{fig:comparison_orient} shows the MetaTracts in F
 
 Apart from direct visualization of the MetaTracts, we show two additional extensions which were requested by our domain specialists as highly important. The first extension is voxelizing the original volume according to the clusters each voxel is associated with.
 The second is to extract the corresponding surfaces from the voxel data by binarizing the volume per cluster and extracting the isosurface of the largest connected component from the binary volume. Both methods can possibly be used for further analysis of the data, e.g. in simulations.
-
-To voxelize the space,  we compute a neighborhood around each voxel. We then enumerate the number of voxels of each class (cluster) in this neighborhood. The voxel is then assigned to the class with the maximum number of elements in the neighborhood. Figures ~\ref{fig:crop-16-decomp}a and~\ref{fig:prepreg}d show the result of voxelization. Figure~\ref{fig:crop-16-decomp}c,d shows examples of extracted meshes.
+%
+To voxelize the space,  we compute a neighborhood around each voxel. We then enumerate the number of voxels of each class (cluster) in this neighborhood. The voxel is then assigned to the class with the maximum number of elements in the neighborhood. Fig.~\ref{fig:crop-16-decomp}a and~\ref{fig:prepreg}d show the result of voxelization. Fig.~\ref{fig:crop-16-decomp}c,d shows examples of extracted meshes.
 
 \begin{figure}
 \centering
-		\includegraphics[width=0.4\textwidth]{images_pvis/figure7}
+		\includegraphics[width=0.45\textwidth]{images_pvis/figure7}
 		%\includegraphics[width=0.5\textwidth, trim = 0mm 70mm 0mm 20mm, clip]{imagesMT2014/image7b.pdf}
 	%\includegraphics[width=0.45\textwidth]{imagesMT2014/crop-16/bundles}~ 
 	%\includegraphics[height=0.35\textwidth]{imagesMT2014/crop-16/vol_mesh.png} 
-	\caption{(A) Volume rendering of data set Figure~\ref{fig:data-char}A.(B) shows a single slice of the data set. (C) shows two of the extracted meshes together. (D) shows the meshes separately.}
+	\caption{(A) Volume rendering of data set Fig.~\ref{fig:data-char}A.(B) shows a single slice of the data set. (C) shows two of the extracted meshes together. (D) shows the meshes separately.}
 	\label{fig:crop-16-decomp}
 \end{figure}  
 
@@ -576,7 +558,7 @@ To voxelize the space,  we compute a neighborhood around each voxel. We then enu
 \begin{figure}[tb]
 \centering
 	%\includegraphics[width=0.45\textwidth]{imagesMT2014/image8b}
-	\includegraphics[width=0.4\textwidth, trim = 0mm 30mm 0mm 0mm, clip,]{images_pvis/figure8}
+	\includegraphics[width=0.45\textwidth, trim = 0mm 30mm 0mm 0mm, clip,]{images_pvis/figure8}
 	\caption{Data set with flat thin and compact bundles. (A) shows the volume rendering and a 2D slice with one of the boundaries marked in green, (B) shows the clusters according to individual orientation. (C) shows the complete result. (D) shows the voxelization of (C).}
 	\label{fig:prepreg}
 \end{figure}
@@ -585,15 +567,15 @@ To voxelize the space,  we compute a neighborhood around each voxel. We then enu
 
  %glass
 We tested our method on three datasets with varying characteristics. We report results on two due to lack of space.  
-Dataset 1 is described in section~\ref{sec:char_data}. Dataset 1 has eleven separate fiber bundles which we identified correctly.
-Figure~\ref{fig:orientation_clustering} shows the result of dataset~\ref{fig:data-char} decomposed into two orientation clusters with each orientation cluster further decomposed into $h=10$ clusters (the ground truth is 6 and 5 respectively). 
+Dataset 1 is described in Sec.~\ref{sec:char_data}. Dataset 1 has eleven separate fiber bundles which were identified correctly by MetaTracts.
+Fig.~\ref{fig:orientation_clustering} shows the result of dataset~\ref{fig:data-char} decomposed into two orientation clusters with each orientation cluster further decomposed into $h=10$ clusters (the ground truth is 6 and 5 respectively). 
 
 The hierarchical clustering is robust against over segmentation. For example,
-Figure~\ref{fig:len_dist_crop16} shows the median, minimum and maximum lengths per cluster in orientation 1 (Figure~\ref{fig:orientation_clustering}d). We generate the correct clusters and outlier bundles with very few elements which can be discarded. As noted in section~\ref{subsec:dist_clustering} the tracts do not run the entire length of the dataset, the median length of MetaTracts in cluster six (Figure~\ref{fig:len_dist_crop16}) is 200 while the maximum MetaTract length in the bundle is about 500 (measured in units of grid cube length: 2 $\mu m$). Figure~\ref{fig:length_distribution}b shows the length per MetaTract distribution for a particular fiber bundle. 
+Fig.~\ref{fig:len_dist_crop16} shows the median, minimum and maximum lengths per cluster in orientation 1 (Fig.~\ref{fig:orientation_clustering}d). We generate the correct clusters and outlier bundles with very few elements which can be discarded. As noted in Sec.~\ref{subsec:dist_clustering}, the MetaTracts do not run the entire length of the dataset, the median length of MetaTracts in cluster six (Fig.~\ref{fig:len_dist_crop16}) is 200 while the maximum MetaTract length in the bundle is about 500 (measured in units of grid cube length: 2 $\mu m$). Fig.~\ref{fig:length_distribution}b shows the length per MetaTract distribution for a particular fiber bundle. 
 
-Figure~\ref{fig:prepreg} shows the results on our dataset 2. This dataset is dense with \textit{flat and thin} bundles. The dimensions are 300$\times$350$\times$300 and the datatype is uint16 (dataset 1 is uint8). The bundles are indistinguishable in the original data set Figure~\ref{fig:prepreg}a. A green dotted line shows one of the fiber bundle boundary. Figure~\ref{fig:prepreg}b shows the fiber bundles for the two orientations, Figure~\ref{fig:prepreg}c shows the combined results, and Figure~\ref{fig:prepreg}d shows the volume after the voxelization.
+Fig.~\ref{fig:prepreg} shows the results on our dataset 2. This dataset is dense with \textit{flat and thin} bundles. The dimensions are 300$\times$350$\times$300 and the datatype is uint16 (dataset 1 is uint8). The bundles are indistinguishable in the original data set Fig.~\ref{fig:prepreg}a. A green dotted line shows one of the fiber bundle boundary. Fig.~\ref{fig:prepreg}b shows the fiber bundles for the two orientations, Fig.~\ref{fig:prepreg}c shows the combined results, and Fig.~\ref{fig:prepreg}d shows the volume after the voxelization.
 
-The fiber bundle extraction using MetaTracts was implemented in C++ using ITK. All clustering was done in R. The preprocessing is time consuming and consists of MetaTract generation and the distance computation. The orientation clustering is robust and is done as a part of preprocessing. The hierarchical clustering separately, on the results of the orientation clusters can be done within an order of a few minutes on Intel Xeon E5-2667 workstation and can be repeated according to user input of $h$ (section~\ref{sec:param_choices}). We store the normalized direction at each fiber point, thus both distance measures can be extracted simultaneously without any extra computations.
+The fiber bundle extraction using MetaTracts was implemented in C++ using ITK. All clustering was done in R. The preprocessing is time consuming and may take several hours. It consists of MetaTract generation and the distance computation. The orientation clustering is robust and done as a part of preprocessing. The hierarchical clustering itself, on the results of the orientation clusters can be done within an order of a few minutes on Intel Xeon E5-2667 workstation and can be repeated according to user input of $h$ (Sec.~\ref{sec:param_choices}). We store the normalized direction at each fiber point, thus both distance measures can be extracted simultaneously without any extra computations.
 
 
 
@@ -620,8 +602,8 @@ Finally, the majority participants agreed that the extracted meshes provides bet
 	\label{fig:len_dist_crop16}
 \end{figure}
 The critical parameters are $K$ for the K-means in orientation based clustering and $h$ for the hierarchical clustering. K denotes the number of major directions, which is either known a priori or can be easily estimated by looking at the weaving pattern. 
-Our framework is robust to the choice of $h$ (Section~\ref{sec:results}). Large $h$ keeps the major bundles intact. For example, in  Fig.~\ref{fig:len_dist_crop16}, where $h$ was set to ten while the ground truth was five clusters, we observe that the major clusters remain well segmented and small clusters can be removed if they have too few elements (clusters 2,3,4,5 and 7 in Fig.~\ref{fig:len_dist_crop16} all have less than 10 elements). This is an appealing trait of the proximity based clustering, thus providing good results even when exact $h$ might be unknown.
-The following parameters were fixed for all the tests. We set the reliable Hessian threshold $R_{h}$ to be 0.3 for all our tests. A $R_{h}$ of 0.0 would mean all points have reliable local orientation which would cause spurious MetaTracts detection. On the other hand, a very high $ R_{h}$ would lead to be a decline in number of MetaTracts produced. The $\alpha$ and $\beta$ in $R_{h}$ are as explained in Frangi et al. \cite{Frangi1998} and set to 0.5. The length and the width parameters for the cylinders for the MetaTracts decide how coarse the fiber cylinders are. Larger cylinders will handle noisy local orientation better as it inspects a higher number of candidate points to extend the fiber. We used 10.00 and 2.00 for length and breadth(measured in grid cube length), respectively for all tests. $\alpha$ and $\beta$ in equation~\ref{eqn:algo_1} decide how quickly the value of the factor decays; we have used [7-10] and half the length of cylinder (5.0). Our number of fiber bundle directions are limited. Thus even for small $m$ (cardinality of lower dimension in orientation clustering), the distinction between the orientation clusters is preserved quite well. We compared  $m=3-7$ experimentally without any dramatic change in results. 
+Our framework is robust to the choice of $h$ (Sec.~\ref{sec:results}). Large $h$ keeps the major bundles intact. For example, in  Fig.~\ref{fig:len_dist_crop16}, where $h$ was set to ten while the ground truth was five clusters, we observe that the major clusters remain well segmented and small clusters can be removed if they have too few elements (clusters 2,3,4,5 and 7 in Fig.~\ref{fig:len_dist_crop16} all have less than 10 elements). This is an appealing trait of the proximity based clustering, thus providing good results even when exact $h$ might be unknown.
+The following parameters were fixed for all the tests. We set the reliable Hessian threshold $R_{h}$ to be 0.3 for all our tests. A $R_{h}$ of 0.0 would mean all points have reliable local orientation which would cause spurious MetaTracts detection. On the other hand, a very high $ R_{h}$ would lead to be a decline in number of MetaTracts produced. The $\alpha$ and $\beta$ in $R_{h}$ are as explained in Frangi et al. \cite{Frangi1998} and set to 0.5. The length and the width parameters for the cylinders for the MetaTracts decide how coarse the fiber cylinders are. Larger cylinders will handle noisy local orientation better as it inspects a higher number of candidate points to extend the fiber. We used 10.00 and 2.00 for length and breadth(measured in grid cube length), respectively for all tests. Short tracts of less than 0.01 times the smallest axes size are prone to have erroneous local orientation and are therefore removed. $\alpha$ and $\beta$ in equation~\ref{eqn:algo_1} decide how quickly the value of the factor decays; we have used [7-10] and half the length of cylinder (5.0). Our number of fiber bundle directions are limited. Thus even for small $m$ (cardinality of lower dimension in orientation clustering), the distinction between the orientation clusters is preserved quite well. We compared  $m=3-7$ experimentally without any dramatic change in results. 
 %\begin{figure}[tb]
 %	\centering
 %	\includegraphics[width=0.5\textwidth, trim = 0mm 80mm 0mm 170mm, clip]{images_pvis/figure10}

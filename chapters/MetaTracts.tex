@@ -107,7 +107,7 @@ Unlike DTI, we do not have diffusion tensor data. Instead, we have a scalar volu
 \subsection {Visual Analysis and Modeling of Fiber Reinforced Composites}
 The approaches presented in visualization and analysis of composites mainly focus on individual objects such as fibers or pores and deals with fiber extraction from high resolution data where the individual fibers are clearly discernible. Fritz et al.~\cite{Fritz2009} proposed interactive workflows for non destructive testing practitioners to explore and quantify steel fibers in reinforced sprayed concrete. This approach allows analyzing fiber orientations based on direction transfer functions. Salaberger et al.~\cite{Salaberger2011} introduced a pipeline to extract and characterize individual fibers of fiber reinforced composites. They encode the extracted fibers as color-coded line segments in 3D and visually identifying fibers with similar orientations. Recently, Weissenbock et al.~\cite{Weissenbock2014} introduced a system for interactive exploration and analysis of fibers in fiber reinforced polymers. 
 
-Lomov et al.~\cite{Lomov2010} in a recent paper, discussed the current available solutions in geometric modeling of three dimensional composites. Modeling of the composites starts with establishing the topology of the structure, which translates to answering if a particular bundle is in contact with another at a particular position? The second builds the geometry of the model, answering questions relating to placement of bundles in space their orientations and dimensions. 
+Lomov et al.~\cite{Lomov2010, Lomov2001} and Straumit et al.~\cite{StraumitI2014} in recent papers, discussed the problems and current available solutions in geometric modeling of three dimensional composites. Modeling of the composites, first starts with establishing the topology of the structure, which translates to answering if a particular bundle is in contact with another at a particular position? The second step builds the geometry of the model, answering questions relating to placement of bundles in space their orientations and dimensions. 
 
 %Tools based on image analysis, fiber tracking and clustering into bundles in DTI and their subsequent visualization through stream tubes and coloring schemes have received extensive research. Recently, similar techniques have been applied to fiber tracing in composite materials. 
 To the best of our knowledge there is no approach focusing on direct extraction of fiber bundle structures from low resolution XCT of composite fibers, which is the main scope of this work.
@@ -598,7 +598,7 @@ Finally, the majority participants agreed that the extracted meshes provides bet
 \label{sec:param_choices}
 \begin{figure}[tb]
 \centering
-	\includegraphics[width=\linewidth,  trim = 0mm 0mm 0mm 00mm, clip]{images_pvis/figure9.pdf}
+	\includegraphics[width=\linewidth,  trim = 0mm 0mm 0mm 00mm, clip]{images_pvis/figure9_AMA.pdf}
 	 \vspace{-1.5em}
 	%\includegraphics[width=0.5\textwidth,  trim = 10mm 40mm 0mm 15mm, clip]{imagesMT2014/image_length_histogram.pdf}
 	\caption{Number of tracts and median, minimum and maximum length of individual MetaTracts in the orientation cluster Figure~\ref{fig:orientation_clustering}d, clustered into 10 clusters. The unit for length is the grid cube length.  Clusters labeled 2,3,4,5 and 7 all have cardinality less than 10. }

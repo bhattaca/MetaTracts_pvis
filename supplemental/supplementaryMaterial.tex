@@ -1,43 +1,24 @@
-\section{Supplementary Material}
-\label{sec:sm}
-Section~\ref{subsec:ext_exp} contains extended experiments.
-Section~\ref{subsec:usereval} contains our user evaluation questionnaire.
-\subsection{Enlarged Figures}
-\label{subsec:enlarged_fig}
-\begin{figure}[tb]
-	\centering
-	%\includegraphics[width=0.5\textwidth, trim = 0mm 110mm 0mm 0mm, clip,]{images_pvis/figure1}
-	\includegraphics[width=\textwidth]{images_pvis/data-char.pdf}
-	\caption{Data characteristics: (a) Rendering of the data. (b) 2D slices along the X-axis and (c) 2D slice along the Z-axis. (d) Magnified region marked in green square (c). Multiple fiber bundles cross and are indistinguishable by visual inspection alone. }
-	\label{fig:data-char}
-\end{figure}
-\subsection{Extended Experiments}
-\label{subsec:ext_exp}
+
+
+%Section~\ref{subsec:usereval} contains our user evaluation questionnaire.
+
+\section{Extended Experiments}
+\label{sec:ext_exp}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{images_pvis/dataset3.pdf}
-	\caption{Results on dataset3. (a) Rendering of our dataset. (b) MetaTracts embedded on the top 3 eigenvectors and clustered into 2 clusters. (c) Each orientation, hierarchically clustered into 10 clusters.}
+	\includegraphics[width=\linewidth]{images_pvis/dataset3.pdf}
+	\caption{Results on dataset3. (a) Rendering of our dataset. (b) MetaTracts embedded on the top 3 eigenvectors and clustered into 2 clusters. (c) Combined results of each orientation, hierarchically clustered into 10 clusters.}
 	\label{fig:dataset3}
 \end{figure}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.7\linewidth]{images_pvis/dataset1-extended.pdf}
+	\includegraphics[width=\linewidth]{images_pvis/dataset1-extended.pdf}
 	\caption{Results on dataset1. (a) MetaTracts. (b) Voxelized MetaTracts. (c) Subset of the fiber bundles are shown to better visualize the interaction between particular bundles.}
 	\label{fig:dataset1-extended}
 \end{figure}
 Figure~\ref{fig:dataset3} shows the results on our third dataset. The data set is 600$\times$500$\times$600 in size and the datatype is uint16. For testing purposes we have restricted the number of MetaTracts produced to 10000 which generates the empty spaces in Figure~\ref{fig:dataset3}b,c.
 The dataset has 5 major bundles. All the bundles were extracted by MetaTracts.
 
-Figure~\ref{fig:dataset1-extended} further shows how spatial context can be used to answer questions such as  Are these bundles in contact at a particular position in the data? What is the relative orientations of the contacting bundles? These bundles are occluded in the original volume and no conclusions can be made from the original volume. In the voxelized MetaTracts we can clearly see where and how the bundles interact.
+Figure~\ref{fig:dataset1-extended} further shows how spatial context can be used to answer questions such as:  Are these bundles in contact at a particular position in the data? What is the relative orientations of the contacting bundles? These annotated bundles are occluded in the original volume and no conclusions can be made from the volume rendering. In the voxelized MetaTracts we can clearly see where and how the bundles interact.
 
-
-
-
-
-
-\subsection{User Evaluation Questionnaire}
-The questionnaire contains links to videos which were seen by the participants.
-\label{subsec:usereval}
-\pagebreak
-\includepdf[pages={1-13}]{./supplemental/MetaTracts_usereval.pdf}

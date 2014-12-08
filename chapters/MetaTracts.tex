@@ -185,7 +185,8 @@ The Hessian matrix represents the local curvature. The eigen decomposition of th
 
 The eigenvector corresponding to the smallest eigenvalue (also referred as the principal direction) gives the direction along which the curvature is smallest. This direction coincides with the direction of the tubular structure.
 
-Frangi et al.~\cite{Frangi1998} introduced a process that searches for geometric structures which are tubular. They define a measure based on two geometric ratios of the second order ellipsoid given by the local Hessian matrix to measure the ``vesselness'' criterion.  In order to determine reliable Hessians, we compute a similar metric. We include their work here for completeness and direct the reader to ~\cite{Frangi1998} for details. Let $\lambda_{K}$ be the eigenvalue with the $K^{th}$ smallest magnitude. Here, $|{\lambda}_{1}| \leq| {\lambda}_{2}|\leq| {\lambda}_{3}| $ are the eigenvalues of the Hessian matrix. Specifically, a pixel belonging to a vessel region will have small $\lambda_{1}$ ($|\lambda_{1}|\approx 0$) and $\lambda_{2}$, $\lambda_{3}$ of large magnitude and of equal sign($|\lambda_{1}| \ll |\lambda_{2}|$ and $|\lambda_{2}|\approx |\lambda_{3}|$). The sign indicates if the vessel is bright in a dark background or dark in a bright background. In our case the individual fibers are bright ($\lambda_2,\lambda_3 < 0$). The following measures are defined in~\cite{Frangi1998}.  
+Frangi et al.~\cite{Frangi1998} introduced a process that searches for geometric structures which are tubular. They define a measure based on two geometric ratios of the second order ellipsoid given by the local Hessian matrix to measure the ``vesselness'' criterion.  In order to determine reliable Hessians, we compute 
+\color{red}{ the same metric} \color{blue}{a similar metric}\color{black}. We include their work here for completeness and direct the reader to ~\cite{Frangi1998} for details. Let $\lambda_{K}$ be the eigenvalue with the $K^{th}$ smallest magnitude. Here, $|{\lambda}_{1}| \leq| {\lambda}_{2}|\leq| {\lambda}_{3}| $ are the eigenvalues of the Hessian matrix. Specifically, a pixel belonging to a vessel region will have small $\lambda_{1}$ ($|\lambda_{1}|\approx 0$) and $\lambda_{2}$, $\lambda_{3}$ of large magnitude and of equal sign($|\lambda_{1}| \ll |\lambda_{2}|$ and $|\lambda_{2}|\approx |\lambda_{3}|$). The sign indicates if the vessel is bright in a dark background or dark in a bright background. In our case the individual fibers are bright ($\lambda_2,\lambda_3 < 0$). The following measures are defined in~\cite{Frangi1998}.  
 \begin{equation}\label{RA}
 \mathcal{R_{A}}=\frac{\textrm{Largest  Cross Section}\big/ \pi}{{\textrm{Largest Axis Semi-length}}^{2}}=\frac{|\lambda_{2}|}{|\lambda_{3}|}
 \end{equation}
@@ -645,9 +646,15 @@ Simpler geometry (example dataset 2) was experimentally found to handle larger c
 %\end{figure}
 
 
-\section{Conclusion and future work}
+\section{Limitations and future work}
 \label{sec:conclusions}
-In this paper, we introduce a framework to extract and visualize fiber bundles in composite materials. We show that our framework works at comparatively low resolution and with dense fiber arrangements (when extracting single fibers might not be possible). It handles complex fiber patterns such as ``cross overs'' and ``braiding''. We perform an user evaluation to indicate the usefulness of the method. In future, we plan to increase the precision of the extractions, include uncertainty based visualization to better portray the surface of separations and speed up extraction times.
+\color{red}
+ A key assumption of the method is ``connectivity'' (Sec.~\ref{sec:char_data}).
+If the ``connectivity'' is not satisfied due to noise in the image, the then MetaTracts will be inaccurate. 
+The clustering process also assumes that the fiber bundles have a minimum width.
+\color{green}
+In this paper, we introduce a framework to extract and visualize fiber bundles in composite materials. We show that our framework works at comparatively low resolution and with dense fiber arrangements (when extracting single fibers might not be possible). It handles complex fiber patterns such as ``cross overs'' and ``braiding''. We perform an user evaluation to indicate the usefulness of the method.
+\color{black} In future, we plan to increase the precision of the extractions, include uncertainty based visualization to better portray the surface of separations and speed up extraction times.
 %
 %\begin{figure}
 %  \centering

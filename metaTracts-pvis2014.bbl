@@ -32,9 +32,8 @@ A.~Brun, H.~Knutsson, H.-J. Park, M.~E. Shenton, and C.-F. Westin.
 \bibitem{Brun2003}
 A.~Brun, H.-J. Park, H.~Knutsson, and C.-F. Westin.
 \newblock Coloring of dt-mri fiber traces using laplacian eigenmaps.
-\newblock In {\em Computer Aided Systems Theory - EUROCAST 2003}, volume 2809
-  of {\em Lecture Notes in Computer Science}, pages 518--529. Springer Verlag,
-  2003.
+\newblock In {\em Computer Aided Systems Theory}, volume 2809 of {\em Lecture
+  Notes in Computer Science}. 2003.
 
 \bibitem{Corouge2004}
 I.~Corouge, S.~Gouttard, and G.~Gerig.
@@ -51,10 +50,9 @@ R.~O. Duda, P.~E. Hart, and D.~G. Stork.
 \bibitem{Frangi1998}
 A.~Frangi, W.~Niessen, K.~Vincken, and M.~Viergever.
 \newblock Multiscale vessel enhancement filtering.
-\newblock In W.~Wells, A.~Colchester, and S.~Delp, editors, {\em Medical Image
-  Computing and Computer-Assisted Interventation MICCAI98}, volume 1496 of {\em
-  Lecture Notes in Computer Science}, pages 130--137. Springer Berlin
-  Heidelberg, 1998.
+\newblock In {\em Medical Image Computing and Computer-Assisted Interventation
+  MICCAI98}, volume 1496 of {\em Lecture Notes in Computer Science}, pages
+  130--137. 1998.
 
 \bibitem{Fritz2009}
 L.~Fritz, M.~Hadwiger, G.~Geier, G.~Pittino, and M.~E. Gr\"{o}ller.
@@ -72,8 +70,7 @@ E.~Garyfallidis, M.~Brett, M.~M. Correia, G.~B. Williams, and I.~Nimmo-Smith.
 C.~Heinzl.
 \newblock {\em Analysis and Visualization of Industrial CT Data}.
 \newblock PhD thesis, Institute of Computer Graphics and Algorithms, Vienna
-  University of Technology, Favoritenstrasse 9-11/186, A-1040 Vienna, Austria,
-  12 2009.
+  University of Technology, 12 2009.
 
 \bibitem{jonasson2005}
 L.~Jonasson, P.~Hagmann, J.~Thiran, and V.~Wedeen.
@@ -93,6 +90,19 @@ Y.~Karpat, O.~Bahtiyar, and B.~Değer.
 J.~Kastner, editor.
 \newblock {\em 4th Conference on Industrial Computed Tomography}, Wels,
   Austria, September 2012. Shaker Verlag, Aachen.
+
+\bibitem{Lomov2010}
+S.~Lomov, G.~Perie, D.~S. Ivanov, I.~Verpoest, and D.~Marsal.
+\newblock Modeling three-dimensional fabrics and three-dimensional reinforced
+  composites: challenges and solutions.
+\newblock {\em Textile Research Journal}, 2010.
+
+\bibitem{Lomov2001}
+S.~V. Lomov, G.~Huysmans, Y.~Luo, R.~Parnas, A.~Prodromou, I.~Verpoest, and
+  F.~Phelan.
+\newblock Textile composites: modelling strategies.
+\newblock {\em Composites Part A: applied science and manufacturing},
+  32(10):1379--1394, 2001.
 
 \bibitem{Moberts2005}
 B.~Moberts, A.~Vilanova, and J.~J. van Wijk.
@@ -122,12 +132,6 @@ C.~Red.
 \newblock Aviation outlook: Composites in general aviation 2011-2020.
 \newblock {\em High-Performance Composites}, May 2012.
 
-\bibitem{PMI_AR_2012}
-A.~Reh, B.~Plank, J.~Kastner, M.~E. Gr{\"o}ller, and C.~Heinzl.
-\newblock Porosity maps - interactive exploration and visual analysis of
-  porosity in carbon fiber reinforced polymers.
-\newblock {\em Computer Graphics Forum,}, 31(3):1185--1194, June 2012.
-
 \bibitem{Salaberger2011}
 D.~Salaberger, K.~Kannappan, J.~Kastner, J.and~Reussner, and T.~Auinger.
 \newblock Evaluation of computed tomography data from fibre reinforced polymers
@@ -140,9 +144,8 @@ Y.~Sato, S.~Nakajima, H.~Atsumi, T.~Koller, G.~Gerig, S.~Yoshida, and
   R.~Kikinis.
 \newblock 3d multi-scale line filter for segmentation and visualization of
   curvilinear structures in medical images.
-\newblock In J.~Troccaz, E.~Grimson, and R.~Mosges, editors, {\em
-  CVRMed-MRCAS'97}, volume 1205 of {\em Lecture Notes in Computer Science},
-  pages 213--222. Springer Berlin Heidelberg, 1997.
+\newblock In {\em CVRMed-MRCAS'97}, volume 1205 of {\em Lecture Notes in
+  Computer Science}, pages 213--222. 1997.
 
 \bibitem{Schilling2005}
 P.~J. Schilling, B.~R. Karedla, A.~K. Tatiparthi, M.~A. Verges, and P.~D.
@@ -151,13 +154,19 @@ P.~J. Schilling, B.~R. Karedla, A.~K. Tatiparthi, M.~A. Verges, and P.~D.
   polymer matrix composites.
 \newblock {\em Composites Science and Technology}, 65(14):2071 -- 2078, 2005.
 
+\bibitem{Straumit2014}
+I.~Straumit, S.~Lomov, F.~Bensadoun, and M.~Wevers.
+\newblock Automatic transformation of 3d micro-ct images into finite element
+  models with anisotropic local properties.
+\newblock In {\em Proceedings of the 16th European Conference on Composite
+  Materials (ECCM16)}, 2014.
+
 \bibitem{Weissenbock2014}
 J.~Weissenbock, A.~Amirkhanov, W.~Li, A.~Reh, A.~Amirkhanov, E.~Groller,
   J.~Kastner, and C.~Heinzl.
 \newblock Fiberscout: An interactive tool for exploring and analyzing fiber
   reinforced polymers.
-\newblock In {\em Pacific Visualization Symposium (PacificVis), 2014 IEEE},
-  pages 153--160, March 2014.
+\newblock In {\em Pacific Visualization Symposium,IEEE}, pages 153--160, 2014.
 
 \bibitem{westinMEDIA02}
 C.-F. Westin, S.~E. Maier, H.~Mamata, A.~Nabavi, F.~A. Jolesz, and R.~Kikinis.

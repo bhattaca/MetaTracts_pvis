@@ -71,6 +71,7 @@ We \replacedWith{advance and interpret}{interpret and advance} techniques from d
 	\includegraphics[width=\linewidth]{images_pvis/workflow.pdf}
 	\caption{Flow chart of the MetaTracts approach for fiber bundle extraction}
 	\label{fig:flowchart}
+	\vskip-0.2cm
 \end{figure}
 Figure~\ref{fig:flowchart} shows an over view of our approach.
 \replacedWith
@@ -159,6 +160,7 @@ Data characteristics: (a) Rendering of dataset D1. (b, c) 2D slices along Z- and
 }
 }
 \label{fig:data-char}
+\vskip-0.2cm
 \end{figure}
 
 
@@ -166,8 +168,8 @@ Data characteristics: (a) Rendering of dataset D1. (b, c) 2D slices along Z- and
 \label{sec:char_data}
 \replacedWith
 {
-Figure \ref{fig:data-char} shows dataset 1 with woven fiber bundles. Dataset 1 is 450$\times$300$\times$500 voxels in size with isotropic resolution of 2$\mu m$. The data type is unsigned 8 bit integer. Figure~\ref{fig:data-char} clearly shows the weaving structure of the composite unit cell as regional subset of the recurring fiber bundle weaving pattern. The unit cell is used as a basis structure for CFRP manufacturing. The alignment and weaving pattern of the fiber bundles in the cloth influences the strength and stiffness properties of the resulting material. Figure~\ref{fig:data-char}a shows a volume rendering of the dataset. Figure~\ref{fig:data-char}b shows 2D slices along the $X$- and Figure~\ref{fig:data-char}c in $Z$-axis. Figure~\ref{fig:data-char}d shows the magnified version of the green region of interest. 
-The resolution of dataset 1 renders the individual carbon fibers in a fiber bundle hard to resolve in the 2D slice images. Figure~\ref{fig:data-char}d contains two bundles going in opposite directions. The separation between two fiber bundles is barely visible. The carbon fibers themselves do not differ much from the underlying epoxy matrix in terms of attenuation which poses an additional challenge for characterization. The fiber bundles may differ in terms of the amount of fibers in the bundle. Figure~\ref{fig:data-char}a shows the large variation in cross section sizes among the bundles.
+Figure \ref{fig:data-char} shows \replacedWith{dataset 1}{D1} with woven fiber bundles. \replacedWith{Dataset 1}{D1} is 450$\times$300$\times$500 voxels in size with isotropic resolution of 2$\mu m$. The data type is unsigned 8 bit integer. Figure~\ref{fig:data-char} clearly shows the weaving structure of the composite unit cell as regional subset of the recurring fiber bundle weaving pattern. The unit cell is used as a basis structure for CFRP manufacturing. The alignment and weaving pattern of the fiber bundles in the cloth influences the strength and stiffness properties of the resulting material. Figure~\ref{fig:data-char}a shows a volume rendering of the dataset. Figure~\ref{fig:data-char}b shows 2D slices along the $X$- and Figure~\ref{fig:data-char}c in $Z$-axis. Figure~\ref{fig:data-char}d shows the magnified version of the green region of interest. 
+The resolution of \replacedWith{dataset 1}{D1} renders the individual carbon fibers in a fiber bundle hard to resolve in the 2D slice images. Figure~\ref{fig:data-char}d contains two bundles going in opposite directions. The separation between two fiber bundles is barely visible. The carbon fibers themselves do not differ much from the underlying epoxy matrix in terms of attenuation which poses an additional challenge for characterization. The fiber bundles may differ in terms of the amount of fibers in the bundle. Figure~\ref{fig:data-char}a shows the large variation in cross section sizes among the bundles.
 Depending on the weaving pattern, the fiber bundles cross each other in different orientations. In general, the number of orientations is limited by the weaving pattern. Nevertheless, the weaving pattern may cause the individual bundles to be curved. In consequence individual fibers may be adjacent in Euclidean distance but belong to different bundles. 
 We make the following assumptions on our data:
 }
@@ -276,6 +278,7 @@ Regions where the principal direction is parallel to the X axis are red in color
  \vspace{-1.5em}
 \caption{Reliable Hessians. (a) Colored according to Orientation vector mapped to RGB. (b\added{,c}) 2D slice\added{s} along Z\replacedWith{ and (c) along}{-} and X axis. (d) \replacedWith{Magnified}{Zoom in of the green} region marked in \replacedWith{green square}{(c)}.}
 \label{fig:reliable_hessian}
+\vskip-0.2cm
 \end{figure}
 
 
@@ -322,7 +325,8 @@ In this section we explain the process of MetaTracts generation in $\mathbb{R}^2
   \vspace{-1em}
  \caption{MetaTracts generation: (b) \replacedWith{MetaTract generation, region with $R_H$ less than threshold}{Generation process}. (a) \replacedWith{Close up of}{Zoom in of the white} marked region in (b). (c) \replacedWith{Parts of a single MetaTract}{Individual cylinder}.}
   \label{fig:algo}
-    \vspace{-1.5em}
+    %\vspace{-1.5em}
+    \vskip-0.2cm
 \end{figure}
 The set of vertices which are in the green region but not overlapped by blue are possible \textit{``candidate vertices"} for the start point of the next cylinder in a particular MetaTract. From these we select another grid vertex which will be the start point for the next cylinder.
 %\begin{figure}
@@ -396,6 +400,7 @@ MetaTracts in a given fiber bundle may extend the full length of the bundle and 
 	%\includegraphics[width=0.45\textwidth,  trim = 0mm 100mm 0mm 50mm, clip]{imagesMT2014/image_length}
 	\caption{(a) MetaTracts color-coded according to their mean orientations. (b) length distribution of individual MetaTracts for a particular bundle (unit for length is grid cube edge length:  $2\mu m$).}
 	\label{fig:length_distribution}
+	\vskip-0.2cm
 \end{figure}
 
 
@@ -442,6 +447,7 @@ For our test case there are two major directions of the fiber bundles and $K$ wa
   	\caption{(b) Result of K means clustering with data points projected to the top three eigenvectors as major axes. (a) MetaTracts belonging to orientation cluster 1. (c) MetaTracts belonging to orientation cluster 2. MetaTracts in gray (a,c) show context.
   	(d,e) shows the result of distance based clustering on the orientation cluster. (f) shows the combined result. }
   \label{fig:orientation_clustering}
+  \vskip-0.2cm
   \end{figure}
 
 %\subsection {Distance based clustering}
@@ -520,6 +526,7 @@ Figure~\ref{fig:comparison}b shows the MetaTracts, clustered using K-means clust
 	\includegraphics[width=\linewidth]{images_pvis/comparison_all.pdf}
 	\caption{Applying only (a)hierarchical and (b)\added{dimensionality reduction followed by} K-means clustering methods to MetaTracts for various numbers of clusters \added{(distance measure is minimal directed Hausdorffs.}}
 	\label{fig:comparison}
+	\vskip-0.2cm
 \end{figure} 
 
 % We in our approach use Zhang et al.~\cite{Zhang2008} Hierarchical clustering approach. Zhang et al.\cite{Zhang2008} define the distance between two DTI fibers Q and R as the larger mean of thresholded closest distances (equation \ref{eqn:dist}).
@@ -558,6 +565,7 @@ To voxelize the space,  we compute a neighborhood around each voxel. We then enu
 	%\includegraphics[height=0.35\textwidth]{imagesMT2014/crop-16/vol_mesh.png} 
 	\caption{(a) Voxelization of data set 1; (b) a single slice of the data set; (c) two of the extracted meshes together; (d) the meshes rendered separately.}
 	\label{fig:crop-16-decomp}
+	\vskip-0.2cm
 \end{figure}  
 
 
@@ -611,21 +619,21 @@ To voxelize the space,  we compute a neighborhood around each voxel. We then enu
 	\includegraphics[width=\linewidth]{images_pvis/dataset2.pdf}
 	\caption{Data set with flat thin and compact bundles. (a) shows the volume rendering and a 2D slice with one of the boundaries marked in green, (b) shows the clusters according to individual orientation. (c) shows the complete result. (d) shows the voxelization of (c).}
 	\label{fig:prepreg}
+	\vskip-0.2cm
 \end{figure}
 
 %Fig~\ref{fig:kull} (b) shows the results after the MetaTracts extraction. Fig.~\ref{fig:kull} (c) shows the results of the orientation clustering with $K$ set to 2. Note, that the curved fiber bundle has also been detected with the correct orientation. Fig. \ref{fig:kull} (d) and (e) shows the results of hierarchical clustering of \ref{fig:kull} (c) using proximity based clustering. Both the orientation were clustered into 14 classes.
 
  %glass
 We tested our method on three datasets with varying characteristics. We report results on two \replacedWith{due to lack of space}{here and third in the supplemental section}.  
-Dataset 1 is described in Sec.~\ref{sec:char_data} (Figure~\ref{fig:data-char}). Dataset 1 has eleven separate fiber bundles (5 along one orientation and 6 along the other). All of them were identified correctly by MetaTracts. With different cross-section sizes and varying degree of curvature of the bundles, dataset 1 is a complicated dataset.
-Figure~\ref{fig:orientation_clustering} and Figure~\ref{fig:crop-16-decomp} shows the result of dataset 1 decomposed into two orientation clusters with each orientation cluster further decomposed into $h=10$ clusters followed by voxelization and mesh extraction. \removed{MetaTracts correctly identified the fiber bundles.} Note how the thin and curved purple cluster bundle 7 is extracted well (Figure~\ref{fig:orientation_clustering}e, Figure~\ref{fig:crop-16-decomp}d). 
+Dataset \added{D}1 is described in Sec.~\ref{sec:char_data} (Figure~\ref{fig:data-char}). \replacedWith{Dataset 1}{D1} has eleven separate fiber bundles (5 along one orientation and 6 along the other). All of them were identified correctly by MetaTracts. With different cross-section sizes and varying degree of curvature of the bundles, \replacedWith{dataset 1}{D1} is a complicated dataset.
+Figure~\ref{fig:orientation_clustering} and Figure~\ref{fig:crop-16-decomp} shows the result of \replacedWith{dataset 1}{D1} decomposed into two orientation clusters with each orientation cluster further decomposed into $h=10$ clusters followed by voxelization and mesh extraction. \removed{MetaTracts correctly identified the fiber bundles.} Note how the thin and curved purple cluster bundle 7 is extracted well (Figure~\ref{fig:orientation_clustering}e, Figure~\ref{fig:crop-16-decomp}d). 
 
 \removed{The hierarchical clustering is robust against over segmentation. For example,}
 Figure~\ref{fig:len_dist_crop16} shows the median, minimum and maximum lengths per cluster in orientation 1 (Figure~\ref{fig:orientation_clustering}d) \added{clustered into 10 clusters, the ground truth being  5 clusters}. We generate the correct clusters and outlier bundles with very few elements which can be discarded. As noted in Sec.~\ref{subsec:dist_clustering}, the MetaTracts do not run the entire length of the dataset, the median length of MetaTracts in cluster six (Figure~\ref{fig:len_dist_crop16}) is 200 while the maximum MetaTract length in the bundle is about 500 (measured in units of grid cube length: 2 $\mu m$). Figure~\ref{fig:length_distribution}b shows the length per MetaTract distribution for a particular fiber bundle. 
+Figure~\ref{fig:prepreg} shows the results on our dataset 2 \added{(D2)}. This dataset has different characteristics, and is dense with \textit{flat and thin} bundles, it consists of 4 bundles along one direction and 5 along the other. The dimensions are 300$\times$350$\times$300 and the datatype is uint16 (\replacedWith{dataset 1}{D1} is uint8). The bundles are indistinguishable in the original data set Figure~\ref{fig:prepreg}a. A green dotted line shows one of the fiber bundle boundary. Figure~\ref{fig:prepreg}b shows the fiber bundles for the two orientations, Figure~\ref{fig:prepreg}c shows the combined results, and Figure~\ref{fig:prepreg}d shows the volume after the voxelization.
 
-Figure~\ref{fig:prepreg} shows the results on our dataset 2. This dataset has different characteristics, and is dense with \textit{flat and thin} bundles, it consists of 4 bundles along one direction and 5 along the other. The dimensions are 300$\times$350$\times$300 and the datatype is uint16 (dataset 1 is uint8). The bundles are indistinguishable in the original data set Figure~\ref{fig:prepreg}a. A green dotted line shows one of the fiber bundle boundary. Figure~\ref{fig:prepreg}b shows the fiber bundles for the two orientations, Figure~\ref{fig:prepreg}c shows the combined results, and Figure~\ref{fig:prepreg}d shows the volume after the voxelization.
-
-The fiber bundle extraction using MetaTracts was implemented in C++ using ITK. All clustering was done in R. The preprocessing is time consuming and may take several hours. It consists of MetaTract generation and the distance computation. The orientation clustering is robust and done as a part of preprocessing. The hierarchical clustering by itself, on the results of the orientation clusters can be done within an order of a few minutes on Intel Xeon E5-2667 workstation and can be repeated according to user input of $h$ (Sec.~\ref{sec:param_choices}). We store the normalized direction at each fiber point, thus both distance measures can be extracted simultaneously without any extra computations.
+\removed{The fiber bundle extraction using }MetaTracts \replacedWith{was}{are} implemented in C++ using ITK. \removed{All }Clustering \replacedWith{was}{is} done in R. The preprocessing is time consuming and may take several hours. It consists of MetaTract generation and the distance computation. The orientation clustering is robust and done as a part of preprocessing. The hierarchical clustering by itself, on the results of the orientation clusters can be done within an order of a few minutes on Intel Xeon E5-2667 workstation and can be repeated according to user input of $h$ (Sec.~\ref{sec:param_choices}). We store the normalized direction at each fiber point, thus both distance measures can be extracted simultaneously without any extra computations.
 
 
 
@@ -637,10 +645,12 @@ The fiber bundle extraction using MetaTracts was implemented in C++ using ITK. A
 	%\includegraphics[width=0.5\textwidth,  trim = 10mm 40mm 0mm 15mm, clip]{imagesMT2014/image_length_histogram.pdf}
 	\caption{The user evaluation consists of a set of queries on videos of our results, volume rendering and Hessian colormap. The questionnaire tests the effectiveness of MetaTracts in visualizing ``geometric structure" and ``spatial context". The Likert scale goes from 1-5: strongly disagree, disagree, neutral, agree and strongly agree. }
 	\label{fig:userstudy}
+	\vskip-0.2cm
 \end{figure}
-Four NDT practitioners who are familiar with X-Ray computed tomography and its visual representations, four material scientists who are experienced in analyzing fiber reinforced polymers and four practitioners of visualization participated in the user evaluation of our work. We setup a questionnaire with questions on solving given tasks as well as questions using the Likert scale (LS) for evaluating the performance of the MetaTracts over currently used techniques. LS consists of 5 levels from ``strongly disagree" to ``strongly agree". Figure~\ref{fig:userstudy} shows the results \added{in the sequential order they were asked}. Task 1 of the questionnaire was to ``identify the number of fiber bundles" from a video showing a 360 degree rotation of the volume rendering of dataset 1 (Figure~\ref{fig:data-char}a). This task tests the perception of geometric structure and how common problems like uniform grayscale values and occlusion of the different fiber bundles affects the user. Figure~\ref{fig:userstudy} shows that, as expected the participants found it difficult to determine the number of bundles from volume rendering alone. Another common approach is to color map the top eigenvector of Hessian matrix to RGB space. We show a video showing a 360 degree rotation of the volume rendering of the color mapped eigenvectors (similar to Figure~\ref{fig:reliable_hessian}a) and asked the same query. Compared to the volume rendering, the Hessian color map provides more information about the major orientations and we see that the evaluators performed better in this test than in the direct volume rendering test. The majority of our participants agreed or strongly agreed (LS) that Hessian color map was more effective. Finally, we showed the MetaTracts extracted bundles (for orientation 1 and 2 separately Figure~\ref{fig:orientation_clustering}d,e). All participants could correctly identify the number of fiber bundles. All participants agreed that MetaTracts was more effective in perceiving geometric structure than direct volume rendering. They especially liked the two dimensional slices of the MetaTracts (Figure~\ref{fig:crop-16-decomp}b, compared to Figure~\ref{fig:data-char}c).
-The next set of tasks on the MetaTracts results tests the spatial context perceived from MetaTracts. We achieve this by asking the evaluators to select the largest fiber bundle from a subset of fiber bundles, to select the smallest from a subset and given a fiber bundle and to select the most similar one from a subset. Due to the problems of occlusions and similar grayscale values these tests are difficult on volume rendering of the plain data only, but straight forward using MetaTracts. In the Likert scale, the majority strongly agreed that the tasks are undemanding compared to volume rendering.
-Finally, the majority participants agreed that the extracted meshes provides better spatial context than volume rendering. 
+Four NDT practitioners \replacedWith{who are familiar}{working} with \replacedWith{X-Ray computed tomography}{XCT}\removed{ and its visual representations}, four material scientists \removed{who are} experienced in analyzing \replacedWith{fiber reinforced polymers}{CFRPs} and four \replacedWith{practitioners of visualization}{visualization practitioners} participated in the user evaluation of \replacedWith{our work}{MetaTracts}. We setup a questionnaire with questions on solving given tasks as well as questions using the Likert scale (LS) for evaluating the performance of the MetaTracts over currently used techniques. LS consists of 5 levels from ``strongly disagree" to ``strongly agree". Figure~\ref{fig:userstudy} shows the results \added{in the sequential order they were asked}. \replacedWith{Task 1}{First task}\removed{ of the questionnaire} was to \removed{``}identify the number of fiber bundles\removed{"} using a video\replacedWith{ showing}{of} 360$\degree$ rotation of the\replacedWith{ volume rendering of dataset 1}{D1 volume rendering} (Figure~\ref{fig:data-char}a).\removed{ This task tests the perception of geometric structure and how common problems like uniform grayscale values and occlusion of the different fiber bundles affects the user.}\replacedWith{ Figure~\ref{fig:userstudy} shows that, as expected}{Results show that} the participants found it difficult to determine the number of bundles from volume rendering alone.\replacedWith{ Another common approach is to color map the top eigenvector of Hessian matrix to RGB space. We show a video showing a 360 degree rotation of the volume rendering of the color mapped eigenvectors}{Second task evaluates RGB color mapping of the top Hessian matrix eigenvector. We again show a full 360$\degree$ rotation video where eigenvectors are color-mapped and rendered using volume rendering }\replacedWith{ (similar to}{(as in} Figure~\ref{fig:reliable_hessian}a) and asked the same query. Compared to the volume rendering, the Hessian color map provides more information about the major orientations and \replacedWith{we see}{results demonstrate} that the evaluators performed better than simple volume rendering in this test. The majority of our participants agreed or strongly agreed \removed{(LS)} that Hessian color map was more effective. Finally, we showed the video of bundles extracted with MetaTracts (for orientation 1 and 2 separately Figure~\ref{fig:orientation_clustering}d,e). All participants could correctly identify the number of fiber bundles\replacedWith{. All participants}{and} agreed that MetaTracts \replacedWith{was}{are} more effective in perceiving geometric structure than simple volume rendering or Hessian color map. They especially liked the \replacedWith{two dimensional}{2D} slices of the MetaTracts (Figure~\ref{fig:crop-16-decomp}b, compared to Figure~\ref{fig:data-char}c).
+
+The next set of tasks evaluated the spatial context perceived from MetaTracts.\replacedWith{ We achieve this by asking the evaluators}{The participants were asked} to select the fiber bundle which is largest, smallest, or the most similar to a given one from a \removed{sub}set of fiber bundles. Due to the problems of occlusions and similar grayscale values these tests proven to be more difficult to perform successfully with volume rendering of the plain data, compared to MetaTracts. In the Likert scale, the majority strongly agreed that the tasks are undemanding compared to volume rendering.
+Finally, the majority of participants agreed that the extracted meshes provides better spatial context than volume rendering. 
  
 \section{Parameter choices}
 \label{sec:param_choices}
@@ -651,11 +661,12 @@ Finally, the majority participants agreed that the extracted meshes provides bet
 	%\includegraphics[width=0.5\textwidth,  trim = 10mm 40mm 0mm 15mm, clip]{imagesMT2014/image_length_histogram.pdf}
 	\caption{Number of tracts and median, minimum and maximum length of individual MetaTracts in the orientation cluster Figure~\ref{fig:orientation_clustering}d, clustered into 10 clusters. The unit for length is the grid cube length.  Clusters labeled 2,3,4,5 and 7 all have cardinality less than 10. }
 	\label{fig:len_dist_crop16}
+	\vskip-0.2cm
 \end{figure}
 The critical parameters are $K$ for the K-means in orientation based clustering and $h$ for the hierarchical clustering. K denotes the number of major directions, which is either known a priori or can be easily estimated by looking at the weaving pattern. 
 Our framework is robust to the choice of $h$. Large $h$ keeps the major bundles intact. For example, in  Figure~\ref{fig:len_dist_crop16}, where $h$ was set to ten while the ground truth was five clusters, we observe that the major clusters remain well segmented and small clusters can be removed if they have too few elements (clusters 2,3,4,5 and 7 in Figure~\ref{fig:len_dist_crop16} all have less than 10 elements). This is an appealing trait of the proximity based clustering, thus providing good results even when exact $h$ might be unknown \added{(avoiding over-segmentation)}.
 The following parameters were fixed for all the tests. We set the reliable Hessian threshold $R_{H}$ to be 0.3 for all our tests. A $R_{H}$ of 0.0 would mean all points have reliable local orientation which would cause spurious MetaTracts detection. \replacedWith{On the other hand, a}{A} very high $ R_{H}$ would lead to a decline in number of MetaTracts produced. The $\alpha$ and $\beta$ in $R_{H}$ are as explained in Frangi et al. \cite{Frangi1998} and set to 0.5. The length and the radius parameters for the cylinders of MetaTracts decide how coarse the fiber cylinders are. These are dependent on the underlying fiber characteristic and the weaving pattern. Larger cylinders will handle noisy local orientation better as it inspects a higher number of candidate points to extend the fiber. We used 10.00 and 2.00 for length and radius (measured in grid voxel size), respectively for all tests.  
-Simpler geometry (example dataset 2) was experimentally found to handle larger cylinders better. $\eta$ in sec.~\ref{subsec:dist_clustering} decides how quickly the hierarchical clustering converges, experimentally 0.3 to 0.6 gave similar results. 
+Simpler geometry (\replacedWith{example dataset 2}{e.g., D2}) was experimentally found to handle larger cylinders better. $\eta$ in sec.~\ref{subsec:dist_clustering} decides how quickly the hierarchical clustering converges, experimentally 0.3 to 0.6 gave similar results. 
  %Short tracts of less than 0.01 times the smallest axes size are prone to have erroneous local orientation and are therefore removed. 
  $\alpha$ and $\beta$ in equation~\ref{eqn:algo_1} decide how quickly the value of the factor decays; we have used [7-10] and half the length of cylinder (5.0). Our number of fiber bundle directions are limited. Thus even for small $m$ (cardinality of lower dimension in orientation clustering), the distinction between the orientation clusters is preserved quite well. We compared  $m=3-7$ experimentally without any change in results. 
 %\begin{figure}[tb]
@@ -714,6 +725,6 @@ In future, we plan to increase the precision of the extractions, include uncerta
 \added
 {
 \acknowledgements{
-The research leading to these results has received funding from the European Union’s Seventh Framework Programme (FP7/2007-2013) under grant agreement ACP2-GA-2012-314562-QUICOM. Our special thanks go to Ilya Straumit (KU Leuven) who provided us with dataset1.
+The research leading to these results has received funding from the European Union’s Seventh Framework Programme (FP7/2007-2013) under grant agreement ACP2-GA-2012-314562-QUICOM. We especially thank Ilya Straumit (KU Leuven) for providing us with dataset 1.
 }
 }

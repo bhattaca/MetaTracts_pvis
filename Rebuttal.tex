@@ -9,18 +9,18 @@
 \begin{document}
 
 \maketitle
-We thank the reviewers for their reviews of the submitted manuscript, we have addressed the queries,  re-worked and improved the manuscript. The summary reviews had three issues, 
+We thank the reviewers for their reviews of the submitted manuscript, in order to address the raised queries we carefully re-worked and improved the manuscript, improved some figures, included additional explanations, and extended supplementary material. This document describes a summary of the introduced improvements. The summary review mentioned three main issues: 
 \begin{enumerate}
 	   \item  Visualization of more datasets, particularly, the ones, as R1 has
 	   mentioned with crossings at other angles.
 	   \item Effects of choice of length in MetaTract generation.
 	   \item Performance studies and limitations.
 \end{enumerate}
-We incorporated the following changes
+We fully dedicated ourselves to address these comments and incorporated the following changes:
 \begin{enumerate}
-	\item {Due to the manufacturing process, a vast majority of composites have bundles crossing at ~90 degree angles. With the separation factors being width, spacings and compactness of fiber bundles. These variations are well represented in our data sets. We maintain that the technique is useful and applicable to a large percentage of composite polymers. We have demonstrated the technique on three datasets, two of them are in the paper and the third is in the supplemental section due space  constraints. Getting additional datasets is time consuming. 
+	\item {Due to the manufacturing process, a vast majority of composites have bundles crossing at ~90 degree angles. With the separation factors being widths, spacings and compactness of fiber bundles. These variations are well represented in our data sets: total of three in the original submission. We present evaluation of MetaTracts for datasets D1 and D2 in the main manuscript. Additionally applicability for dataset D3 and glass fiber reinforced dataset is presented in the supplimentary material due to space constraints. Therefore we argue that the technique is useful and applicable to a range of various composite polymers. Providing additional datasets is unfortunately not possible given the time constraints of the minor revision. 
 		
-		In dataset 1, Figure~\ref{fig:angle_bundles}f, bundles 7,10 and 6 show  bundles which  though parallel differ in angle and bundle width.It is a common example of variations in the datasets which we extract accurately. 
+		In dataset 1, Figure~\ref{fig:angle_bundles}f, bundles 7,10 and 6 show  bundles which  though parallel differ in angle and bundle width. It is a common example of variations in the datasets which we extract accurately. 
 		
 		During additional experiments, we did apply our technique to a different class of fibers where the individual fibers are clearly visible, namely the glass-fibers. We have added the results to the supplementary section. 
 		\begin{figure}
@@ -30,14 +30,15 @@ We incorporated the following changes
 			\label{fig:angle_bundles}
 		\end{figure}}
 		\item {
-			As mentioned in the paper, 
+			We clarified the effects of choice of length and radius of MetaTracts cylinders in the paper: 
 			``The length and the radius parameters for the cylinders of MetaTracts decide how coarse the fiber cylinders are. These are dependent on the underlying fiber characteristic and the weaving pattern. Larger cylinders will handle noisy local orientation better as it inspects a higher number of candidate points to extend the fiber. We used 10.00 and 2.00 for length and radius (measured in grid voxel size), respectively for all tests.  
 			Simpler geometry (example dataset 2) was experimentally found to handle larger cylinders better.''
 			
-			Reviewer 3 and  4, asked  about the effect of the length threshold ``$\eta$".  ``$\eta$" decides how quickly the hierarchical clustering converges. As mentioned in the paper,  experimentally 0.3 to 0.6 gave qualitatively similar results. Quantitatively in our  tests $1.2\% - 5\%$ of fibers (total number of fibers $\sim$10000)were removed, while quantitatively small, without removing these clusters are difficult to separate.
+			Reviewer 3 and  4, asked  about the effect of the length threshold ``$\eta$".  ``$\eta$" on how quickly the hierarchical clustering converges. We mention in the manuscript that our experimental studies concluded that the length threshold choice of 0.3 to 0.6 gave qualitatively similar results. Quantitatively in our  tests $1.2\% - 5\%$ of fibers (total number of fibers $\sim$10000)were removed, while quantitatively small, without removing these clusters are difficult to separate. These experimental results were included in the paper.
 			}
 			\item{
-				We have added a limitations section to the paper. We provide the approximate times of MetaTracts computation of our datasets in the Experimental Results section of the paper. Unfortunately the full scale performance study was not possible due to the time constraints of the minor revision.}
+				We have added a limitations section to the paper. We also detailed the approximate times of MetaTracts computation for our datasets in the Experimental Results section of the paper. Unfortunately the full scale performance study was not possible due to the time constraints of the minor revision. Additional difficulty of obtaining the detailed performance numbers is that it would require the access to workstations which are actively used and regularly occupied by other researchers and developers. Therefore only the reasonable round-ups of the performance and computation run-times are presented.
+				}
 \end{enumerate}
    
 

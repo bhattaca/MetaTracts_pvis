@@ -9,7 +9,37 @@
 \begin{document}
 
 \maketitle
-
+We thank the reviewers for their reviews of the submitted manuscript, we have addressed the queries,  re-worked and improved the manuscript. The summary reviews had three issues, 
+\begin{enumerate}
+	   \item  Visualization of more datasets, particularly, the ones, as R1 has
+	   mentioned with crossings at other angles.
+	   \item Effects of choice of length in MetaTract generation.
+	   \item Performance studies and limitations.
+\end{enumerate}
+We incorporated the following changes
+\begin{enumerate}
+	\item {Due to the manufacturing process, a vast majority of composites have bundles crossing at ~90 degree angles. With the separation factors being width, spacings and compactness of fiber bundles. These variations are well represented in our data sets. We maintain that the technique is useful and applicable to a large percentage of composite polymers. We have demonstrated the technique on three datasets, two of them are in the paper and the third is in the supplemental section due space  constraints. Getting additional datasets is time consuming. 
+		
+		In dataset 1, Figure~\ref{fig:angle_bundles}f, bundles 7,10 and 6 show  bundles which  though parallel differ in angle and bundle width.It is a common example of variations in the datasets which we extract accurately. 
+		
+		During additional experiments, we did apply our technique to a different class of fibers where the individual fibers are clearly visible, namely the glass-fibers. We have added the results to the supplementary section. 
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.7\linewidth]{images_pvis/clustering.pdf}
+			\caption{Fiber bundles extraction}
+			\label{fig:angle_bundles}
+		\end{figure}}
+		\item {
+			As mentioned in the paper, 
+			``The length and the radius parameters for the cylinders of MetaTracts decide how coarse the fiber cylinders are. These are dependent on the underlying fiber characteristic and the weaving pattern. Larger cylinders will handle noisy local orientation better as it inspects a higher number of candidate points to extend the fiber. We used 10.00 and 2.00 for length and radius (measured in grid voxel size), respectively for all tests.  
+			Simpler geometry (example dataset 2) was experimentally found to handle larger cylinders better.''
+			
+			Reviewer 3 and  4, asked  about the effect of the length threshold ``$\eta$".  ``$\eta$" decides how quickly the hierarchical clustering converges. As mentioned in the paper,  experimentally 0.3 to 0.6 gave qualitatively similar results. Quantitatively in our  tests $1.2\% - 5\%$ of fibers (total number of fibers $\sim$10000)were removed, while quantitatively small, without removing these clusters are difficult to separate.
+			}
+			\item{
+				We have added a limitation and future work section to the paper.}
+\end{enumerate}
+   
 
 \section{Reviewer 1}
 \color{red}
@@ -45,16 +75,8 @@ As mentioned in the paper, we do not have clear tubular structures embedded in a
 \color{red}
 Q2. In the examples presented, it seems only one type of composite was studied. For instance, there is no example showing a composite with fiber bundles that cross each other at an angle $<$ 90 degrees. When two bundles are almost parallel, will the current algorithm be sufficient to separate them apart? The authors are encouraged to provide more than one fiber configurations.
 \color{black}
+Please see summary answer 1, also see supplemental sections.  
 
-Answer. Due to the manufacturing process, a vast majority of composites have bundles crossing at ~90 degree angles. With the separation factors being width, spacings and compactness of fiber bundles. These variations are well represented in our data sets. We maintain that the technique is useful and applicable to a large percentage of composite polymers. We have demonstrated the technique on three datasets, two of them are in the paper and the third is in the supplemental section due space  constraints. Getting additional datasets at this time is not possible
-
-In dataset 1, Figure~\ref{fig:angle_bundles}f, bundles 7,10 and 6 shows a common example of variations in the datasets which we extract accurately. 
-\begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{images_pvis/clustering.pdf}
-\caption{Fiber bundles extraction}
-\label{fig:angle_bundles}
-\end{figure}
   
 
 \color{red}
@@ -69,7 +91,7 @@ I feel the background section could be improved. Why the orientation and weaving
 
 
 \color{black}
-Answer.
+We modified the related works section.
 
 \color{red}
   It seems to me that the extracted fibers may not be real fibers. Is this
@@ -78,28 +100,14 @@ Answer.
   \color{black}
   Answer. 
 Yes, the extracted fibers cannot be mapped to real fibers. One of the goals  we  focused on was to move away from extraction of individual fibers, instead work on direct reconstruction of bundles. The design decisions adheres to extracting reliable bundles directly from the images. 
- Developing methods which can precisely compute the deviations from original bundles remains a future direction of the project. 
+ Developing methods which can precisely compute the deviations from original bundles remains a future direction of the project. We did experiment with glass fibers (see supplemental section) where the individual fibers are clearly separated, and proved as a sanity check that the MetaTract technique does extract correct fibers. 
 
 \color{red}
 The authors claim that their method can deal with low resolution data.
 But this might be in the eyes of the beholders, since in my opinion the example data in the paper all have fairly high resolutions. Perhaps a comparison with a really high resolution data using this method and other existing methods could diffuse the doubt.
 \color{black}
 
-Answer. Figure~\ref{fig:glass_fibers} shows an example where each fiber is clearly demarcated compared to the type of data we address in the paper (Figure~\ref{fig:data-char-rebuttal}).
-\begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{images_pvis/glass_fibers}
-\caption{High Resolution fiber}
-\label{fig:glass_fibers}
-\end{figure}
-
-\begin{figure}[htp]
-\centering
- \includegraphics[width=0.4\linewidth]{imagesMT2014/glass-cluster-a.eps}
-  \includegraphics[width=0.4\linewidth]{imagesMT2014/glass-cluster-b.eps}
-   \includegraphics[width=0.4\linewidth]{imagesMT2014/glass-scalar.eps}
-  \caption{ Fig  A and C shows the results fiber extraction. B and D shows the results of clustering with clipping planes.}\label{fig:closeup-full}
-\end{figure}
+Answer.  Please look at the supplementary section on glass fibers.
 
 
 \section{Reviewer 4}
@@ -116,10 +124,9 @@ In Section 5.2, the authors mention that they remove short Meta Tracks.
 How much data is thrown away here? Can examples be provided to get a
 better understanding?
 \color{black}
-
+Please see summary answer 2.
 
 \color{red}
-
 What are the limitations of the approach? Are there data sets where the
 method fails?
 \color{black}

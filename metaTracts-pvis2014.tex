@@ -35,19 +35,6 @@
 \usepackage{epstopdf}
 \usepackage{enumitem}
 \usepackage{color}
-\usepackage{gensymb}
-
-%comment to hide higlighting the revised text
-%\newcommand{\removed}[1]{\textcolor{green}{#1}}
-%\newcommand{\added}[1]{\textcolor{red}{#1}}
-%\newcommand{\replaced}[1]{\textcolor{blue}{#1}}
-\newcommand{\replacedWith}[2]{\replaced{#1} \added{#2}}
-
-%uncomment to hide higlighting the revised text
-\newcommand{\removed}[1]{}
-\newcommand{\added}[1]{{#1}}
-\newcommand{\replaced}[1]{}
-
 %% We encourage the use of mathptmx for consistent usage of times font
 %% throughout the proceedings. However, if you encounter conflicts
 %% with other math-related packages, you may want to disable it.
@@ -84,16 +71,17 @@
 
 %% Author and Affiliation (multiple authors with multiple affiliations)
 \author{Arindam Bhattacharya\thanks{e-mail: arindamb86@gmail.com}\\ %
-     \scriptsize The Ohio State University\\ %
-\and Christoph Heinzl\thanks{e-mail: christoph.heinzl@fh-wels.at}\\ %
+     \scriptsize The Ohio State University %
+\and Christoph Heinzl\thanks{e-mail:christoph.heinzl@fh-wels.at}\\ %
      \scriptsize University of Applied Sciences - Upper Austria%
-\and Artem Amirkhanov\thanks{e-mail: artem.amirkhanov@fh-wels.at}\\ %
+\and Rephael Wenger\thanks{e-mail:wenger@cse.ohio-state.edu}\\ %
+\scriptsize The Ohio State University
+\and Artem Amirkhanov\thanks{e-mail:artem.amirkhanov@fh-wels.at}\\ %
      \scriptsize University of Applied Sciences - Upper Austria%
-\and Johann Kastner\thanks{e-mail: johann.kastner@fh-wels.at}\\ %
+\and Johann Kastner\thanks{e-mail:johann.kastner@fh-wels.at}\\ %
      \scriptsize University of Applied Sciences - Upper Austria%
-\and Rephael Wenger\thanks{e-mail: wenger@cse.ohio-state.edu}\\ %
-    \scriptsize The Ohio State University\\ %
-}
+	    }
+
 
 %% A teaser figure can be included as follows, but is not recommended since
 %% the space is now taken up by a full width abstract.
@@ -143,8 +131,6 @@ We evaluate the proposed work flow on a number of real world datasets and demons
 \maketitle
 
 \input {./chapters/MetaTracts.tex}
-
-
 
 \bibliographystyle{abbrv}
 %%use following if all content of bibtex file should be shown

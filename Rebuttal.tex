@@ -55,7 +55,7 @@ Q1. A new variable, reliable Hessian, is defined and it is stated that $R_{H}$ i
 }}
 
 
-A1. Reliable Hessians is computed exactly equivalently to Vesselness for a single scale (Firangi et al.~\cite{Frangi1998}). We have  updated the corresponding sentence in the paper to reflect this information. We explain further about the utility being different.
+\textbf{A1.} Reliable Hessians is computed exactly equivalently to Vesselness for a single scale (Firangi et al.~\cite{Frangi1998}). We have  updated the corresponding sentence in the paper to reflect this information. We explain further about the utility being different.
 
 A common approach and one utilized by the Frangi et al.~\cite{Frangi1998}, is to consider the Taylor series expansion in the neighborhood of point $x$ in an image as.
 \begin{equation}
@@ -87,7 +87,7 @@ Q2. In the examples presented, it seems only one type of composite was studied. 
 }}
 
 
-A2. Please see answer 1 to the summary review and the extended supplementary material.  
+\textbf{A2.} Please see answer 1 to the summary review and the extended supplementary material.  
 
 \makebox[\linewidth]{\rule{0.25\textwidth}{0.4pt}}
 
@@ -97,7 +97,7 @@ Q3. All clustering was done in R. The letter R is not explained.
 }}
 
 
-A3. R is a free software environment for statistical computing and graphics. This explanation is now added to the paper.
+\textbf{A3.} R is a free software environment for statistical computing and graphics. This explanation is now added to the paper.
 
 
 \section*{Reviewer 2}
@@ -108,7 +108,7 @@ Q1. I feel the background section could be improved. Why the orientation and wea
 
 
 
-A1. We modified the related works section.
+\textbf{A1.} We modified the related works section.
 
 \makebox[\linewidth]{\rule{0.25\textwidth}{0.4pt}}
 
@@ -120,7 +120,7 @@ on the imaginary fibers?
 }}
 
 
-A2. Yes, the extracted fibers cannot be mapped to real fibers. One of our main goals is to move away from extraction of individual fibers and work instead on direct reconstruction of bundles. These design decisions adheres to extracting reliable bundles directly from the images.
+\textbf{A2.} Yes, the extracted fibers cannot be mapped to real fibers. One of our main goals is to move away from extraction of individual fibers and work instead on direct reconstruction of bundles. These design decisions adheres to extracting reliable bundles directly from the images.
 Developing methods which can precisely compute the deviations from original bundles remains a future direction of the project. We did experiment with glass fibers (see supplemental section) where the individual fibers are clearly separated, and proved as a sanity check that the MetaTract technique does extract correct fibers.
  
 \makebox[\linewidth]{\rule{0.25\textwidth}{0.4pt}}
@@ -132,7 +132,7 @@ But this might be in the eyes of the beholders, since in my opinion the example 
 }}
 
 
-A3. In the context of this work by low resolution we intend situations when resolving individual fibers is not possible. We state this in the paper. Please look at the supplementary section on glass fibers as an example of high-resolution data.
+\textbf{A3.} In the context of this work by low resolution we intend situations when resolving individual fibers is not possible. We state this in the paper. Please look at the supplementary section on glass fibers as an example of high-resolution data.
 
 
 \section*{Reviewer 4}
@@ -144,7 +144,7 @@ Is that really the case when they represent eigenvectors?
 }}
 
 
-A1. Belkin  and Niyogi's~\cite{Belkin01} laplacian eigenmaps embeds the high dimensional data ( represented as a graph ) into a low dimensional space where the Euclidean distance approximates the distances in higher dimension space. For such reason, Eigen embedding for dimensionality reduction has become quiet popular and has found favor in tackling a variety of problems. Empirically the K-means for orientation clustering provided us with excellent results. The major orientations are limited by the inherent characteristics of our data set and this also plays a role in Laplacian embedding followed by k-means giving us such good results. A formal proof is not provided due to the strict space constraints.
+\textbf{A1.} Belkin  and Niyogi's~\cite{Belkin01} laplacian eigenmaps embeds the high dimensional data ( represented as a graph ) into a low dimensional space where the Euclidean distance approximates the distances in higher dimension space. For such reason, Eigen embedding for dimensionality reduction has become quiet popular and has found favor in tackling a variety of problems. Empirically the K-means for orientation clustering provided us with excellent results. The major orientations are limited by the inherent characteristics of our data set and this also plays a role in Laplacian embedding followed by k-means giving us such good results. A formal proof is not provided due to the strict space constraints.
  
 \makebox[\linewidth]{\rule{0.25\textwidth}{0.4pt}}
 
@@ -156,7 +156,7 @@ better understanding?
 }}
 
 
-A2. Please see the answer 2 to the summary review.
+\textbf{A2.} Please see the answer 2 to the summary review.
 
 \makebox[\linewidth]{\rule{0.25\textwidth}{0.4pt}}
 
@@ -167,7 +167,7 @@ method fails?
 }
 }
 
-A3. We have added a ``Limitations and future work" Section to the end of the paper. We cite it here for completeness:
+\textbf{A3.} We have added a ``Limitations and future work" Section to the end of the paper. We cite it here for completeness:
 
 A key assumption of the method is ``connectivity'' (Sec. Data Characteristic).
 If the ``connectivity'' is not satisfied due to noise in the image, the then MetaTracts will be inaccurate. 
